@@ -20,9 +20,10 @@ export default function AnnouncementBar() {
             href={BUSINESS_INFO.googleProfileUrl}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Google Verified Listing for Elegant Contractors and Interiors"
             className="flex items-center gap-1.5 text-gold hover:underline font-mono"
           >
-            <Sparkles className="w-3 h-3 text-gold" />
+            <Sparkles className="w-3 h-3 text-gold" aria-hidden="true" />
             <span className="hidden sm:inline">Google Verified Listing</span>
           </a>
           <span className="text-stone-600 hidden sm:inline">|</span>

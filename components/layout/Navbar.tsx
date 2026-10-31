@@ -33,7 +33,11 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Brand Logo */}
-          <a href="#" className="flex items-center gap-3 group focus:outline-none">
+          <a 
+            href="#" 
+            aria-label="Elegant Contractors and Interiors Homepage" 
+            className="flex items-center gap-3 group focus:outline-none"
+          >
             <div className="w-10 h-10 rounded-lg border border-gold/40 flex items-center justify-center bg-stone-900/80 group-hover:border-gold transition-all duration-300 relative overflow-hidden shadow-sm">
               <Image
                 src="/logos/elegant-logo-luxury-crest.jpg"

@@ -110,19 +110,21 @@ export default function Footer() {
                 href={BUSINESS_INFO.googleProfileUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Official Google Business Profile for Elegant Contractors and Interiors"
                 className="inline-flex items-center gap-1.5 text-xs text-gold hover:underline font-mono"
               >
                 <span>Official Google Business Profile</span>
-                <ExternalLink className="w-3.5 h-3.5" />
+                <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
               </a>
               <a
                 href={BUSINESS_INFO.googleMapsCidUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Google Maps Direct Knowledge Panel for Elegant Contractors and Interiors"
                 className="inline-flex items-center gap-1.5 text-[11px] text-stone-500 hover:text-stone-300 font-mono"
               >
                 <span>Google Maps Direct Knowledge Panel</span>
-                <ExternalLink className="w-3 h-3" />
+                <ExternalLink className="w-3 h-3" aria-hidden="true" />
               </a>
             </div>
           </div>

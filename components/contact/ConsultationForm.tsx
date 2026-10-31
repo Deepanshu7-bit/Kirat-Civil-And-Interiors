@@ -49,20 +49,30 @@ export default function ConsultationForm() {
 
             <div className="space-y-4 pt-4">
               <div className="flex items-start gap-3.5 p-3.5 rounded-xl border border-stone-800 bg-stone-900/40">
-                <Phone className="w-5 h-5 text-gold shrink-0 mt-0.5" />
+                <Phone className="w-5 h-5 text-gold shrink-0 mt-0.5" aria-hidden="true" />
                 <div>
                   <span className="text-xs font-mono uppercase text-stone-400 block">Direct Line</span>
-                  <a href={`tel:${BUSINESS_INFO.phone.replace(/[^0-9+]/g, '')}`} className="text-sm font-semibold text-stone-100 hover:text-gold transition-colors font-mono">
+                  <a 
+                    href={`tel:${BUSINESS_INFO.phone.replace(/[^0-9+]/g, '')}`} 
+                    aria-label={`Call Elegant Contractors and Interiors at ${BUSINESS_INFO.phone}`}
+                    className="text-sm font-semibold text-stone-100 hover:text-gold transition-colors font-mono"
+                  >
                     {BUSINESS_INFO.phone}
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-3.5 p-3.5 rounded-xl border border-stone-800 bg-stone-900/40">
-                <MessageSquare className="w-5 h-5 text-gold shrink-0 mt-0.5" />
+                <MessageSquare className="w-5 h-5 text-gold shrink-0 mt-0.5" aria-hidden="true" />
                 <div>
                   <span className="text-xs font-mono uppercase text-stone-400 block">WhatsApp Desk</span>
-                  <a href={`https://wa.me/${BUSINESS_INFO.whatsapp}`} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-stone-100 hover:text-gold transition-colors font-mono">
+                  <a 
+                    href={`https://wa.me/${BUSINESS_INFO.whatsapp}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    aria-label="Chat with Elegant Contractors and Interiors on WhatsApp at +91 7401011740"
+                    className="text-sm font-semibold text-stone-100 hover:text-gold transition-colors font-mono"
+                  >
                     +91 7401011740
                   </a>
                 </div>
@@ -101,11 +111,14 @@ export default function ConsultationForm() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4 text-xs font-sans">
                   <div>
-                    <label className="block text-stone-300 mb-1.5 font-mono uppercase text-[11px]">
+                    <label htmlFor="full-name" className="block text-stone-300 mb-1.5 font-mono uppercase text-[11px]">
                       Your Full Name *
                     </label>
                     <input
+                      id="full-name"
+                      name="fullName"
                       type="text"
+                      aria-label="Your Full Name"
                       required
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
@@ -116,11 +129,14 @@ export default function ConsultationForm() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-stone-300 mb-1.5 font-mono uppercase text-[11px]">
+                      <label htmlFor="phone-number" className="block text-stone-300 mb-1.5 font-mono uppercase text-[11px]">
                         WhatsApp Mobile Number *
                       </label>
                       <input
+                        id="phone-number"
+                        name="phoneNumber"
                         type="tel"
+                        aria-label="WhatsApp Mobile Number"
                         required
                         value={phoneNumber}
                         onChange={(e) => setPhoneNumber(e.target.value)}
@@ -130,11 +146,14 @@ export default function ConsultationForm() {
                     </div>
 
                     <div>
-                      <label className="block text-stone-300 mb-1.5 font-mono uppercase text-[11px]">
+                      <label htmlFor="site-location" className="block text-stone-300 mb-1.5 font-mono uppercase text-[11px]">
                         Site Locality / Sector *
                       </label>
                       <input
+                        id="site-location"
+                        name="siteLocation"
                         type="text"
+                        aria-label="Site Locality or Sector"
                         required
                         value={siteLocation}
                         onChange={(e) => setSiteLocation(e.target.value)}
@@ -145,10 +164,13 @@ export default function ConsultationForm() {
                   </div>
 
                   <div>
-                    <label className="block text-stone-300 mb-1.5 font-mono uppercase text-[11px]">
+                    <label htmlFor="service-type" className="block text-stone-300 mb-1.5 font-mono uppercase text-[11px]">
                       Service Required *
                     </label>
                     <select
+                      id="service-type"
+                      name="serviceType"
+                      aria-label="Service Required"
                       value={serviceType}
                       onChange={(e) => setServiceType(e.target.value)}
                       className="w-full px-4 py-3 rounded-xl bg-stone-900/80 border border-stone-800 text-stone-100 focus:outline-none focus:border-gold transition-colors"
@@ -163,10 +185,13 @@ export default function ConsultationForm() {
                   </div>
 
                   <div>
-                    <label className="block text-stone-300 mb-1.5 font-mono uppercase text-[11px]">
+                    <label htmlFor="project-notes" className="block text-stone-300 mb-1.5 font-mono uppercase text-[11px]">
                       Project Notes / Expected Timeline (Optional)
                     </label>
                     <textarea
+                      id="project-notes"
+                      name="projectNotes"
+                      aria-label="Project Notes or Expected Timeline"
                       rows={3}
                       value={projectNotes}
                       onChange={(e) => setProjectNotes(e.target.value)}
