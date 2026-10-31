@@ -2,24 +2,18 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { Calculator, ChevronRight, Award, Shield, Clock, Compass, ArrowUpRight } from 'lucide-react';
+import { Calculator, ChevronRight, Shield, Compass, ArrowUpRight } from 'lucide-react';
 import { BUSINESS_INFO } from '@/lib/data';
 
 export default function HeroSection() {
   return (
     <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden pt-8 pb-16 px-4 sm:px-6 lg:px-8 cad-grid">
-      {/* Background Radial Gold Glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-gold/10 blur-[130px] rounded-full pointer-events-none -z-10" />
+      {/* Background Radial Gold Glow - GPU Accelerated Gradient (No Heavy Blur CPU Cost) */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.15)_0%,transparent_70%)] rounded-full pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         {/* Left Column: Text & Value Proposition */}
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="lg:col-span-7 space-y-6 text-center lg:text-left"
-        >
+        <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
           {/* CAD Coordinates & Verified Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-stone-800 bg-stone-900/80 backdrop-blur-sm text-xs font-mono text-stone-300">
             <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
@@ -73,28 +67,24 @@ export default function HeroSection() {
               <span className="font-mono text-[10px] sm:text-[11px] text-stone-400 uppercase tracking-wider block">Guaranteed Move-In</span>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Right Column: 3D Visual Centerpiece */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9, delay: 0.2 }}
-          className="lg:col-span-5 relative flex justify-center"
-        >
+        <div className="lg:col-span-5 relative flex justify-center">
           <div className="relative w-full max-w-md sm:max-w-lg aspect-square rounded-2xl p-2 border border-stone-800/80 bg-gradient-to-b from-stone-900/60 to-obsidian/90 shadow-2xl overflow-hidden group">
             {/* Ambient Gold Glow Halo behind image */}
-            <div className="absolute inset-0 bg-gold/15 blur-3xl rounded-full opacity-60 group-hover:opacity-90 transition-opacity" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.2)_0%,transparent_75%)] rounded-full opacity-70 group-hover:opacity-100 transition-opacity" />
 
             {/* Main 3D Brand Artwork */}
             <div className="relative w-full h-full rounded-xl overflow-hidden border border-stone-700/50">
               <Image
-                src="/logos/kirat-logo-hero-cover.png"
-                alt="Elegant Contractors and Interiors 3D Isometric Architectural Cube"
+                src="/logos/elegant-logo-luxury-crest.jpg"
+                alt="Elegant Contractors and Interiors Luxury Architectural Crest & Insignia"
                 fill
                 priority
+                quality={75}
                 className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                sizes="(max-width: 768px) 100vw, 500px"
+                sizes="(max-width: 640px) 340px, (max-width: 1024px) 450px, 500px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-60" />
             </div>
@@ -117,7 +107,7 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

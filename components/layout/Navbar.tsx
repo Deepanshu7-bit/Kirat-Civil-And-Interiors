@@ -34,8 +34,15 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Brand Logo */}
           <a href="#" className="flex items-center gap-3 group focus:outline-none">
-            <div className="w-9 h-9 rounded border border-stone-700/60 flex items-center justify-center bg-stone-900/60 group-hover:border-gold transition-colors relative overflow-hidden">
-              <Compass className="w-5 h-5 text-gold group-hover:rotate-45 transition-transform duration-500" />
+            <div className="w-10 h-10 rounded-lg border border-gold/40 flex items-center justify-center bg-stone-900/80 group-hover:border-gold transition-all duration-300 relative overflow-hidden shadow-sm">
+              <Image
+                src="/logos/elegant-logo-luxury-crest.jpg"
+                alt="Elegant Contractors and Interiors Crest"
+                width={40}
+                height={40}
+                priority
+                className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-300"
+              />
             </div>
             <div>
               <div className="flex items-center gap-2">

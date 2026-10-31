@@ -6,7 +6,7 @@ export const BUSINESS_INFO = {
   googleProfileUrl: "https://share.google/dOlbrTeWCayWnMQKu",
   googleMapsCidUrl: "https://maps.google.com/?cid=8580072631903777693",
   phone: "+91 7401011740",
-  whatsapp: "919876543210",
+  whatsapp: "917401011740",
   email: "contact@elegantcontractors.com",
   address: "Sector 125, Sunny Enclave Corridor, Kharar, Mohali, Punjab 140301",
   coordinates: {

@@ -103,7 +103,7 @@ export default function RawToFinishedSection() {
                 src="/images/raw-civil-site.jpg"
                 alt="Raw Civil Construction Stage"
                 fill
-                priority
+                loading="lazy"
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 1200px"
               />
@@ -122,7 +122,7 @@ export default function RawToFinishedSection() {
                 src="/images/finished-luxury-interior.jpg"
                 alt="Finished Luxury Interior Stage"
                 fill
-                priority
+                loading="lazy"
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 1200px"
               />

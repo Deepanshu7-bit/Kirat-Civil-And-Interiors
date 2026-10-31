@@ -6,10 +6,16 @@ export function generateLocalBusinessSchema() {
     "@type": "HomeAndConstructionBusiness",
     "name": BUSINESS_INFO.name,
     "alternateName": [BUSINESS_INFO.legalTag, "Elegant Contractors & Interiors Kharar Mohali"],
-    "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
+    "logo": "https://elegantcontractorsandinteriors.com/logos/elegant-logo-luxury-crest.jpg",
+    "image": "https://elegantcontractorsandinteriors.com/logos/elegant-logo-luxury-crest.jpg",
     "@id": "https://maps.google.com/?cid=8580072631903777693",
     "url": "https://elegantcontractorsandinteriors.com",
     "telephone": BUSINESS_INFO.phone,
+    "email": BUSINESS_INFO.email,
+    "sameAs": [
+      BUSINESS_INFO.googleProfileUrl,
+      BUSINESS_INFO.googleMapsCidUrl
+    ],
     "priceRange": "₹₹ - ₹₹₹₹",
     "address": {
       "@type": "PostalAddress",

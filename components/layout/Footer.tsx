@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { Compass, Phone, MessageSquare, MapPin, Clock, ShieldCheck, ExternalLink } from 'lucide-react';
 import { BUSINESS_INFO } from '@/lib/data';
 
@@ -12,8 +13,14 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded border border-gold/40 flex items-center justify-center bg-gold/10">
-                <Compass className="w-5 h-5 text-gold" />
+              <div className="w-10 h-10 rounded-lg border border-gold/40 flex items-center justify-center bg-stone-900/80 overflow-hidden relative shadow-sm">
+                <Image
+                  src="/logos/elegant-logo-luxury-crest.jpg"
+                  alt="Elegant Contractors and Interiors Crest"
+                  width={40}
+                  height={40}
+                  className="object-cover w-full h-full"
+                />
               </div>
               <div>
                 <span className="font-cinzel font-bold tracking-[0.2em] text-base text-stone-100 uppercase block">

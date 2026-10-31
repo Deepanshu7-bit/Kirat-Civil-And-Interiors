@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Phone, MessageSquare, MapPin, ChevronRight } from 'lucide-react';
 import { BUSINESS_INFO } from '@/lib/data';
@@ -44,9 +45,15 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
           >
             <div>
               <div className="flex items-center justify-between pb-6 border-b border-stone-800">
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded border border-gold/40 flex items-center justify-center font-cinzel font-bold text-gold text-sm bg-gold/10">
-                    E
+                <div className="flex items-center gap-2.5">
+                  <div className="w-9 h-9 rounded-lg border border-gold/40 flex items-center justify-center bg-stone-900/80 overflow-hidden relative shadow-sm">
+                    <Image
+                      src="/logos/elegant-logo-luxury-crest.jpg"
+                      alt="Elegant Contractors Logo Crest"
+                      width={36}
+                      height={36}
+                      className="object-cover w-full h-full"
+                    />
                   </div>
                   <div>
                     <span className="font-cinzel font-bold text-sm text-stone-100 tracking-wider block">
