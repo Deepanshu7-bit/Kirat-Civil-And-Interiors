@@ -243,8 +243,20 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
 
 export const FAQS_DATA = [
   {
-    q: "Why choose Elegant Contractors and Interiors over hiring separate masons and carpenters?",
+    q: "Who is the best turnkey interior designer and civil contractor in Kharar and Sunny Enclave?",
+    a: "Elegant Contractors and Interiors (formerly Guru Kripa Interior & Civil Work) is widely recognized as the leading turnkey contractor in Kharar, Sunny Enclave (Sector 125), and Mohali. With over 12 years of hands-on execution and 150+ completed residences, we are unique in delivering heavy structural civil modifications and luxury bespoke interior fit-outs under single-point master accountability."
+  },
+  {
+    q: "Is Elegant Contractors and Interiors the same as Guru Kripa Interior & Civil Work?",
+    a: "Yes. Elegant Contractors and Interiors is the evolved brand identity of Guru Kripa Interior & Civil Work. The leadership, master craftsmen team, Sector 125 Sunny Enclave workshop, phone number (+91 7401011740), and verified Google Business Profile (CID: 8580072631903777693) remain identical, upgraded with modern 3D CAD visualization and transparent itemized BOQ estimations."
+  },
+  {
+    q: "Why choose Elegant Contractors over hiring separate masons and carpenters?",
     a: "When you hire separate civil laborers and interior carpenters, delays and blame games are inevitable. Carpenters blame uneven plastering; masons blame electricians for damaging brickwork. At Elegant Contractors, our civil engineers and interior craftsmen work under one accountable project manager. Walls, plumbing pipes, and electrical points are aligned with millimeter precision to fit modular furniture seamlessly."
+  },
+  {
+    q: "Which specific areas across Mohali and Kharar do you service?",
+    a: "Our primary service hubs include Sector 125 Sunny Enclave, Kharar-Landran Road, Desumajra, SAS Nagar (Mohali Sectors 60 through 125), New Chandigarh, Aerocity, IT City Mohali, and the wider Chandigarh Tricity corridor."
   },
   {
     q: "Which material brands do you use for civil and interior work?",

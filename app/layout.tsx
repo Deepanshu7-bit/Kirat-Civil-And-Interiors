@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Plus_Jakarta_Sans, Cinzel, Space_Mono } from 'next/font/google';
 import './globals.css';
-import { generateLocalBusinessSchema } from '@/lib/schema';
+import { generateLocalBusinessSchema, generateFAQSchema } from '@/lib/schema';
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -105,14 +105,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const jsonLd = generateLocalBusinessSchema();
+  const localBusinessJsonLd = generateLocalBusinessSchema();
+  const faqJsonLd = generateFAQSchema();
 
   return (
     <html lang="en" className={`${jakarta.variable} ${cinzel.variable} ${spaceMono.variable} dark scroll-smooth`}>
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       </head>
       <body className="bg-obsidian text-zinc-100 antialiased selection:bg-gold/30 selection:text-white flex flex-col min-h-screen">

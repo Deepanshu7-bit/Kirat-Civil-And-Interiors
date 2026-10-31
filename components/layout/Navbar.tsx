@@ -107,6 +107,13 @@ export default function Navbar() {
               Reviews
               <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-gold transition-all duration-300 group-hover:w-full" />
             </a>
+            <a
+              href="#faqs"
+              className="font-mono text-xs tracking-wider uppercase text-stone-300 hover:text-gold transition-colors relative py-1 group"
+            >
+              FAQs
+              <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-gold transition-all duration-300 group-hover:w-full" />
+            </a>
           </nav>
 
           {/* Action Button & Mobile Toggle */}

@@ -19,6 +19,7 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
     { label: 'Completed Sites', href: '#portfolio' },
     { label: 'Execution Process', href: '#process' },
     { label: 'Client Reviews', href: '#testimonials' },
+    { label: 'FAQs & Transparency', href: '#faqs' },
     { label: 'Site Inspection', href: '#contact' },
   ];
 

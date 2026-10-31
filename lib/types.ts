@@ -42,3 +42,10 @@ export interface TestimonialItem {
   reviewText: string;
   date: string;
 }
+
+export interface FAQItem {
+  id: string;
+  question: string;
+  answer: string;
+  category: 'turnkey' | 'costs' | 'civil' | 'materials' | 'areas';
+}

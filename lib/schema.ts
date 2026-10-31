@@ -1,11 +1,12 @@
-import { BUSINESS_INFO } from './data';
+import { BUSINESS_INFO, FAQS_DATA } from './data';
 
 export function generateLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     "name": BUSINESS_INFO.name,
-    "alternateName": [BUSINESS_INFO.legalTag, "Elegant Contractors & Interiors Kharar Mohali"],
+    "alternateName": [BUSINESS_INFO.legalTag, "Elegant Contractors & Interiors Kharar Mohali", "Guru Kripa Interior & Civil Work"],
+    "description": "Premier turnkey civil contractor and bespoke luxury interior designer based in Sector 125 Sunny Enclave, Kharar, Mohali. Specializing in complete home renovations, RCC civil structural alterations, modular acrylic kitchens, and architectural false ceilings with single-point accountability.",
     "logo": "https://elegantcontractorsandinteriors.com/logos/elegant-logo-luxury-crest.jpg",
     "image": "https://elegantcontractorsandinteriors.com/logos/elegant-logo-luxury-crest.jpg",
     "@id": "https://maps.google.com/?cid=8580072631903777693",
@@ -17,6 +18,13 @@ export function generateLocalBusinessSchema() {
       BUSINESS_INFO.googleMapsCidUrl
     ],
     "priceRange": "₹₹ - ₹₹₹₹",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "48",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Sector 125, Sunny Enclave Corridor, Kharar",
@@ -76,5 +84,20 @@ export function generateLocalBusinessSchema() {
         }
       ]
     }
+  };
+}
+
+export function generateFAQSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": FAQS_DATA.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
   };
 }
