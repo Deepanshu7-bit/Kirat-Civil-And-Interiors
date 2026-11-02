@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Plus_Jakarta_Sans, Cinzel, Space_Mono } from 'next/font/google';
 import './globals.css';
 import { generateLocalBusinessSchema, generateFAQSchema } from '@/lib/schema';
+import { Analytics } from '@vercel/analytics/next';
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -134,6 +135,7 @@ export default function RootLayout({
       </head>
       <body className="bg-obsidian text-zinc-100 antialiased selection:bg-gold/30 selection:text-white flex flex-col min-h-screen">
         {children}
+        <Analytics />
       </body>
     </html>
   );
