@@ -6,11 +6,11 @@ export function generateLocalBusinessSchema() {
     "@type": "HomeAndConstructionBusiness",
     "name": BUSINESS_INFO.name,
     "alternateName": [BUSINESS_INFO.legalTag, "Elegant Contractors & Interiors Kharar Mohali", "Guru Kripa Interior & Civil Work"],
-    "description": "Premier turnkey civil contractor and bespoke luxury interior designer based in Sector 125 Sunny Enclave, Kharar, Mohali. Specializing in complete home renovations, RCC civil structural alterations, modular acrylic kitchens, and architectural false ceilings with single-point accountability.",
-    "logo": "https://elegantcontractorsandinteriors.com/logos/elegant-logo-luxury-crest.jpg",
-    "image": "https://elegantcontractorsandinteriors.com/logos/elegant-logo-luxury-crest.jpg",
+    "description": "Premier turnkey civil contractor and bespoke luxury interior designer based in Sector 117 ACME Heights-2 and Sunny Enclave Kharar, Mohali. Specializing in complete home renovations, RCC civil structural alterations, modular acrylic kitchens, and architectural false ceilings with single-point accountability.",
+    "logo": "https://www.elegantspaces.me/logos/elegant-logo-luxury-crest.jpg",
+    "image": "https://www.elegantspaces.me/logos/elegant-logo-luxury-crest.jpg",
     "@id": "https://maps.google.com/?cid=8580072631903777693",
-    "url": "https://elegantcontractorsandinteriors.com",
+    "url": "https://www.elegantspaces.me",
     "telephone": BUSINESS_INFO.phone,
     "email": BUSINESS_INFO.email,
     "sameAs": [
@@ -20,15 +20,15 @@ export function generateLocalBusinessSchema() {
     "priceRange": "₹₹ - ₹₹₹₹",
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "48",
+      "ratingValue": "5.0",
+      "reviewCount": "2",
       "bestRating": "5",
       "worstRating": "1"
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Sector 125, Sunny Enclave Corridor, Kharar",
-      "addressLocality": "Mohali / SAS Nagar",
+      "streetAddress": "ACME HEIGHTS-2, 309/G, Sector 117, Ex 2",
+      "addressLocality": "Sahibzada Ajit Singh Nagar, Mohali",
       "addressRegion": "Punjab",
       "postalCode": "140301",
       "addressCountry": "IN"

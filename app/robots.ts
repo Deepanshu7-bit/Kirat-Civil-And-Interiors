@@ -20,7 +20,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       }
     ],
-    sitemap: 'https://elegantcontractorsandinteriors.com/sitemap.xml',
-    host: 'https://elegantcontractorsandinteriors.com',
+    sitemap: 'https://www.elegantspaces.me/sitemap.xml',
+    host: 'https://www.elegantspaces.me',
   };
 }

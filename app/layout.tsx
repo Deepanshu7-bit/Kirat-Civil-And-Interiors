@@ -31,18 +31,27 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://elegantcontractorsandinteriors.com'),
+  metadataBase: new URL('https://www.elegantspaces.me'),
   title: {
     default: 'Elegant Contractors and Interiors | Turnkey Civil & Luxury Interior Contractor in Kharar & Mohali',
     template: '%s | Elegant Contractors and Interiors',
   },
   description: 'From solid civil foundation to bespoke luxury interiors. Leading turnkey civil construction, modular kitchens, structural alterations, and architectural false ceilings across Kharar, Sunny Enclave, and Mohali Tricity.',
   keywords: [
+    'elegant contractors and interiors',
+    'guru kirpa interiors and civil works',
+    'civil mistri near me',
+    'civil thekedar mohali',
+    'modular kitchen maker near me',
+    'modular kitchen mohali',
+    'pop false ceiling contractor mohali',
+    'gypsum pop wala near me',
     'interior designer kharar',
     'civil contractor mohali',
     'turnkey civil and interior contractor',
     'modular kitchen kharar',
     'false ceiling contractor mohali',
+    'house renovation sector 117 mohali',
     'house renovation sunny enclave sector 125',
     'luxury interior designer mohali',
     'commercial interior contractor tricity',
@@ -51,19 +60,20 @@ export const metadata: Metadata = {
     'bwp 710 marine ply woodwork kharar',
     'home renovation contractor new chandigarh',
     'gyproc false ceiling mohali',
-    'waterproofing contractor kharar'
+    'waterproofing contractor kharar',
+    'tile marble mistri mohali'
   ],
-  authors: [{ name: 'Elegant Contractors and Interiors', url: 'https://elegantcontractorsandinteriors.com' }],
+  authors: [{ name: 'Elegant Contractors and Interiors', url: 'https://www.elegantspaces.me' }],
   creator: 'Elegant Contractors and Interiors',
   publisher: 'Elegant Contractors and Interiors',
   category: 'Construction and Interior Design',
   alternates: {
-    canonical: 'https://elegantcontractorsandinteriors.com',
+    canonical: 'https://www.elegantspaces.me',
   },
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://elegantcontractorsandinteriors.com',
+    url: 'https://www.elegantspaces.me',
     title: 'Elegant Contractors and Interiors | Turnkey Civil & Luxury Interior Contractor',
     description: 'Bespoke Turnkey Civil Engineering & Luxury Interior Studio based in Mohali & Kharar. Complete structural foundation-to-handover execution.',
     siteName: 'Elegant Contractors and Interiors',
@@ -94,9 +104,11 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/logos/elegant-logo-luxury-crest.jpg',
-    shortcut: '/logos/elegant-logo-luxury-crest.jpg',
-    apple: '/logos/elegant-logo-luxury-crest.jpg',
+    icon: [
+      { url: '/icon.png', type: 'image/png' },
+    ],
+    shortcut: '/icon.png',
+    apple: '/apple-icon.png',
   },
 };
 

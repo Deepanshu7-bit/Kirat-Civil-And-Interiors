@@ -8,13 +8,14 @@ export const BUSINESS_INFO = {
   phone: "+91 7401011740",
   whatsapp: "917401011740",
   email: "contact@elegantcontractors.com",
-  address: "Sector 125, Sunny Enclave Corridor, Kharar, Mohali, Punjab 140301",
+  address: "ACME HEIGHTS-2, 309/G, Sector 117, Ex 2, Sahibzada Ajit Singh Nagar (Mohali), Punjab 140301",
   coordinates: {
-    lat: 30.731625,
-    lng: 76.653739,
+    lat: 30.729150,
+    lng: 76.688320,
   },
   hours: "Monday – Saturday: 9:00 AM – 8:00 PM (Sunday by Appointment)",
   serviceAreas: [
+    "Sector 117 (ACME Heights-2)",
     "Kharar",
     "Sunny Enclave (Sector 125)",
     "Desumajra",
