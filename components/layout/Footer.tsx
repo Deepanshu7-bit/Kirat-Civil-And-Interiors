@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Compass, Phone, MessageSquare, MapPin, Clock, ShieldCheck, ExternalLink } from 'lucide-react';
 import { BUSINESS_INFO } from '@/lib/data';
 
@@ -48,12 +49,12 @@ export default function Footer() {
               Core Capabilities
             </h4>
             <ul className="space-y-2 text-xs">
-              <li><a href="#services" className="hover:text-gold transition-colors">Civil Construction & Wall Demolition</a></li>
-              <li><a href="#services" className="hover:text-gold transition-colors">Turnkey Residential Interiors</a></li>
-              <li><a href="#services" className="hover:text-gold transition-colors">Custom Modular Acrylic Kitchens</a></li>
-              <li><a href="#services" className="hover:text-gold transition-colors">Gyproc False Ceilings & Mood LEDs</a></li>
-              <li><a href="#services" className="hover:text-gold transition-colors">Sliding Wardrobes & Millwork</a></li>
-              <li><a href="#services" className="hover:text-gold transition-colors">Commercial SCO & Office Fit-Outs</a></li>
+              <li><Link href="/turnkey-interior-designer-kharar-mohali" className="hover:text-gold transition-colors font-semibold text-stone-300">Turnkey Interior Design</Link></li>
+              <li><Link href="/modular-kitchen-maker-mohali-kharar" className="hover:text-gold transition-colors font-semibold text-stone-300">Modular Kitchen Maker</Link></li>
+              <li><Link href="/pop-false-ceiling-contractor-mohali" className="hover:text-gold transition-colors font-semibold text-stone-300">POP & False Ceilings</Link></li>
+              <li><a href="/#services" className="hover:text-gold transition-colors">Civil Construction & Wall Demolition</a></li>
+              <li><a href="/#services" className="hover:text-gold transition-colors">Sliding Wardrobes & Millwork</a></li>
+              <li><a href="/#services" className="hover:text-gold transition-colors">Commercial SCO & Office Fit-Outs</a></li>
             </ul>
           </div>
 

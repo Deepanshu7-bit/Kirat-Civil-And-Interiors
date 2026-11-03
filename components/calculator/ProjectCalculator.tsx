@@ -52,27 +52,27 @@ export default function ProjectCalculator() {
   };
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#09090b] via-[#101015] to-[#09090b] border-t border-stone-800" id="calculator">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5] border-t border-[#EADBCA] relative" id="calculator">
       <div className="max-w-5xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-gold/30 bg-gold/10 text-gold text-xs font-mono uppercase tracking-widest mb-3">
-            <ListChecks className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#F5E9D3] border border-[#EADBCA] text-[#9E7D3B] text-xs font-mono uppercase tracking-widest mb-3 shadow-sm">
+            <ListChecks className="w-3.5 h-3.5 text-[#C5A059]" />
             <span>PROJECT SCOPE & BOQ PLANNER</span>
           </div>
 
-          <h2 className="text-2xl sm:text-4xl font-cinzel font-bold text-stone-100 tracking-tight">
-            Customize Your Project Scope in <span className="text-gold-gradient">30 Seconds</span>
+          <h2 className="text-2xl sm:text-4xl font-cinzel font-bold text-stone-900 tracking-tight">
+            Customize Your Project Scope in <span className="text-[#C5A059]">30 Seconds</span>
           </h2>
-          <p className="mt-3 text-xs sm:text-sm text-stone-400 font-sans">
+          <p className="mt-3 text-xs sm:text-sm text-stone-600 font-sans">
             Select your configuration below to review customized material specifications, delivery timelines, and request an itemized BOQ.
           </p>
         </div>
 
-        <div className="glass-card rounded-2xl p-6 sm:p-8 border border-stone-800 shadow-2xl space-y-8">
+        <div className="rounded-2xl p-6 sm:p-8 bg-white border border-[#EADBCA] shadow-[0_20px_50px_rgba(245,233,211,0.8)] space-y-8">
           {/* Step 1: Configuration */}
           <div className="space-y-3">
-            <label className="text-xs font-mono tracking-wider text-stone-300 uppercase flex items-center gap-2">
-              <Building className="w-4 h-4 text-gold" />
+            <label className="text-xs font-mono tracking-wider text-stone-800 uppercase flex items-center gap-2 font-semibold">
+              <Building className="w-4 h-4 text-[#C5A059]" />
               <span>1. Select Property Configuration</span>
             </label>
             <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
@@ -86,14 +86,14 @@ export default function ProjectCalculator() {
                 <button
                   key={item.id}
                   onClick={() => setBhk(item.id as PropertyBHK)}
-                  className={`p-3 rounded-xl border text-left transition-all duration-300 flex flex-col justify-between min-h-[64px] ${
+                  className={`p-3 rounded-xl border text-left transition-all duration-300 flex flex-col justify-between min-h-[64px] cursor-pointer ${
                     bhk === item.id
-                      ? 'border-gold bg-gold/15 text-stone-100 shadow-md gold-glow-sm'
-                      : 'border-stone-800 bg-stone-900/60 text-stone-400 hover:border-stone-700'
+                      ? 'border-[#C5A059] bg-[#F5E9D3] text-stone-900 shadow-sm'
+                      : 'border-[#EADBCA] bg-[#FAF8F5] text-stone-600 hover:border-[#C5A059]'
                   }`}
                 >
-                  <span className="font-cinzel font-bold text-sm text-stone-100">{item.label}</span>
-                  <span className="font-mono text-[10px] text-stone-400">{item.detail}</span>
+                  <span className="font-cinzel font-bold text-sm text-stone-900">{item.label}</span>
+                  <span className="font-mono text-[10px] text-stone-500">{item.detail}</span>
                 </button>
               ))}
             </div>
@@ -101,8 +101,8 @@ export default function ProjectCalculator() {
 
           {/* Step 2: Scope of Work */}
           <div className="space-y-3">
-            <label className="text-xs font-mono tracking-wider text-stone-300 uppercase flex items-center gap-2">
-              <Layers className="w-4 h-4 text-gold" />
+            <label className="text-xs font-mono tracking-wider text-stone-800 uppercase flex items-center gap-2 font-semibold">
+              <Layers className="w-4 h-4 text-[#C5A059]" />
               <span>2. Select Scope of Execution</span>
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -114,17 +114,17 @@ export default function ProjectCalculator() {
                 <button
                   key={item.id}
                   onClick={() => setScope(item.id as ServiceScope)}
-                  className={`p-3.5 rounded-xl border text-left transition-all duration-300 ${
+                  className={`p-3.5 rounded-xl border text-left transition-all duration-300 cursor-pointer ${
                     scope === item.id
-                      ? 'border-gold bg-gold/15 text-stone-100 shadow-md gold-glow-sm'
-                      : 'border-stone-800 bg-stone-900/60 text-stone-400 hover:border-stone-700'
+                      ? 'border-[#C5A059] bg-[#F5E9D3] text-stone-900 shadow-sm'
+                      : 'border-[#EADBCA] bg-[#FAF8F5] text-stone-600 hover:border-[#C5A059]'
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="font-cinzel font-bold text-sm text-stone-100">{item.label}</span>
-                    {scope === item.id && <Check className="w-4 h-4 text-gold" />}
+                    <span className="font-cinzel font-bold text-sm text-stone-900">{item.label}</span>
+                    {scope === item.id && <Check className="w-4 h-4 text-[#9E7D3B]" />}
                   </div>
-                  <p className="text-[11px] text-stone-400 mt-1 leading-relaxed">{item.desc}</p>
+                  <p className="text-[11px] text-stone-600 mt-1 leading-relaxed">{item.desc}</p>
                 </button>
               ))}
             </div>
@@ -132,8 +132,8 @@ export default function ProjectCalculator() {
 
           {/* Step 3: Material Quality Preference */}
           <div className="space-y-3">
-            <label className="text-xs font-mono tracking-wider text-stone-300 uppercase flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-gold" />
+            <label className="text-xs font-mono tracking-wider text-stone-800 uppercase flex items-center gap-2 font-semibold">
+              <Sparkles className="w-4 h-4 text-[#C5A059]" />
               <span>3. Material Quality Preference</span>
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -145,68 +145,68 @@ export default function ProjectCalculator() {
                 <button
                   key={item.id}
                   onClick={() => setTier(item.id as PropertyTier)}
-                  className={`p-3.5 rounded-xl border text-left transition-all duration-300 ${
+                  className={`p-3.5 rounded-xl border text-left transition-all duration-300 cursor-pointer ${
                     tier === item.id
-                      ? 'border-gold bg-gold/15 text-stone-100 shadow-md gold-glow-sm'
-                      : 'border-stone-800 bg-stone-900/60 text-stone-400 hover:border-stone-700'
+                      ? 'border-[#C5A059] bg-[#F5E9D3] text-stone-900 shadow-sm'
+                      : 'border-[#EADBCA] bg-[#FAF8F5] text-stone-600 hover:border-[#C5A059]'
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="font-cinzel font-bold text-sm text-stone-100">{item.label}</span>
-                    {tier === item.id && <Check className="w-4 h-4 text-gold" />}
+                    <span className="font-cinzel font-bold text-sm text-stone-900">{item.label}</span>
+                    {tier === item.id && <Check className="w-4 h-4 text-[#9E7D3B]" />}
                   </div>
-                  <p className="text-[11px] text-stone-400 mt-1 leading-relaxed">{item.spec}</p>
+                  <p className="text-[11px] text-stone-600 mt-1 leading-relaxed">{item.spec}</p>
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Dynamic Specifications & Timeline Output (NO DIRECT MONEY FIGURES) */}
-          <div className="pt-6 border-t border-stone-800 bg-stone-950/70 -mx-6 sm:-mx-8 -mb-6 sm:-mb-8 p-6 sm:p-8 rounded-b-2xl">
+          {/* Dynamic Output */}
+          <div className="pt-6 border-t border-[#EADBCA] bg-[#FAF6EE] -mx-6 sm:-mx-8 -mb-6 sm:-mb-8 p-6 sm:p-8 rounded-b-2xl">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
               <div>
-                <span className="font-mono text-[11px] uppercase tracking-wider text-stone-500 block flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-gold" />
+                <span className="font-mono text-[11px] uppercase tracking-wider text-stone-600 block flex items-center gap-1.5 font-semibold">
+                  <Clock className="w-3.5 h-3.5 text-[#C5A059]" />
                   Estimated Timeline:
                 </span>
-                <div className="text-lg font-cinzel font-bold text-gold mt-1">
+                <div className="text-lg font-cinzel font-bold text-[#9E7D3B] mt-1">
                   {getTimeline()}
                 </div>
-                <span className="text-[10px] text-stone-400 font-mono">Guaranteed handover milestone</span>
+                <span className="text-[10px] text-stone-500 font-mono">Guaranteed handover milestone</span>
               </div>
 
               <div>
-                <span className="font-mono text-[11px] uppercase tracking-wider text-stone-500 block flex items-center gap-1.5">
-                  <Layers className="w-3.5 h-3.5 text-gold" />
+                <span className="font-mono text-[11px] uppercase tracking-wider text-stone-600 block flex items-center gap-1.5 font-semibold">
+                  <Layers className="w-3.5 h-3.5 text-[#C5A059]" />
                   Scope Selected:
                 </span>
-                <div className="text-sm font-semibold text-stone-200 mt-1">
+                <div className="text-sm font-semibold text-stone-900 mt-1">
                   {getScopeLabel()}
                 </div>
-                <span className="text-[10px] text-stone-400 font-mono">3D Plan + Site Engineer Supervision</span>
+                <span className="text-[10px] text-stone-500 font-mono">3D Plan + Site Engineer Supervision</span>
               </div>
 
               <div>
-                <span className="font-mono text-[11px] uppercase tracking-wider text-stone-500 block flex items-center gap-1.5">
-                  <ShieldCheck className="w-3.5 h-3.5 text-gold" />
+                <span className="font-mono text-[11px] uppercase tracking-wider text-stone-600 block flex items-center gap-1.5 font-semibold">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#C5A059]" />
                   Warranty Coverage:
                 </span>
-                <div className="text-sm font-semibold text-stone-200 mt-1">
+                <div className="text-sm font-semibold text-stone-900 mt-1">
                   10-Yr Marine Ply + 1-Yr Service
                 </div>
-                <span className="text-[10px] text-stone-400 font-mono">Anti-Termite & BWP 710 Certified</span>
+                <span className="text-[10px] text-stone-500 font-mono">Anti-Termite & BWP 710 Certified</span>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-stone-900">
-              <span className="text-xs text-stone-400 font-sans">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-[#EADBCA]">
+              <span className="text-xs text-stone-600 font-sans">
                 Get an exact, itemized material BOQ calculated for your site in Kharar/Mohali.
               </span>
               <button
                 onClick={handleWhatsAppDispatch}
-                className="w-full sm:w-auto px-6 py-4 rounded-xl bg-[#25D366] text-black font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 hover:brightness-110 transition-all shadow-xl font-mono shrink-0"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-stone-900 text-[#F5E9D3] hover:bg-stone-800 font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 transition-all shadow-md font-mono shrink-0 cursor-pointer"
               >
-                <MessageSquare className="w-4 h-4" />
+                <MessageSquare className="w-4 h-4 text-[#C5A059]" />
                 <span>Request Custom BOQ on WhatsApp</span>
               </button>
             </div>

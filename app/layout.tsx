@@ -71,6 +71,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.elegantspaces.me',
   },
+  verification: {
+    google: 'A9lXPt2Wm2kGDAioq-VtNsPw_V2V38VDDbGv8xvb77k',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_IN',

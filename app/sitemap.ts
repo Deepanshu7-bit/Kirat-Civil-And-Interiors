@@ -1,12 +1,33 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://www.elegantspaces.me';
+  const currentDate = new Date();
+
   return [
     {
-      url: 'https://www.elegantspaces.me',
-      lastModified: new Date(),
+      url: baseUrl,
+      lastModified: currentDate,
       changeFrequency: 'weekly',
-      priority: 1,
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/modular-kitchen-maker-mohali-kharar`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/pop-false-ceiling-contractor-mohali`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/turnkey-interior-designer-kharar-mohali`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
   ];
 }
