@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 import { Plus_Jakarta_Sans, Cinzel, Space_Mono } from 'next/font/google';
 import './globals.css';
 import { generateLocalBusinessSchema, generateFAQSchema } from '@/lib/schema';
@@ -137,6 +138,19 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-obsidian text-zinc-100 antialiased selection:bg-gold/30 selection:text-white flex flex-col min-h-screen">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BLCJ1SNJ4G"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-BLCJ1SNJ4G');
+          `}
+        </Script>
         {children}
         <Analytics />
       </body>
