@@ -68,31 +68,31 @@ export default function ProjectCalculator() {
           </p>
         </div>
 
-        <div className="rounded-2xl p-6 sm:p-8 bg-white border border-[#EADBCA] shadow-[0_20px_50px_rgba(245,233,211,0.8)] space-y-8">
+        <div className="rounded-2xl p-4 sm:p-8 bg-white border border-[#EADBCA] shadow-[0_20px_50px_rgba(245,233,211,0.8)] space-y-6 sm:space-y-8">
           {/* Step 1: Configuration */}
           <div className="space-y-3">
             <label className="text-xs font-mono tracking-wider text-stone-800 uppercase flex items-center gap-2 font-semibold">
               <Building className="w-4 h-4 text-[#C5A059]" />
               <span>1. Select Property Configuration</span>
             </label>
-            <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+            <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 sm:gap-2.5">
               {[
-                { id: '1bhk', label: '1 BHK', detail: '~600 sq ft' },
-                { id: '2bhk', label: '2 BHK', detail: '~1050 sq ft' },
-                { id: '3bhk', label: '3 BHK', detail: '~1550 sq ft' },
-                { id: 'villa', label: '4BHK / Villa', detail: '~2300+ sq ft' },
-                { id: 'sco', label: 'Commercial SCO', detail: '~1800 sq ft' },
+                { id: '1bhk', label: '1 BHK', detail: '~600 sq ft', span: '' },
+                { id: '2bhk', label: '2 BHK', detail: '~1050 sq ft', span: '' },
+                { id: '3bhk', label: '3 BHK', detail: '~1550 sq ft', span: '' },
+                { id: 'villa', label: '4BHK / Villa', detail: '~2300+ sq ft', span: '' },
+                { id: 'sco', label: 'Commercial SCO', detail: '~1800 sq ft', span: 'col-span-2 sm:col-span-1' },
               ].map((item) => (
                 <button
                   key={item.id}
                   onClick={() => setBhk(item.id as PropertyBHK)}
-                  className={`p-3 rounded-xl border text-left transition-all duration-300 flex flex-col justify-between min-h-[64px] cursor-pointer ${
+                  className={`p-2.5 sm:p-3 rounded-xl border text-left transition-all duration-300 flex flex-col justify-between min-h-[58px] sm:min-h-[64px] cursor-pointer ${item.span} ${
                     bhk === item.id
                       ? 'border-[#C5A059] bg-[#F5E9D3] text-stone-900 shadow-sm'
                       : 'border-[#EADBCA] bg-[#FAF8F5] text-stone-600 hover:border-[#C5A059]'
                   }`}
                 >
-                  <span className="font-cinzel font-bold text-sm text-stone-900">{item.label}</span>
+                  <span className="font-cinzel font-bold text-xs sm:text-sm text-stone-900">{item.label}</span>
                   <span className="font-mono text-[10px] text-stone-500">{item.detail}</span>
                 </button>
               ))}
@@ -133,7 +133,7 @@ export default function ProjectCalculator() {
           {/* Step 3: Material Quality Preference */}
           <div className="space-y-3">
             <label className="text-xs font-mono tracking-wider text-stone-800 uppercase flex items-center gap-2 font-semibold">
-              <Sparkles className="w-4 h-4 text-[#C5A059]" />
+              <ShieldCheck className="w-4 h-4 text-[#C5A059]" />
               <span>3. Material Quality Preference</span>
             </label>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -162,14 +162,14 @@ export default function ProjectCalculator() {
           </div>
 
           {/* Dynamic Output */}
-          <div className="pt-6 border-t border-[#EADBCA] bg-[#FAF6EE] -mx-6 sm:-mx-8 -mb-6 sm:-mb-8 p-6 sm:p-8 rounded-b-2xl">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+          <div className="pt-5 sm:pt-6 border-t border-[#EADBCA] bg-[#FAF6EE] -mx-4 sm:-mx-8 -mb-4 sm:-mb-8 p-4 sm:p-8 rounded-b-2xl">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-5 sm:mb-6">
               <div>
                 <span className="font-mono text-[11px] uppercase tracking-wider text-stone-600 block flex items-center gap-1.5 font-semibold">
                   <Clock className="w-3.5 h-3.5 text-[#C5A059]" />
                   Estimated Timeline:
                 </span>
-                <div className="text-lg font-cinzel font-bold text-[#9E7D3B] mt-1">
+                <div className="text-base sm:text-lg font-cinzel font-bold text-[#9E7D3B] mt-1">
                   {getTimeline()}
                 </div>
                 <span className="text-[10px] text-stone-500 font-mono">Guaranteed handover milestone</span>
@@ -180,7 +180,7 @@ export default function ProjectCalculator() {
                   <Layers className="w-3.5 h-3.5 text-[#C5A059]" />
                   Scope Selected:
                 </span>
-                <div className="text-sm font-semibold text-stone-900 mt-1">
+                <div className="text-xs sm:text-sm font-semibold text-stone-900 mt-1">
                   {getScopeLabel()}
                 </div>
                 <span className="text-[10px] text-stone-500 font-mono">3D Plan + Site Engineer Supervision</span>
@@ -191,20 +191,20 @@ export default function ProjectCalculator() {
                   <ShieldCheck className="w-3.5 h-3.5 text-[#C5A059]" />
                   Warranty Coverage:
                 </span>
-                <div className="text-sm font-semibold text-stone-900 mt-1">
+                <div className="text-xs sm:text-sm font-semibold text-stone-900 mt-1">
                   10-Yr Marine Ply + 1-Yr Service
                 </div>
-                <span className="text-[10px] text-stone-500 font-mono">Anti-Termite & BWP 710 Certified</span>
+                <span className="text-[10px] text-stone-500 font-mono">Anti-Termite &amp; BWP 710 Certified</span>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-[#EADBCA]">
-              <span className="text-xs text-stone-600 font-sans">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 pt-4 border-t border-[#EADBCA]">
+              <span className="text-xs text-stone-600 font-sans text-center sm:text-left">
                 Get an exact, itemized material BOQ calculated for your site in Kharar/Mohali.
               </span>
               <button
                 onClick={handleWhatsAppDispatch}
-                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-stone-900 text-[#F5E9D3] hover:bg-stone-800 font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 transition-all shadow-md font-mono shrink-0 cursor-pointer"
+                className="w-full sm:w-auto px-5 sm:px-6 py-3.5 rounded-xl bg-stone-900 text-[#F5E9D3] hover:bg-stone-800 font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 transition-all shadow-md font-mono shrink-0 cursor-pointer"
               >
                 <MessageSquare className="w-4 h-4 text-[#C5A059]" />
                 <span>Request Custom BOQ on WhatsApp</span>

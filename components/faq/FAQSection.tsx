@@ -12,19 +12,22 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#09090b] via-[#101015] to-[#09090b] border-t border-stone-800" id="faqs">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5] border-t border-[#EADBCA] relative" id="faqs">
+      {/* Ambient Golden Glow */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,#F5E9D3_0%,transparent_70%)] opacity-70 -z-10 pointer-events-none" />
+
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-gold/30 bg-gold/10 text-gold text-xs font-mono uppercase tracking-widest mb-3">
-            <HelpCircle className="w-3.5 h-3.5" aria-hidden="true" />
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#F5E9D3] border border-[#EADBCA] text-[#9E7D3B] text-xs font-mono uppercase tracking-widest mb-3 shadow-sm">
+            <HelpCircle className="w-3.5 h-3.5 text-[#C5A059]" aria-hidden="true" />
             <span>TRANSPARENCY & ASSURANCE</span>
           </div>
 
-          <h2 className="text-2xl sm:text-4xl font-cinzel font-bold text-stone-100 tracking-tight">
-            Frequently Asked <span className="text-gold-gradient">Questions</span>
+          <h2 className="text-2xl sm:text-4xl font-cinzel font-bold text-stone-900 tracking-tight">
+            Frequently Asked <span className="text-[#C5A059]">Questions</span>
           </h2>
-          <p className="mt-3 text-xs sm:text-sm text-stone-400 font-sans leading-relaxed">
+          <p className="mt-3 text-xs sm:text-sm text-stone-600 font-sans leading-relaxed">
             Direct, transparent answers regarding turnkey execution, pricing, branded materials, and structural warranties across Kharar & Mohali.
           </p>
         </div>
@@ -41,8 +44,8 @@ export default function FAQSection() {
                 key={idx}
                 className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                   isOpen
-                    ? 'border-gold/40 bg-gradient-to-b from-stone-900/90 to-stone-950/80 shadow-lg gold-glow-sm'
-                    : 'border-stone-800/80 bg-stone-900/40 hover:border-stone-700'
+                    ? 'border-[#C5A059] bg-white shadow-[0_10px_30px_rgba(245,233,211,0.8)]'
+                    : 'border-[#EADBCA] bg-white hover:border-[#C5A059] shadow-sm'
                 }`}
               >
                 <h3>
@@ -51,19 +54,19 @@ export default function FAQSection() {
                     aria-expanded={isOpen}
                     aria-controls={contentId}
                     onClick={() => toggleFAQ(idx)}
-                    className="w-full py-4.5 px-5 sm:px-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer"
+                    className="w-full py-3.5 sm:py-4.5 px-4 sm:px-6 text-left flex items-center justify-between gap-3 sm:gap-4 focus:outline-none cursor-pointer"
                   >
-                    <span className="font-cinzel text-sm sm:text-base font-semibold text-stone-100 leading-snug">
+                    <span className="font-cinzel text-xs sm:text-base font-semibold text-stone-900 leading-snug">
                       {faq.q}
                     </span>
                     <div
-                      className={`w-7 h-7 rounded-full border flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                      className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full border flex items-center justify-center shrink-0 transition-transform duration-300 ${
                         isOpen
-                          ? 'border-gold bg-gold text-black rotate-180'
-                          : 'border-stone-700 bg-stone-800/60 text-stone-400'
+                          ? 'border-[#C5A059] bg-[#C5A059] text-stone-950 rotate-180'
+                          : 'border-[#EADBCA] bg-[#FAF8F5] text-stone-600'
                       }`}
                     >
-                      <ChevronDown className="w-4 h-4" aria-hidden="true" />
+                      <ChevronDown className="w-3.5 h-3.5 sm:w-4 sm:h-4" aria-hidden="true" />
                     </div>
                   </button>
                 </h3>
@@ -72,11 +75,11 @@ export default function FAQSection() {
                   id={contentId}
                   role="region"
                   aria-labelledby={headerId}
-                  className={`px-5 sm:px-6 transition-all duration-300 ease-in-out ${
-                    isOpen ? 'max-h-96 pb-5 opacity-100' : 'max-h-0 pb-0 opacity-0 overflow-hidden'
+                  className={`px-4 sm:px-6 transition-all duration-300 ease-in-out ${
+                    isOpen ? 'max-h-96 pb-4 sm:pb-5 opacity-100' : 'max-h-0 pb-0 opacity-0 overflow-hidden'
                   }`}
                 >
-                  <p className="text-xs sm:text-sm text-stone-300 font-sans leading-relaxed pt-2 border-t border-stone-800/60">
+                  <p className="text-xs sm:text-sm text-stone-600 font-sans leading-relaxed pt-3 border-t border-[#EADBCA]">
                     {faq.a}
                   </p>
                 </div>
@@ -86,14 +89,14 @@ export default function FAQSection() {
         </div>
 
         {/* Bottom Direct Query CTA */}
-        <div className="mt-10 p-6 rounded-2xl border border-gold/20 bg-gradient-to-r from-stone-900/80 via-obsidian to-stone-900/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gold/10 border border-gold/30 flex items-center justify-center shrink-0 text-gold">
-              <Sparkles className="w-5 h-5" aria-hidden="true" />
+        <div className="mt-8 sm:mt-10 p-4 sm:p-6 rounded-2xl border border-[#EADBCA] bg-white shadow-[0_10px_30px_rgba(245,233,211,0.6)] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-[#F5E9D3] border border-[#EADBCA] flex items-center justify-center shrink-0 text-[#9E7D3B]">
+              <MessageSquare className="w-5 h-5 text-[#C5A059]" aria-hidden="true" />
             </div>
             <div>
-              <h4 className="font-cinzel text-sm font-bold text-stone-100">Have a specific civil or interior query?</h4>
-              <p className="text-xs text-stone-400">Speak directly with our senior site engineer on WhatsApp.</p>
+              <h4 className="font-cinzel text-xs sm:text-sm font-bold text-stone-900">Have a specific civil or interior query?</h4>
+              <p className="text-xs text-stone-600">Speak directly with our senior site engineer on WhatsApp.</p>
             </div>
           </div>
 
@@ -102,9 +105,9 @@ export default function FAQSection() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Ask questions on WhatsApp with Elegant Contractors and Interiors"
-            className="px-5 py-2.5 rounded-full bg-gold text-black font-mono text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#e8cf78] transition-colors shadow-md gold-glow-sm shrink-0"
+            className="px-5 py-2.5 rounded-full bg-stone-900 text-[#F5E9D3] hover:bg-stone-800 font-mono text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors shadow-md shrink-0"
           >
-            <MessageSquare className="w-4 h-4" aria-hidden="true" />
+            <MessageSquare className="w-4 h-4 text-[#C5A059]" aria-hidden="true" />
             <span>Ask on WhatsApp</span>
           </a>
         </div>

@@ -12,6 +12,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
+      url: `${baseUrl}/turnkey-interior-designer-kharar-mohali`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/modular-kitchen-maker-mohali-kharar`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
@@ -24,7 +30,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/turnkey-interior-designer-kharar-mohali`,
+      url: `${baseUrl}/civil-construction-contractor-kharar-mohali`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/modular-wardrobes-maker-mohali-kharar`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/commercial-interior-office-fitouts-mohali`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.9,

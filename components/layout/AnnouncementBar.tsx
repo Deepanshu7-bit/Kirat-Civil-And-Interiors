@@ -28,7 +28,7 @@ export default function AnnouncementBar() {
           </a>
           <span className="text-stone-400 hidden sm:inline">|</span>
           <span className="font-mono text-[10px] tracking-wider uppercase text-stone-700 bg-white/80 px-2 py-0.5 rounded border border-[#EADBCA] hidden md:inline">
-            Formerly Guru Kirpa Interiors & Civil Works
+            Sector 117 · ACME Heights-2 · Mohali
           </span>
         </div>
       </div>

@@ -11,6 +11,7 @@ export interface ServiceItem {
   features: string[];
   materialsUsed: string[];
   icon: string;
+  href?: string;
 }
 
 export interface PortfolioItem {

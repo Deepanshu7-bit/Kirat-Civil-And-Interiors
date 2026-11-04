@@ -22,7 +22,7 @@ import MobileStickyBar from '@/components/contact/MobileStickyBar';
 import { BUSINESS_INFO } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: 'POP Wala & False Ceiling Contractor in Mohali & Kharar | Gyproc Ceiling Rates',
+  title: 'POP & False Ceiling Contractor Mohali | Elegant Spaces',
   description: 'Experienced POP wala and false ceiling contractor in Mohali, Kharar & Sunny Enclave. Saint-Gobain Gyproc false ceilings, magnetic track lighting, cove LED profiles, and crack-free GI framing with rates from ₹75/sq ft.',
   keywords: [
     'pop wala near me',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.elegantspaces.me/pop-false-ceiling-contractor-mohali',
   },
   openGraph: {
-    title: 'POP Wala & False Ceiling Contractor in Mohali & Kharar | Elegant Contractors',
+    title: 'POP & False Ceiling Contractor Mohali | Elegant Spaces',
     description: 'Bespoke Gyproc false ceilings, cove profile lighting, and designer POP work across Kharar, Sunny Enclave & Mohali with transparent per-square-foot pricing.',
     url: 'https://www.elegantspaces.me/pop-false-ceiling-contractor-mohali',
     type: 'website',
@@ -60,7 +60,7 @@ export default function FalseCeilingPage() {
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "ACME HEIGHTS-2, 309/G, Sector 117, Ex 2",
-        "addressLocality": "Mohali",
+        "addressLocality": "Sahibzada Ajit Singh Nagar",
         "addressRegion": "Punjab",
         "postalCode": "140301",
         "addressCountry": "IN"
@@ -125,30 +125,30 @@ export default function FalseCeilingPage() {
 
       <Navbar />
 
-      <main className="min-h-screen bg-[#FAF8F5] text-stone-900 selection:bg-gold/30 selection:text-white">
+      <main className="min-h-screen bg-[#FAF8F5] text-stone-900 selection:bg-gold/30 selection:text-stone-900 pt-[68px] sm:pt-[72px]">
         {/* Breadcrumbs */}
         <div className="bg-white border-b border-[#EADBCA] py-2.5 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto flex items-center gap-2 text-xs font-mono text-stone-500">
-            <Link href="/" className="hover:text-stone-900 transition-colors">Home</Link>
-            <ChevronRight className="w-3.5 h-3.5 text-stone-400" />
-            <span className="text-stone-400">Services</span>
-            <ChevronRight className="w-3.5 h-3.5 text-stone-400" />
-            <span className="text-[#9E7D3B] font-semibold">POP Wala & False Ceiling Contractor Mohali</span>
+          <div className="max-w-7xl mx-auto flex items-center gap-2 text-xs font-mono text-stone-500 overflow-x-auto whitespace-nowrap">
+            <Link href="/" className="hover:text-stone-900 transition-colors shrink-0">Home</Link>
+            <ChevronRight className="w-3.5 h-3.5 text-stone-400 shrink-0" />
+            <span className="text-stone-400 shrink-0">Services</span>
+            <ChevronRight className="w-3.5 h-3.5 text-stone-400 shrink-0" />
+            <span className="text-[#9E7D3B] font-semibold shrink-0">POP Wala &amp; False Ceiling Contractor Mohali</span>
           </div>
         </div>
 
         {/* Hero Section */}
-        <section className="relative py-14 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[radial-gradient(circle_at_top,#F5E9D3_0%,transparent_60%)]">
-          <div className="max-w-5xl mx-auto text-center space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#EADBCA] bg-white/80 backdrop-blur-sm text-xs font-mono text-stone-800 shadow-sm">
+        <section className="relative py-12 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[radial-gradient(circle_at_top,#F5E9D3_0%,transparent_60%)]">
+          <div className="max-w-5xl mx-auto text-center space-y-5 sm:space-y-6">
+            <div className="inline-flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-full border border-[#EADBCA] bg-white/80 backdrop-blur-sm text-[10px] sm:text-xs font-mono text-stone-800 shadow-sm max-w-full text-center">
               <span className="w-2 h-2 rounded-full bg-[#C5A059] animate-pulse" />
               <span className="text-[#9E7D3B] font-semibold uppercase tracking-wider">MOHALI · KHARAR · TRICITY</span>
-              <span className="text-stone-400">|</span>
-              <span className="text-stone-600 font-sans">STARTING AT ₹75 / SQ FT</span>
+              <span className="text-stone-400 hidden xs:inline">|</span>
+              <span className="text-stone-600 font-sans hidden xs:inline">STARTING AT ₹75 / SQ FT</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-cinzel font-bold text-stone-900 tracking-tight leading-tight">
-              Master <span className="text-[#C5A059]">POP Wala & False Ceiling</span> Contractor in Mohali
+            <h1 className="text-2xl sm:text-5xl lg:text-6xl font-cinzel font-bold text-stone-900 tracking-tight leading-tight">
+              Master <span className="text-[#C5A059]">POP Wala &amp; False Ceiling</span> Contractor in Mohali
             </h1>
 
             <p className="text-base sm:text-lg text-stone-600 max-w-3xl mx-auto font-sans leading-relaxed">
@@ -330,13 +330,13 @@ export default function FalseCeilingPage() {
         </section>
 
         {/* CTA Banner */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-stone-900 text-[#F5E9D3] text-center relative overflow-hidden">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#FAF8F5] via-[#F5E9D3]/40 to-[#FAF8F5] border-t border-[#EADBCA] text-center relative overflow-hidden">
           <div className="max-w-3xl mx-auto space-y-6">
-            <span className="font-mono text-xs uppercase tracking-widest text-[#C5A059] font-semibold">NEED AN ON-SITE MEASUREMENT?</span>
-            <h2 className="text-3xl sm:text-5xl font-cinzel font-bold text-white tracking-tight">
+            <span className="font-mono text-xs uppercase tracking-widest text-[#9E7D3B] font-semibold">NEED AN ON-SITE MEASUREMENT?</span>
+            <h2 className="text-3xl sm:text-5xl font-cinzel font-bold text-stone-900 tracking-tight">
               Get Your False Ceiling Measured Today
             </h2>
-            <p className="text-sm sm:text-base text-stone-300 font-sans leading-relaxed">
+            <p className="text-sm sm:text-base text-stone-600 font-sans leading-relaxed">
               Available across Sector 117 ACME Heights-2, Sunny Enclave Sector 125, Gillco Valley Kharar, and all Mohali GMADA sectors.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
@@ -344,14 +344,14 @@ export default function FalseCeilingPage() {
                 href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=Hi%20Elegant%20Contractors,%20I%20want%20to%20get%20false%20ceiling%20measurements%20and%20rates%20for%20my%20site.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#C5A059] text-stone-950 font-mono text-xs tracking-wider uppercase font-bold flex items-center justify-center gap-2 hover:bg-[#b38e46] transition-all shadow-lg"
+                className="w-full sm:w-auto px-8 py-4 rounded-full bg-stone-900 text-[#F5E9D3] font-mono text-xs tracking-wider uppercase font-bold flex items-center justify-center gap-2 hover:bg-stone-800 transition-all shadow-lg"
               >
-                <MessageSquare className="w-4 h-4" />
+                <MessageSquare className="w-4 h-4 text-[#C5A059]" />
                 <span>Schedule Free Site Measurement</span>
               </a>
               <a
                 href={`tel:${BUSINESS_INFO.phone.replace(/[^0-9+]/g, '')}`}
-                className="w-full sm:w-auto px-7 py-4 rounded-full border border-stone-700 bg-stone-800 text-stone-200 font-mono text-xs tracking-wider uppercase hover:border-[#C5A059] transition-all flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-7 py-4 rounded-full border border-[#EADBCA] bg-white text-stone-800 font-mono text-xs tracking-wider uppercase hover:border-[#C5A059] transition-all flex items-center justify-center gap-2 shadow-sm"
               >
                 <Phone className="w-4 h-4 text-[#C5A059]" />
                 <span>Call {BUSINESS_INFO.phone}</span>

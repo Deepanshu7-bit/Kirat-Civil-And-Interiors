@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
-import { Plus_Jakarta_Sans, Cinzel, Space_Mono } from 'next/font/google';
+import { Plus_Jakarta_Sans, Cinzel, Space_Mono, Cormorant_Garamond } from 'next/font/google';
 import './globals.css';
 import { generateLocalBusinessSchema, generateFAQSchema } from '@/lib/schema';
 import { Analytics } from '@vercel/analytics/next';
+import SplashScreen from '@/components/layout/SplashScreen';
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -18,6 +19,13 @@ const cinzel = Cinzel({
   display: 'swap',
 });
 
+const cormorant = Cormorant_Garamond({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--font-cormorant',
+  display: 'swap',
+});
+
 const spaceMono = Space_Mono({
   weight: ['400', '700'],
   subsets: ['latin'],
@@ -26,7 +34,7 @@ const spaceMono = Space_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: '#09090b',
+  themeColor: '#FAF8F5',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
@@ -35,13 +43,13 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.elegantspaces.me'),
   title: {
-    default: 'Elegant Contractors and Interiors | Turnkey Civil & Luxury Interior Contractor in Kharar & Mohali',
+    default: 'Civil & Interior Contractor Mohali, Kharar | Elegant Spaces',
     template: '%s | Elegant Contractors and Interiors',
   },
   description: 'From solid civil foundation to bespoke luxury interiors. Leading turnkey civil construction, modular kitchens, structural alterations, and architectural false ceilings across Kharar, Sunny Enclave, and Mohali Tricity.',
   keywords: [
     'elegant contractors and interiors',
-    'guru kirpa interiors and civil works',
+    'elegant contractors',
     'civil mistri near me',
     'civil thekedar mohali',
     'modular kitchen maker near me',
@@ -79,23 +87,23 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: 'https://www.elegantspaces.me',
-    title: 'Elegant Contractors and Interiors | Turnkey Civil & Luxury Interior Contractor',
+    title: 'Civil & Interior Contractor Mohali | Elegant Contractors',
     description: 'Bespoke Turnkey Civil Engineering & Luxury Interior Studio based in Mohali & Kharar. Complete structural foundation-to-handover execution.',
     siteName: 'Elegant Contractors and Interiors',
     images: [
       {
-        url: '/logos/elegant-logo-luxury-crest.jpg',
-        width: 1024,
-        height: 1024,
-        alt: 'Elegant Contractors and Interiors Luxury Architectural Crest',
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Elegant Contractors and Interiors Logo',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Elegant Contractors and Interiors | Turnkey Civil & Luxury Interior Contractor',
+    title: 'Civil & Interior Contractor Mohali | Elegant Contractors',
     description: 'Bespoke Turnkey Civil Engineering & Luxury Interior Studio in Kharar & Mohali.',
-    images: ['/logos/elegant-logo-luxury-crest.jpg'],
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -110,10 +118,15 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/icon.png', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png', sizes: '48x48' },
+      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+      { url: '/icon-512.png', type: 'image/png', sizes: '512x512' },
     ],
-    shortcut: '/icon.png',
-    apple: '/apple-icon.png',
+    shortcut: '/favicon.ico',
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
 };
 
@@ -126,7 +139,7 @@ export default function RootLayout({
   const faqJsonLd = generateFAQSchema();
 
   return (
-    <html lang="en" className={`${jakarta.variable} ${cinzel.variable} ${spaceMono.variable} dark scroll-smooth`}>
+    <html lang="en" className={`${jakarta.variable} ${cinzel.variable} ${cormorant.variable} ${spaceMono.variable} scroll-smooth`}>
       <head>
         <script
           type="application/ld+json"
@@ -136,8 +149,14 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
+        <script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="Cbhre7fWFkg/wx/VDFiasg"
+          async
+        />
       </head>
-      <body className="bg-obsidian text-zinc-100 antialiased selection:bg-gold/30 selection:text-white flex flex-col min-h-screen">
+      <body className="bg-[#FAF8F5] text-stone-900 antialiased selection:bg-gold/30 selection:text-stone-900 flex flex-col min-h-screen">
+        <SplashScreen />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-BLCJ1SNJ4G"
           strategy="afterInteractive"

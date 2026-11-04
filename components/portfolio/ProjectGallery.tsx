@@ -28,7 +28,7 @@ export default function ProjectGallery() {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-1.5 sm:gap-2">
             {[
               { id: 'all', label: 'All Projects' },
               { id: 'residential', label: 'Residential' },
@@ -39,7 +39,7 @@ export default function ProjectGallery() {
               <button
                 key={tab.id}
                 onClick={() => setFilter(tab.id)}
-                className={`px-4 py-1.5 rounded-full font-mono text-xs tracking-wider uppercase transition-all duration-300 cursor-pointer ${
+                className={`px-3 sm:px-4 py-1.5 rounded-full font-mono text-[11px] sm:text-xs tracking-wider uppercase transition-all duration-300 cursor-pointer ${
                   filter === tab.id
                     ? 'bg-stone-900 text-[#F5E9D3] font-semibold shadow'
                     : 'bg-white border border-[#EADBCA] text-stone-600 hover:text-stone-900 hover:border-[#C5A059]'
@@ -51,7 +51,7 @@ export default function ProjectGallery() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
           {filteredItems.map((project) => (
             <div
               key={project.id}
@@ -62,22 +62,22 @@ export default function ProjectGallery() {
                   src={project.image}
                   alt={project.title}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes="(max-width: 640px) 92vw, (max-width: 1024px) 45vw, 380px"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent" />
 
-                <div className="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-md px-2.5 py-1 rounded text-[10px] font-mono text-[#F5E9D3] uppercase tracking-wider border border-[#EADBCA]/40">
+                <div className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 bg-stone-900/80 backdrop-blur-md px-2.5 py-1 rounded text-[10px] font-mono text-[#F5E9D3] uppercase tracking-wider border border-[#EADBCA]/40">
                   {project.bhk}
                 </div>
 
-                <div className="absolute bottom-3 left-3 flex items-center gap-1.5 text-xs font-mono text-white">
+                <div className="absolute bottom-2.5 left-2.5 sm:bottom-3 sm:left-3 flex items-center gap-1.5 text-xs font-mono text-white">
                   <MapPin className="w-3.5 h-3.5 text-[#C5A059]" />
                   <span>{project.locality}</span>
                 </div>
               </div>
 
-              <div className="p-5 flex flex-col justify-between flex-grow">
+              <div className="p-4 sm:p-5 flex flex-col justify-between flex-grow">
                 <div>
                   <h3 className="font-cinzel text-base sm:text-lg font-bold text-stone-900 group-hover:text-[#9E7D3B] transition-colors">
                     {project.title}

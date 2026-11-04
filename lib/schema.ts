@@ -5,7 +5,7 @@ export function generateLocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     "name": BUSINESS_INFO.name,
-    "alternateName": [BUSINESS_INFO.legalTag, "Elegant Contractors & Interiors Kharar Mohali", "Guru Kripa Interior & Civil Work"],
+    "alternateName": ["Elegant Contractors & Interiors", "Elegant Contractors And Interiors Mohali", "Elegant Spaces"],
     "description": "Premier turnkey civil contractor and bespoke luxury interior designer based in Sector 117 ACME Heights-2 and Sunny Enclave Kharar, Mohali. Specializing in complete home renovations, RCC civil structural alterations, modular acrylic kitchens, and architectural false ceilings with single-point accountability.",
     "logo": "https://www.elegantspaces.me/logos/elegant-logo-luxury-crest.jpg",
     "image": "https://www.elegantspaces.me/logos/elegant-logo-luxury-crest.jpg",
@@ -28,7 +28,7 @@ export function generateLocalBusinessSchema() {
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "ACME HEIGHTS-2, 309/G, Sector 117, Ex 2",
-      "addressLocality": "Sahibzada Ajit Singh Nagar, Mohali",
+      "addressLocality": "Sahibzada Ajit Singh Nagar",
       "addressRegion": "Punjab",
       "postalCode": "140301",
       "addressCountry": "IN"
@@ -80,6 +80,20 @@ export function generateLocalBusinessSchema() {
           "itemOffered": {
             "@type": "Service",
             "name": "Architectural False Ceilings & Mood Lighting"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Custom Modular Wardrobes & Architectural Millwork"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Commercial Office Fit-Outs & SCO Interiors"
           }
         }
       ]

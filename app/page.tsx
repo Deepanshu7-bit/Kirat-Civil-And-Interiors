@@ -1,5 +1,4 @@
 import React from 'react';
-import AnnouncementBar from '@/components/layout/AnnouncementBar';
 import Navbar from '@/components/layout/Navbar';
 import HeroSection from '@/components/hero/HeroSection';
 import RawToFinishedSection from '@/components/transformation/RawToFinishedSection';
@@ -15,14 +14,11 @@ import MobileStickyBar from '@/components/contact/MobileStickyBar';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-obsidian flex flex-col selection:bg-gold/30 selection:text-white relative">
-      {/* Top Banner */}
-      <AnnouncementBar />
-
-      {/* Main Navigation */}
+    <main className="min-h-screen bg-[#FAF8F5] text-stone-900 flex flex-col selection:bg-gold/30 selection:text-stone-900 relative">
+      {/* Main Navigation (Fixed Header over Hero) */}
       <Navbar />
 
-      {/* Hero Section with 3D Brand Centerpiece */}
+      {/* Hero Section with Full-Bleed Video Background */}
       <HeroSection />
 
       {/* Interactive From Raw to Finished Comparison Engine */}

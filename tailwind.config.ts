@@ -9,6 +9,9 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
+      screens: {
+        xs: "420px",
+      },
       colors: {
         obsidian: "#09090b",
         surface: "#121215",
@@ -22,6 +25,7 @@ const config: Config = {
         },
       },
       fontFamily: {
+        cormorant: ["var(--font-cormorant)", "Georgia", "serif"],
         cinzel: ["var(--font-cinzel)", "serif"],
         sans: ["var(--font-jakarta)", "sans-serif"],
         mono: ["var(--font-mono)", "monospace"],

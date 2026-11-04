@@ -1,14 +1,14 @@
 import { ServiceItem, PortfolioItem, TransformationRoom, TestimonialItem } from './types';
 
 export const BUSINESS_INFO = {
-  name: "Elegant Contractors and Interiors",
-  legalTag: "Formerly Guru Kripa Interior & Civil Work",
+  name: "Elegant Contractors And Interiors",
+  legalTag: "Turnkey Civil & Luxury Interior Contractor",
   googleProfileUrl: "https://share.google/dOlbrTeWCayWnMQKu",
   googleMapsCidUrl: "https://maps.google.com/?cid=8580072631903777693",
-  phone: "+91 7401011740",
-  whatsapp: "917401011740",
+  phone: "+91 98783 90090",
+  whatsapp: "919878390090",
   email: "contact@elegantcontractors.com",
-  address: "ACME HEIGHTS-2, 309/G, Sector 117, Ex 2, Sahibzada Ajit Singh Nagar (Mohali), Punjab 140301",
+  address: "ACME HEIGHTS-2, 309/G, Sector 117, Ex 2, Sahibzada Ajit Singh Nagar, Punjab 140301",
   coordinates: {
     lat: 30.729150,
     lng: 76.688320,
@@ -41,7 +41,8 @@ export const SERVICES_DATA: ServiceItem[] = [
       "Concealed electrical piping & sanitary conduit carving"
     ],
     materialsUsed: ["UltraTech / ACC 53 Grade Cement", "Kamdhenu / Tata Tiscon Steel", "Dr. Fixit Pidifin 2K Waterproofing"],
-    icon: "Building2"
+    icon: "Building2",
+    href: "/civil-construction-contractor-kharar-mohali"
   },
   {
     id: "turnkey-interiors",
@@ -56,7 +57,8 @@ export const SERVICES_DATA: ServiceItem[] = [
       "Deep chemical site cleaning before key handover"
     ],
     materialsUsed: ["CenturyPly / Greenply Calibrated BWP 710", "Merino Luxury Laminates", "Asian Paints Royale Luxury Emulsion"],
-    icon: "Compass"
+    icon: "Compass",
+    href: "/turnkey-interior-designer-kharar-mohali"
   },
   {
     id: "modular-kitchens",
@@ -71,7 +73,8 @@ export const SERVICES_DATA: ServiceItem[] = [
       "Pantry pull-outs, wicker baskets & magic corner carousels"
     ],
     materialsUsed: ["BWP 710 Marine Ply", "Hettich InnoTech Atira Drawers", "1mm High-Gloss Acrylic / PU Finish"],
-    icon: "LayoutGrid"
+    icon: "LayoutGrid",
+    href: "/modular-kitchen-maker-mohali-kharar"
   },
   {
     id: "wardrobes-millwork",
@@ -86,7 +89,8 @@ export const SERVICES_DATA: ServiceItem[] = [
       "Acoustic fluted wooden louvers & charcoal louvers"
     ],
     materialsUsed: ["Aluminum Profile Shutters", "Saint-Gobain Tinted Glass", "Hafele Wardrobe Sliders"],
-    icon: "Maximize"
+    icon: "Maximize",
+    href: "/modular-wardrobes-maker-mohali-kharar"
   },
   {
     id: "false-ceiling-lighting",
@@ -101,7 +105,8 @@ export const SERVICES_DATA: ServiceItem[] = [
       "Smart switch & dimmable mood lighting integration"
     ],
     materialsUsed: ["Saint-Gobain Gyproc Sheets", "Philips / Havells COB LED Profiles", "Rust-Proof GI Framing"],
-    icon: "SunMedium"
+    icon: "SunMedium",
+    href: "/pop-false-ceiling-contractor-mohali"
   },
   {
     id: "commercial-fitouts",
@@ -116,7 +121,8 @@ export const SERVICES_DATA: ServiceItem[] = [
       "Strict compliance with fire safety electrical conduits"
     ],
     materialsUsed: ["Armstrong Acoustic Tiles", "Dorma / Ozone Glass Hardware", "Finolex FRLS Fire-Resistant Cables"],
-    icon: "Briefcase"
+    icon: "Briefcase",
+    href: "/commercial-interior-office-fitouts-mohali"
   }
 ];
 
@@ -245,11 +251,11 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
 export const FAQS_DATA = [
   {
     q: "Who is the best turnkey interior designer and civil contractor in Kharar and Sunny Enclave?",
-    a: "Elegant Contractors and Interiors (formerly Guru Kripa Interior & Civil Work) is widely recognized as the leading turnkey contractor in Kharar, Sunny Enclave (Sector 125), and Mohali. With over 12 years of hands-on execution and 150+ completed residences, we are unique in delivering heavy structural civil modifications and luxury bespoke interior fit-outs under single-point master accountability."
+    a: "Elegant Contractors And Interiors is widely recognized as the leading turnkey contractor in Kharar, Sunny Enclave (Sector 125), and Mohali. With over 12 years of hands-on execution and 180+ completed residences, we are unique in delivering heavy structural civil modifications and luxury bespoke interior fit-outs under single-point master accountability."
   },
   {
-    q: "Is Elegant Contractors and Interiors the same as Guru Kripa Interior & Civil Work?",
-    a: "Yes. Elegant Contractors and Interiors is the evolved brand identity of Guru Kripa Interior & Civil Work. The leadership, master craftsmen team, Sector 125 Sunny Enclave workshop, phone number (+91 7401011740), and verified Google Business Profile (CID: 8580072631903777693) remain identical, upgraded with modern 3D CAD visualization and transparent itemized BOQ estimations."
+    q: "What warranties and guarantees do Elegant Contractors And Interiors provide?",
+    a: "We provide an ironclad 10-year waterproof warranty on 100% BWP 710 marine plywood woodwork, manufacturer warranty on German soft-close hydraulic hardware (Hettich/Hafele), and written contractual delivery timelines with zero surprise budget escalation clauses across all Mohali and Kharar sites."
   },
   {
     q: "Why choose Elegant Contractors over hiring separate masons and carpenters?",

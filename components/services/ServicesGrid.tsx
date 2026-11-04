@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { 
   Building2, 
   Compass, 
@@ -40,11 +41,11 @@ export default function ServicesGrid() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
           {SERVICES_DATA.map((service) => (
             <div
               key={service.id}
-              className="rounded-2xl p-6 sm:p-7 bg-white border border-[#EADBCA] hover:border-[#C5A059] shadow-[0_10px_30px_rgba(245,233,211,0.5)] hover:shadow-[0_15px_35px_rgba(245,233,211,0.8)] transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1"
+              className="rounded-2xl p-5 sm:p-7 bg-white border border-[#EADBCA] hover:border-[#C5A059] shadow-[0_10px_30px_rgba(245,233,211,0.5)] hover:shadow-[0_15px_35px_rgba(245,233,211,0.8)] transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
@@ -57,7 +58,13 @@ export default function ServicesGrid() {
                 </div>
 
                 <h3 className="font-cinzel text-lg sm:text-xl font-bold text-stone-900 group-hover:text-[#9E7D3B] transition-colors">
-                  {service.title}
+                  {service.href ? (
+                    <Link href={service.href} className="hover:underline">
+                      {service.title}
+                    </Link>
+                  ) : (
+                    service.title
+                  )}
                 </h3>
                 <p className="text-xs font-mono text-[#C5A059] mt-1 tracking-wide font-medium">
                   {service.tagline}
@@ -77,7 +84,7 @@ export default function ServicesGrid() {
                 </ul>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-[#EADBCA] flex items-center justify-between">
+              <div className="mt-6 pt-4 border-t border-[#EADBCA] flex flex-wrap items-center justify-between gap-2.5">
                 <div className="flex flex-wrap gap-1">
                   {service.materialsUsed.slice(0, 2).map((mat, i) => (
                     <span key={i} className="text-[10px] font-mono text-stone-500 bg-[#FAF8F5] px-2 py-0.5 rounded border border-[#EADBCA]">
@@ -85,15 +92,26 @@ export default function ServicesGrid() {
                     </span>
                   ))}
                 </div>
-                <a
-                  href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=Hi%20Elegant%20Contractors,%20I%20am%20interested%20in%20${encodeURIComponent(service.title)}.`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Inquire about ${service.title}`}
-                  className="w-8 h-8 rounded-full bg-stone-900 hover:bg-[#C5A059] text-[#F5E9D3] hover:text-stone-950 flex items-center justify-center transition-all group-hover:scale-105 cursor-pointer"
-                >
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </a>
+                {service.href ? (
+                  <Link
+                    href={service.href}
+                    aria-label={`View dedicated page for ${service.title}`}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-stone-900 hover:bg-[#C5A059] text-[#F5E9D3] hover:text-stone-950 font-mono text-[11px] font-semibold transition-all group-hover:scale-105 cursor-pointer shadow-sm"
+                  >
+                    <span>Explore</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </Link>
+                ) : (
+                  <a
+                    href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=Hi%20Elegant%20Contractors,%20I%20am%20interested%20in%20${encodeURIComponent(service.title)}.`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Inquire about ${service.title}`}
+                    className="w-8 h-8 rounded-full bg-stone-900 hover:bg-[#C5A059] text-[#F5E9D3] hover:text-stone-950 flex items-center justify-center transition-all group-hover:scale-105 cursor-pointer"
+                  >
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
+                )}
               </div>
             </div>
           ))}

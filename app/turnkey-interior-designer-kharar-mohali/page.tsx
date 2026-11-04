@@ -23,7 +23,7 @@ import MobileStickyBar from '@/components/contact/MobileStickyBar';
 import { BUSINESS_INFO } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: 'Turnkey Interior Designer in Kharar & Mohali | Civil Construction to Luxury Handover',
+  title: 'Turnkey Interior Designer Kharar, Mohali | Elegant Spaces',
   description: 'Top turnkey interior designer and civil contractor in Kharar, Sunny Enclave & Mohali. End-to-end 2BHK/3BHK house renovations, structural RCC changes, modular woodwork, and 3D architectural design under single-point accountability.',
   keywords: [
     'interior designer kharar',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.elegantspaces.me/turnkey-interior-designer-kharar-mohali',
   },
   openGraph: {
-    title: 'Turnkey Interior Designer in Kharar & Mohali | Elegant Contractors',
+    title: 'Turnkey Interior Designer Kharar, Mohali | Elegant Spaces',
     description: 'From solid civil foundations to bespoke luxury living. Master turnkey civil and interior execution across Kharar, Sunny Enclave, and Mohali Tricity.',
     url: 'https://www.elegantspaces.me/turnkey-interior-designer-kharar-mohali',
     type: 'website',
@@ -53,12 +53,12 @@ export default function TurnkeyInteriorPage() {
   const interiorSchema = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
-    "name": "Elegant Contractors & Interiors - Turnkey Civil & Interior Design",
+    "name": BUSINESS_INFO.name,
     "telephone": BUSINESS_INFO.phone,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "ACME HEIGHTS-2, 309/G, Sector 117, Ex 2",
-      "addressLocality": "Mohali",
+      "addressLocality": "Sahibzada Ajit Singh Nagar",
       "addressRegion": "Punjab",
       "postalCode": "140301",
       "addressCountry": "IN"
@@ -112,30 +112,30 @@ export default function TurnkeyInteriorPage() {
 
       <Navbar />
 
-      <main className="min-h-screen bg-[#FAF8F5] text-stone-900 selection:bg-gold/30 selection:text-white">
+      <main className="min-h-screen bg-[#FAF8F5] text-stone-900 selection:bg-gold/30 selection:text-stone-900 pt-[68px] sm:pt-[72px]">
         {/* Breadcrumb Bar */}
         <div className="bg-white border-b border-[#EADBCA] py-2.5 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto flex items-center gap-2 text-xs font-mono text-stone-500">
-            <Link href="/" className="hover:text-stone-900 transition-colors">Home</Link>
-            <ChevronRight className="w-3.5 h-3.5 text-stone-400" />
-            <span className="text-stone-400">Services</span>
-            <ChevronRight className="w-3.5 h-3.5 text-stone-400" />
-            <span className="text-[#9E7D3B] font-semibold">Turnkey Interior Designer Kharar & Mohali</span>
+          <div className="max-w-7xl mx-auto flex items-center gap-2 text-xs font-mono text-stone-500 overflow-x-auto whitespace-nowrap">
+            <Link href="/" className="hover:text-stone-900 transition-colors shrink-0">Home</Link>
+            <ChevronRight className="w-3.5 h-3.5 text-stone-400 shrink-0" />
+            <span className="text-stone-400 shrink-0">Services</span>
+            <ChevronRight className="w-3.5 h-3.5 text-stone-400 shrink-0" />
+            <span className="text-[#9E7D3B] font-semibold shrink-0">Turnkey Interior Designer Kharar &amp; Mohali</span>
           </div>
         </div>
 
         {/* Hero Section */}
-        <section className="relative py-14 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[radial-gradient(circle_at_top,#F5E9D3_0%,transparent_60%)]">
-          <div className="max-w-5xl mx-auto text-center space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#EADBCA] bg-white/80 backdrop-blur-sm text-xs font-mono text-stone-800 shadow-sm">
+        <section className="relative py-12 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[radial-gradient(circle_at_top,#F5E9D3_0%,transparent_60%)]">
+          <div className="max-w-5xl mx-auto text-center space-y-5 sm:space-y-6">
+            <div className="inline-flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-full border border-[#EADBCA] bg-white/80 backdrop-blur-sm text-[10px] sm:text-xs font-mono text-stone-800 shadow-sm max-w-full text-center">
               <span className="w-2 h-2 rounded-full bg-[#C5A059] animate-pulse" />
               <span className="text-[#9E7D3B] font-semibold uppercase tracking-wider">CIVIL FOUNDATION TO LUXURY HANDOVER</span>
-              <span className="text-stone-400">|</span>
-              <span className="text-stone-600 font-sans">SINGLE-POINT ACCOUNTABILITY</span>
+              <span className="text-stone-400 hidden xs:inline">|</span>
+              <span className="text-stone-600 font-sans hidden xs:inline">SINGLE-POINT ACCOUNTABILITY</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-cinzel font-bold text-stone-900 tracking-tight leading-tight">
-              Leading <span className="text-[#C5A059]">Turnkey Interior Designer</span> in Kharar & Mohali
+            <h1 className="text-2xl sm:text-5xl lg:text-6xl font-cinzel font-bold text-stone-900 tracking-tight leading-tight">
+              Leading <span className="text-[#C5A059]">Turnkey Interior Designer</span> in Kharar &amp; Mohali
             </h1>
 
             <p className="text-base sm:text-lg text-stone-600 max-w-3xl mx-auto font-sans leading-relaxed">
@@ -283,13 +283,13 @@ export default function TurnkeyInteriorPage() {
         </section>
 
         {/* CTA Banner */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-stone-900 text-[#F5E9D3] text-center relative overflow-hidden">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#FAF8F5] via-[#F5E9D3]/40 to-[#FAF8F5] border-t border-[#EADBCA] text-center relative overflow-hidden">
           <div className="max-w-3xl mx-auto space-y-6">
-            <span className="font-mono text-xs uppercase tracking-widest text-[#C5A059] font-semibold">START YOUR HOME TRANSFORMATION</span>
-            <h2 className="text-3xl sm:text-5xl font-cinzel font-bold text-white tracking-tight">
+            <span className="font-mono text-xs uppercase tracking-widest text-[#9E7D3B] font-semibold">START YOUR HOME TRANSFORMATION</span>
+            <h2 className="text-3xl sm:text-5xl font-cinzel font-bold text-stone-900 tracking-tight">
               Book Your Free 3D Interior Consultation
             </h2>
-            <p className="text-sm sm:text-base text-stone-300 font-sans leading-relaxed">
+            <p className="text-sm sm:text-base text-stone-600 font-sans leading-relaxed">
               Serving Sector 117 ACME Heights-2, Sunny Enclave Sector 125, Kharar-Landran Corridor, New Chandigarh, and SAS Nagar Mohali.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
@@ -297,14 +297,14 @@ export default function TurnkeyInteriorPage() {
                 href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=Hi%20Elegant%20Contractors,%20I%20want%20to%20schedule%20a%20site%20meeting%20for%20Turnkey%20Interior%20Design.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#C5A059] text-stone-950 font-mono text-xs tracking-wider uppercase font-bold flex items-center justify-center gap-2 hover:bg-[#b38e46] transition-all shadow-lg"
+                className="w-full sm:w-auto px-8 py-4 rounded-full bg-stone-900 text-[#F5E9D3] font-mono text-xs tracking-wider uppercase font-bold flex items-center justify-center gap-2 hover:bg-stone-800 transition-all shadow-lg"
               >
-                <MessageSquare className="w-4 h-4" />
+                <MessageSquare className="w-4 h-4 text-[#C5A059]" />
                 <span>Book Site Consultation on WhatsApp</span>
               </a>
               <a
                 href={`tel:${BUSINESS_INFO.phone.replace(/[^0-9+]/g, '')}`}
-                className="w-full sm:w-auto px-7 py-4 rounded-full border border-stone-700 bg-stone-800 text-stone-200 font-mono text-xs tracking-wider uppercase hover:border-[#C5A059] transition-all flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-7 py-4 rounded-full border border-[#EADBCA] bg-white text-stone-800 font-mono text-xs tracking-wider uppercase hover:border-[#C5A059] transition-all flex items-center justify-center gap-2 shadow-sm"
               >
                 <Phone className="w-4 h-4 text-[#C5A059]" />
                 <span>Call {BUSINESS_INFO.phone}</span>
