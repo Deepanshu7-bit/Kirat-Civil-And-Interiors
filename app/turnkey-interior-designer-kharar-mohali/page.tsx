@@ -160,7 +160,7 @@ export default function TurnkeyInteriorPage() {
         {/* ============================================================== */}
         <section className="relative min-h-[55vh] sm:min-h-[65vh] flex items-end overflow-hidden bg-stone-950">
           <Image
-            src="/images/finished-luxury-interior.jpg"
+            src="/images/finished-luxury-interior.webp"
             alt="Turnkey Interior Designer Kharar Mohali – Elegant Spaces"
             fill
             priority
@@ -184,11 +184,8 @@ export default function TurnkeyInteriorPage() {
               <h1 className="font-cormorant font-semibold text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.08]">
                 Turnkey Interior Design &amp; Civil Execution
               </h1>
-              <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-stone-200 font-light font-sans max-w-2xl leading-relaxed">
-                From structural masonry alterations to bespoke modular woodwork and atmospheric lighting, we deliver ready-to-move-in homes under single-point accountability.
-              </p>
 
-              <div className="mt-6 flex flex-wrap gap-4">
+              <div className="mt-6 sm:mt-8 flex flex-wrap gap-4">
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#C5A059] text-stone-950 font-sans text-xs uppercase tracking-wider font-semibold hover:bg-[#d6b36a] transition-all shadow-md"

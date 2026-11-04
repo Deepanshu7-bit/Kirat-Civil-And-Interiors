@@ -12,6 +12,14 @@ const nextConfig = {
       },
     ],
   },
+  webpack: (config, { dev }) => {
+    if (dev) {
+      // Disable Webpack filesystem disk cache in development to eliminate
+      // corrupt .pack.gz file locks and ENOENT unhandledRejection errors
+      config.cache = false;
+    }
+    return config;
+  },
 };
 
 export default nextConfig;

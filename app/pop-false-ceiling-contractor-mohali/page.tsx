@@ -155,11 +155,8 @@ export default function FalseCeilingPage() {
               <h1 className="font-cormorant font-semibold text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.08]">
                 Architectural False Ceilings &amp; Mood Lighting
               </h1>
-              <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-stone-200 font-light font-sans max-w-2xl leading-relaxed">
-                Sculpting interior space through glare-free indirect illumination, magnetic track rails, and rigid zinc-coated GI framing across Mohali, Kharar, and Chandigarh Tricity.
-              </p>
 
-              <div className="mt-6 flex flex-wrap gap-4">
+              <div className="mt-6 sm:mt-8 flex flex-wrap gap-4">
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#C5A059] text-stone-950 font-sans text-xs uppercase tracking-wider font-semibold hover:bg-[#d6b36a] transition-all shadow-md"

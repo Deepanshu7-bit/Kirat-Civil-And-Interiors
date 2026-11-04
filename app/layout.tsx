@@ -15,13 +15,13 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.elegantspaces.me'),
   title: {
-    default: 'Interior Design & Turnkey Construction Mohali, Kharar | Elegant Spaces',
-    template: '%s | Elegant Spaces – Contractors & Interiors',
+    default: 'Elegant Contractors and Interiors | Turnkey Civil & Interior Contractor Mohali, Kharar',
+    template: '%s | Elegant Contractors and Interiors',
   },
-  description: 'Interior design studio & turnkey civil contractor in Mohali, Kharar & Chandigarh Tricity. Thoughtful spaces, contemporary modular kitchens, luxury wardrobes, and architectural false ceilings.',
-  authors: [{ name: 'Elegant Spaces – Contractors & Interiors', url: 'https://www.elegantspaces.me' }],
-  creator: 'Elegant Spaces – Contractors & Interiors',
-  publisher: 'Elegant Spaces – Contractors & Interiors',
+  description: 'Elegant Contractors and Interiors is a premier turnkey civil contractor & interior design studio in Mohali, Kharar & Chandigarh Tricity. Specialized in complete home interiors, waterproof modular kitchens, false ceilings, and structural alterations.',
+  authors: [{ name: 'Elegant Contractors and Interiors', url: 'https://www.elegantspaces.me' }],
+  creator: 'Elegant Contractors and Interiors',
+  publisher: 'Elegant Contractors and Interiors',
   category: 'Interior Design and Turnkey Construction',
   alternates: {
     canonical: 'https://www.elegantspaces.me',
@@ -33,22 +33,22 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: 'https://www.elegantspaces.me',
-    title: 'Interior Design & Turnkey Construction Mohali | Elegant Spaces',
-    description: 'Interior design studio and turnkey construction brand based in Mohali & Kharar. Thoughtful spatial planning, modular kitchens, and architectural false ceilings across Chandigarh Tricity.',
-    siteName: 'Elegant Spaces – Contractors & Interiors',
+    title: 'Elegant Contractors and Interiors | Turnkey Civil & Interior Contractor Mohali',
+    description: 'Premier turnkey civil contractor & interior design studio in Mohali, Kharar & Chandigarh Tricity.',
+    siteName: 'Elegant Contractors and Interiors',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Elegant Spaces – Contractors & Interiors',
+        alt: 'Elegant Contractors and Interiors',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Interior Design & Turnkey Construction Mohali | Elegant Spaces',
-    description: 'Interior design studio and turnkey construction brand in Kharar & Mohali.',
+    title: 'Elegant Contractors and Interiors | Turnkey Civil & Interior Contractor Mohali',
+    description: 'Premier turnkey civil contractor & interior design studio in Kharar & Mohali.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -64,14 +64,15 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/icon.png', type: 'image/png', sizes: '48x48' },
-      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
-      { url: '/icon-512.png', type: 'image/png', sizes: '512x512' },
+      { url: '/favicon.ico?v=2', sizes: 'any' },
+      { url: '/icon.png?v=2', type: 'image/png', sizes: '48x48' },
+      { url: '/icon-96.png?v=2', type: 'image/png', sizes: '96x96' },
+      { url: '/icon-192.png?v=2', type: 'image/png', sizes: '192x192' },
+      { url: '/icon-512.png?v=2', type: 'image/png', sizes: '512x512' },
     ],
-    shortcut: '/favicon.ico',
+    shortcut: '/favicon.ico?v=2',
     apple: [
-      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/apple-icon.png?v=2', sizes: '180x180', type: 'image/png' },
     ],
   },
 };

@@ -1,8 +1,9 @@
 import { ServiceItem, TransformationRoom, TestimonialItem } from './types';
 
 export const BUSINESS_INFO = {
-  name: "Elegant Spaces – Contractors & Interiors",
-  legalTag: "Interior Design Studio & Turnkey Construction",
+  name: "Elegant Contractors and Interiors",
+  brandName: "Elegant Spaces",
+  legalTag: "Turnkey Civil Contractor & Interior Design Studio",
   googleProfileUrl: "https://share.google/dOlbrTeWCayWnMQKu",
   googleMapsCidUrl: "https://maps.google.com/?cid=8580072631903777693",
   phone: "+91 98783 90090",

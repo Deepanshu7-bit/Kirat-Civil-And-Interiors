@@ -103,13 +103,13 @@ export default function AboutPage() {
     {
       title: 'Civil Construction',
       desc: 'Structural brickwork alterations, RCC lintels, wall shifting, floor screed leveling, and chemical damp-proofing.',
-      image: '/images/raw-civil-site.jpg',
+      image: '/images/raw-civil-site.webp',
       href: '/civil-construction-contractor-kharar-mohali'
     },
     {
       title: 'Residential Renovation',
       desc: 'Re-imagining existing builder floors and independent residences with modern open layouts and high-performance finishes.',
-      image: '/images/furnished-master-bedroom.jpg',
+      image: '/images/furnished-master-bedroom.webp',
       href: '/turnkey-interior-designer-kharar-mohali'
     },
     {
@@ -156,30 +156,68 @@ export default function AboutPage() {
 
       <Navbar />
 
-      <main className="bg-[#FAF8F5] text-stone-900 pt-16 sm:pt-20">
+      <main className="bg-[#FAF8F5] text-stone-900 pt-20 sm:pt-24">
         {/* ============================================================== */}
-        {/* A. About Hero Section                                          */}
+        {/* A. Editorial Architectural Hero Section                         */}
         {/* ============================================================== */}
-        <section className="relative min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center overflow-hidden bg-stone-950">
-          <Image
-            src="/images/luxury-architectural-lobby.jpg"
-            alt="Creating Spaces That Feel Like Yours – Elegant Spaces"
-            fill
-            priority
-            className="object-cover object-center opacity-45 brightness-95"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-stone-950/20" />
-
-          <div className="relative z-10 max-w-4xl mx-auto px-5 sm:px-8 text-center py-20">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#F5E9D3] text-xs font-mono uppercase tracking-[0.2em] mb-4">
-              <span>About Elegant Spaces</span>
+        <section className="pt-8 sm:pt-14 pb-16 sm:pb-20 px-5 sm:px-8 lg:px-12 max-w-7xl mx-auto">
+          {/* Header Typography */}
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F5E9D3] border border-[#EADBCA] text-[#9E7D3B] text-xs font-mono uppercase tracking-[0.2em] mb-4 shadow-2xs">
+              <Sparkles className="w-3.5 h-3.5 text-[#C5A059]" />
+              <span>ABOUT ELEGANT SPACES</span>
             </div>
-            <h1 className="font-cormorant font-semibold text-4xl sm:text-6xl lg:text-7xl text-white tracking-tight leading-[1.08]">
-              Creating Spaces That Feel Like Yours.
+
+            <h1 className="font-cormorant font-semibold text-4xl sm:text-6xl lg:text-7xl text-stone-900 tracking-tight leading-[1.08]">
+              Where Thoughtful Design Meets Civil Integrity.
             </h1>
-            <p className="mt-5 text-sm sm:text-base lg:text-lg text-stone-200/90 font-sans max-w-2xl mx-auto leading-relaxed font-light">
-              We unite interior design artistry with civil engineering discipline, delivering thoughtful, enduring homes across Mohali, Kharar, and Chandigarh Tricity.
+
+            <p className="mt-4 sm:mt-5 text-sm sm:text-base lg:text-lg text-stone-600 font-sans max-w-2xl mx-auto font-light leading-relaxed">
+              We unite interior architecture with on-site civil engineering discipline — delivering enduring, beautifully detailed residences across Mohali, Kharar, and Chandigarh Tricity.
             </p>
+          </div>
+
+          {/* Panoramic Architectural Visual Frame */}
+          <div className="relative aspect-[16/9] sm:aspect-[21/9] rounded-3xl overflow-hidden border border-[#EADBCA] shadow-2xl bg-stone-100">
+            <Image
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+              alt="Architectural residential interior by Elegant Spaces"
+              fill
+              priority
+              sizes="(max-width: 1280px) 100vw, 1280px"
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-stone-950/15 to-transparent" />
+
+            {/* Subtle Floating Bottom Pill */}
+            <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 bg-stone-950/80 backdrop-blur-md border border-[#EADBCA]/40 px-3.5 sm:px-4 py-2 rounded-2xl text-xs font-mono text-[#F5E9D3] flex items-center gap-2 shadow-lg">
+              <span className="w-2 h-2 rounded-full bg-[#C5A059] animate-pulse" />
+              <span className="tracking-wider uppercase text-[10px] sm:text-xs">Single-Point Accountability · Foundation to Luxury Handover</span>
+            </div>
+          </div>
+
+          {/* Core Trust Pillars Bar */}
+          <div className="mt-10 sm:mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+            <div className="p-4 sm:p-5 rounded-2xl border border-[#EADBCA] bg-white shadow-xs">
+              <span className="font-cinzel text-2xl sm:text-3xl font-bold text-stone-900 block">12+</span>
+              <span className="font-mono text-[10px] sm:text-[11px] text-[#9E7D3B] uppercase tracking-wider block mt-1">Years Site Experience</span>
+              <span className="font-sans text-xs text-stone-600 block mt-1">Proven civil &amp; interior execution across Tricity</span>
+            </div>
+            <div className="p-4 sm:p-5 rounded-2xl border border-[#EADBCA] bg-white shadow-xs">
+              <span className="font-cinzel text-2xl sm:text-3xl font-bold text-stone-900 block">100%</span>
+              <span className="font-mono text-[10px] sm:text-[11px] text-[#9E7D3B] uppercase tracking-wider block mt-1">In-House Supervision</span>
+              <span className="font-sans text-xs text-stone-600 block mt-1">No contractor blame games or third-party hand-offs</span>
+            </div>
+            <div className="p-4 sm:p-5 rounded-2xl border border-[#EADBCA] bg-white shadow-xs">
+              <span className="font-cinzel text-2xl sm:text-3xl font-bold text-stone-900 block">BWP 710</span>
+              <span className="font-mono text-[10px] sm:text-[11px] text-[#9E7D3B] uppercase tracking-wider block mt-1">Marine Plywood Standard</span>
+              <span className="font-sans text-xs text-stone-600 block mt-1">CenturyPly &amp; Greenply waterproof carcases</span>
+            </div>
+            <div className="p-4 sm:p-5 rounded-2xl border border-[#EADBCA] bg-white shadow-xs">
+              <span className="font-cinzel text-2xl sm:text-3xl font-bold text-stone-900 block">Itemized</span>
+              <span className="font-mono text-[10px] sm:text-[11px] text-[#9E7D3B] uppercase tracking-wider block mt-1">Milestone Payments</span>
+              <span className="font-sans text-xs text-stone-600 block mt-1">Transparent BOQ with zero surprise escalations</span>
+            </div>
           </div>
         </section>
 
@@ -191,7 +229,7 @@ export default function AboutPage() {
             <div className="lg:col-span-5 relative">
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-[#EADBCA] shadow-2xl bg-stone-100">
                 <Image
-                  src="/images/finished-luxury-interior.jpg"
+                  src="/images/finished-luxury-interior.webp"
                   alt="Thoughtfully designed interior space by Elegant Spaces"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"

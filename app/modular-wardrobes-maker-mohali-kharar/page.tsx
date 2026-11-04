@@ -153,11 +153,8 @@ export default function ModularWardrobesPage() {
               <h1 className="font-cormorant font-semibold text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.08]">
                 Designer Modular Wardrobes &amp; Millwork
               </h1>
-              <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-stone-200 font-light font-sans max-w-2xl leading-relaxed">
-                Custom floor-to-ceiling sliding wardrobes, tinted glass shutters, automated motion-sensor illumination, and personalized storage configurations in Mohali &amp; Kharar.
-              </p>
 
-              <div className="mt-6 flex flex-wrap gap-4">
+              <div className="mt-6 sm:mt-8 flex flex-wrap gap-4">
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#C5A059] text-stone-950 font-sans text-xs uppercase tracking-wider font-semibold hover:bg-[#d6b36a] transition-all shadow-md"

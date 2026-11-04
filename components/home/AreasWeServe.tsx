@@ -35,11 +35,11 @@ export default function AreasWeServe() {
   ];
 
   return (
-    <section className="py-20 sm:py-28 px-5 sm:px-8 lg:px-12 max-w-7xl mx-auto">
+    <section id="service-areas" className="py-20 sm:py-28 px-5 sm:px-8 lg:px-12 max-w-7xl mx-auto">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
         <div>
           <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#9E7D3B] bg-[#F5E9D3] border border-[#EADBCA] px-3.5 py-1 rounded-full mb-3 inline-block">
-            LOCAL TRICITY PRESENCE
+            WHERE WE WORK · SERVICE AREAS
           </span>
           <h2 className="font-cormorant font-semibold text-3xl sm:text-5xl lg:text-6xl text-stone-900 tracking-tight leading-tight">
             Areas We Serve Across Tricity
@@ -47,7 +47,7 @@ export default function AreasWeServe() {
         </div>
 
         <p className="text-xs sm:text-sm text-stone-600 font-sans max-w-md leading-relaxed">
-          Our site engineering and measurement teams are deployed daily across the Chandigarh Tricity corridor for complimentary site visits.
+          Where we work: Our civil engineers and interior project supervisors are actively deployed across Mohali, Kharar, and Chandigarh Tricity for complimentary on-site visits and laser measurements.
         </p>
       </div>
 
