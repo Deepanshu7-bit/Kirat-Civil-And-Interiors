@@ -44,7 +44,7 @@ export default function Navbar() {
             : 'bg-[#FAF8F5]/90 backdrop-blur-md border-b border-[#EADBCA]/60'
         }`}
       >
-        <div className="w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex items-center justify-between">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between">
           {/* ========================================================= */}
           {/* 1. Left: Brand Identity & Logo Crest                      */}
           {/* ========================================================= */}
@@ -184,7 +184,7 @@ export default function Navbar() {
           {/* ========================================================= */}
           {/* 3. Right: Action Button & Phone                           */}
           {/* ========================================================= */}
-          <div className="flex items-center gap-3 sm:gap-3.5 shrink-0">
+          <div className="flex items-center gap-2.5 sm:gap-3.5 shrink-0">
             {/* Direct Phone Call */}
             <a
               href={`tel:${BUSINESS_INFO.phone.replace(/[^0-9+]/g, '')}`}
@@ -199,11 +199,11 @@ export default function Navbar() {
               <span>{BUSINESS_INFO.phone}</span>
             </a>
 
-            {/* Distinct "Get a Quote" CTA Button */}
+            {/* Distinct "Get a Quote" CTA Button - Hidden on small screens */}
             <Link
               href="/contact"
               aria-label="Get a Quote for Your Project"
-              className="inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-[#C5A059] text-stone-950 font-sans text-xs tracking-wider uppercase font-semibold hover:bg-[#d6b36a] transition-all shadow-md group shrink-0"
+              className="hidden md:inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-[#C5A059] text-stone-950 font-sans text-xs tracking-wider uppercase font-semibold hover:bg-[#d6b36a] transition-all shadow-md group shrink-0"
             >
               <MessageSquare className="w-3.5 h-3.5 text-stone-950" aria-hidden="true" />
               <span className="whitespace-nowrap">Get a Quote</span>
@@ -211,16 +211,17 @@ export default function Navbar() {
 
             {/* Mobile Hamburger Button */}
             <button
+              type="button"
               onClick={() => setMobileDrawerOpen(true)}
               aria-label="Open Navigation Menu"
               aria-expanded={mobileDrawerOpen}
-              className={`md:hidden p-2 rounded-xl border transition-colors cursor-pointer shrink-0 ${
+              className={`md:hidden p-2.5 rounded-xl border transition-all cursor-pointer shrink-0 flex items-center justify-center ${
                 isDarkHero
-                  ? 'border-white/20 bg-white/10 text-white'
-                  : 'border-[#EADBCA] bg-white text-stone-800'
+                  ? 'border-white/25 bg-white/15 text-white hover:bg-white/25 shadow-sm'
+                  : 'border-[#EADBCA] bg-white text-stone-900 hover:border-[#C5A059] shadow-xs'
               }`}
             >
-              <Menu className="w-5 h-5" />
+              <Menu className="w-5 h-5 text-current" />
             </button>
           </div>
         </div>
