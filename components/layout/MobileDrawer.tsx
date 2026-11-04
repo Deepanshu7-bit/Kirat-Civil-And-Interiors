@@ -40,7 +40,7 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
             exit={{ opacity: 0 }}
             onClick={onClose}
             aria-hidden="true"
-            className="fixed inset-0 bg-stone-950/70 backdrop-blur-sm z-50 md:hidden"
+            className="fixed inset-0 bg-stone-950/70 backdrop-blur-sm z-[100] md:hidden"
           />
 
           {/* Slide-in Drawer Container */}
@@ -49,7 +49,7 @@ export default function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 28, stiffness: 240 }}
-            className="fixed top-0 right-0 bottom-0 w-[88%] max-w-sm bg-[#FAF8F5] border-l border-[#EADBCA] p-5 z-50 flex flex-col justify-between md:hidden shadow-2xl overflow-y-auto pb-[max(1.5rem,env(safe-area-inset-bottom))]"
+            className="fixed top-0 right-0 bottom-0 w-[88%] max-w-sm bg-[#FAF8F5] border-l border-[#EADBCA] p-5 z-[100] flex flex-col justify-between md:hidden shadow-2xl overflow-y-auto pb-[max(1.5rem,env(safe-area-inset-bottom))]"
           >
             <div>
               {/* Drawer Header with Logo Crest */}
