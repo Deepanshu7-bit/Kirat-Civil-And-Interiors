@@ -5,8 +5,8 @@ export function generateLocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     "name": BUSINESS_INFO.name,
-    "alternateName": ["Elegant Contractors & Interiors", "Elegant Contractors And Interiors Mohali", "Elegant Spaces"],
-    "description": "Premier turnkey civil contractor and bespoke luxury interior designer based in Sector 117 ACME Heights-2 and Sunny Enclave Kharar, Mohali. Specializing in complete home renovations, RCC civil structural alterations, modular acrylic kitchens, and architectural false ceilings with single-point accountability.",
+    "alternateName": ["Elegant Contractors & Interiors", "Elegant Contractors And Interiors Mohali", "Elegant Spaces", "Elegant Spaces – Contractors & Interiors"],
+    "description": "Turnkey interior design studio, civil construction contractor, and bespoke luxury interior specialists across Mohali, Kharar, and Chandigarh Tricity. Specializing in complete home renovations, structural alterations, modular kitchens, and architectural false ceilings.",
     "logo": "https://www.elegantspaces.me/logos/elegant-logo-luxury-crest.jpg",
     "image": "https://www.elegantspaces.me/logos/elegant-logo-luxury-crest.jpg",
     "@id": "https://maps.google.com/?cid=8580072631903777693",
@@ -18,16 +18,8 @@ export function generateLocalBusinessSchema() {
       BUSINESS_INFO.googleMapsCidUrl
     ],
     "priceRange": "₹₹ - ₹₹₹₹",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "2",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "ACME HEIGHTS-2, 309/G, Sector 117, Ex 2",
       "addressLocality": "Sahibzada Ajit Singh Nagar",
       "addressRegion": "Punjab",
       "postalCode": "140301",

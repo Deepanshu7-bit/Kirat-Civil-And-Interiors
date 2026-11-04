@@ -1,60 +1,46 @@
-import { ServiceItem, PortfolioItem, TransformationRoom, TestimonialItem } from './types';
+import { ServiceItem, TransformationRoom, TestimonialItem } from './types';
 
 export const BUSINESS_INFO = {
-  name: "Elegant Contractors And Interiors",
-  legalTag: "Turnkey Civil & Luxury Interior Contractor",
+  name: "Elegant Spaces – Contractors & Interiors",
+  legalTag: "Interior Design Studio & Turnkey Construction",
   googleProfileUrl: "https://share.google/dOlbrTeWCayWnMQKu",
   googleMapsCidUrl: "https://maps.google.com/?cid=8580072631903777693",
   phone: "+91 98783 90090",
   whatsapp: "919878390090",
   email: "contact@elegantcontractors.com",
-  address: "ACME HEIGHTS-2, 309/G, Sector 117, Ex 2, Sahibzada Ajit Singh Nagar, Punjab 140301",
+  address: "Sector 117 / Sector 125 Sunny Enclave, Kharar, SAS Nagar (Mohali), Punjab 140301",
+  areaDescription: "On-site design consultations and project execution across Mohali, Kharar, Sunny Enclave, Zirakpur, Chandigarh & Panchkula",
   coordinates: {
-    lat: 30.729150,
-    lng: 76.688320,
+    lat: 30.7316,
+    lng: 76.6537,
   },
   hours: "Monday – Saturday: 9:00 AM – 8:00 PM (Sunday by Appointment)",
   serviceAreas: [
-    "Sector 117 (ACME Heights-2)",
+    "Mohali (Sectors 60–125)",
     "Kharar",
     "Sunny Enclave (Sector 125)",
-    "Desumajra",
-    "SAS Nagar (Mohali Sectors 60-125)",
+    "Sector 117",
     "Kharar-Landran Road",
     "New Chandigarh",
     "Aerocity & IT City Mohali",
-    "Chandigarh & Panchkula"
+    "Zirakpur",
+    "Chandigarh",
+    "Panchkula"
   ]
 };
 
 export const SERVICES_DATA: ServiceItem[] = [
   {
-    id: "civil-works",
-    title: "Civil Construction & Structural Alterations",
-    category: "civil",
-    tagline: "Uncompromising Structural Integrity",
-    description: "Heavy brickwork, load-bearing beam modifications, wall shifting, floor slab casting, plastering, and Dr. Fixit chemical waterproofing with laser-leveled alignment.",
-    features: [
-      "Foundation to roof structural construction",
-      "RCC framed lintels & reinforced brick masonry",
-      "Chemical anti-damp injection & roof terrace waterproofing",
-      "Concealed electrical piping & sanitary conduit carving"
-    ],
-    materialsUsed: ["UltraTech / ACC 53 Grade Cement", "Kamdhenu / Tata Tiscon Steel", "Dr. Fixit Pidifin 2K Waterproofing"],
-    icon: "Building2",
-    href: "/civil-construction-contractor-kharar-mohali"
-  },
-  {
     id: "turnkey-interiors",
-    title: "Turnkey Luxury Residential Interiors",
+    title: "Turnkey Interior Design & Execution",
     category: "turnkey",
-    tagline: "Foundation to Final Handover Under One Roof",
-    description: "End-to-end transformation of 1BHK, 2BHK, 3BHK flats and independent villas. Includes 3D layouts, Gyproc false ceilings, bespoke wood millwork, and warm ambient lighting.",
+    tagline: "Single-Point Accountability from Blueprint to Handover",
+    description: "Holistic interior transformations for 2BHK, 3BHK flats, builder floors, and luxury villas. Complete coordination of 3D spatial design, civil alterations, electrical conduit planning, bespoke millwork, and atmospheric illumination.",
     features: [
-      "Custom 3D walkthrough rendering before on-site work",
-      "Zero-contractor conflict (Civil + Woodwork coordinated)",
-      "Dedicated site engineer supervising daily milestones",
-      "Deep chemical site cleaning before key handover"
+      "Custom 3D design and spatial planning prior to site work",
+      "Unified civil and interior execution without vendor friction",
+      "Dedicated site supervision for daily milestone quality checks",
+      "Thorough post-completion deep clean and snag audit before handover"
     ],
     materialsUsed: ["CenturyPly / Greenply Calibrated BWP 710", "Merino Luxury Laminates", "Asian Paints Royale Luxury Emulsion"],
     icon: "Compass",
@@ -64,63 +50,79 @@ export const SERVICES_DATA: ServiceItem[] = [
     id: "modular-kitchens",
     title: "Custom Engineered Modular Kitchens",
     category: "interior",
-    tagline: "Ergonomics Meets Timeless Durability",
-    description: "Waterproof marine plywood carcase, German soft-close hydraulic hardware, quartz stone slabs, and anti-scratch acrylic or PU shutters built to withstand Indian cooking.",
+    tagline: "Ergonomics, Durability & German Motion Hardware",
+    description: "Precision-engineered modular kitchens built with 100% Boiling Water Proof 710 marine plywood carcases, anti-stain composite quartz countertops, and soft-close hydraulic tandem drawers built for Indian culinary routines.",
     features: [
-      "100% Boiling Water Proof (BWP) 710 marine plywood base",
-      "Hettich & Hafele soft-close tandem drawers",
-      "Seamless anti-stain Quartz or Kalinga stone countertops",
-      "Pantry pull-outs, wicker baskets & magic corner carousels"
+      "100% Boiling Water Proof (BWP) 710 marine plywood base carcases",
+      "Hettich & Hafele soft-close tandem drawer systems",
+      "Stain-resistant composite quartz countertops and backsplashes",
+      "Pantry pull-outs, cutlery trays & ergonomic corner carousels"
     ],
-    materialsUsed: ["BWP 710 Marine Ply", "Hettich InnoTech Atira Drawers", "1mm High-Gloss Acrylic / PU Finish"],
+    materialsUsed: ["BWP 710 Marine Ply", "Hettich InnoTech Atira Drawers", "1mm High-Gloss Acrylic / Matte PU Finish"],
     icon: "LayoutGrid",
     href: "/modular-kitchen-maker-mohali-kharar"
   },
   {
     id: "wardrobes-millwork",
-    title: "Designer Wardrobes & Custom Millwork",
+    title: "Designer Modular Wardrobes & Millwork",
     category: "interior",
     tagline: "Floor-to-Ceiling Space Optimization",
-    description: "Floor-to-ceiling sliding profile wardrobes, tinted lacquered glass shutters, integrated LED motion sensors, vanity dressers, and custom TV lounge feature walls.",
+    description: "Floor-to-ceiling 9-foot sliding profile wardrobes, tinted reflective glass shutters, integrated internal sensor LEDs, vanity consoles, and custom entertainment feature walls tailored to room architecture.",
     features: [
-      "Anti-bend heavy-duty aluminum slim profile frames",
-      "Concealed sensor strip LED lighting inside wardrobe bays",
-      "Built-in velvet jewelry drawers & digital locker compartments",
-      "Acoustic fluted wooden louvers & charcoal louvers"
+      "Slim anodized aluminum profile tracks with silent glide rollers",
+      "Concealed motion-sensor LED illumination in every bay",
+      "Velvet-lined jewelry compartments, tie racks & digital safe provisions",
+      "Acoustic fluted wooden louvers and custom accent wall paneling"
     ],
-    materialsUsed: ["Aluminum Profile Shutters", "Saint-Gobain Tinted Glass", "Hafele Wardrobe Sliders"],
+    materialsUsed: ["Anodized Aluminum Profile Shutters", "Saint-Gobain Tinted Glass", "Hafele Wardrobe Sliders"],
     icon: "Maximize",
     href: "/modular-wardrobes-maker-mohali-kharar"
   },
   {
     id: "false-ceiling-lighting",
-    title: "Architectural False Ceilings & Mood Lighting",
+    title: "Architectural False Ceilings & Lighting",
     category: "interior",
     tagline: "Spatial Drama Through Ambient Illumination",
-    description: "Gyproc false ceiling designs with hidden magnetic track lights, indirect warm COB profiles (3000K), wooden rafters, and cove lighting for bedrooms and lounges.",
+    description: "Moisture-resistant Saint-Gobain Gyproc false ceiling designs with magnetic low-voltage track rails, indirect warm 3000K cove lighting, and subtle wooden rafter details for living spaces and bedrooms.",
     features: [
       "Saint-Gobain Gyproc moisture-resistant plaster boards",
-      "Reinforced heavy GI channel framing to prevent sag or cracks",
-      "Magnetic track rails & architectural recessed spotlighting",
-      "Smart switch & dimmable mood lighting integration"
+      "Heavy-gauge galvanized GI channel framing anchored to slab",
+      "Low-voltage magnetic track rails & anti-glare COB spotlights",
+      "Smart switch integration and warm indirect ambient coves"
     ],
-    materialsUsed: ["Saint-Gobain Gyproc Sheets", "Philips / Havells COB LED Profiles", "Rust-Proof GI Framing"],
+    materialsUsed: ["Saint-Gobain Gyproc Sheets", "Philips / Havells High-CRI LED Profiles", "Rust-Proof Galvanized Framing"],
     icon: "SunMedium",
     href: "/pop-false-ceiling-contractor-mohali"
   },
   {
-    id: "commercial-fitouts",
-    title: "Commercial SCO & Showroom Fit-Outs",
-    category: "turnkey",
-    tagline: "High-Traffic Durable Corporate Interiors",
-    description: "Turnkey civil and interior execution for corporate offices, retail showrooms, clinics, and SCO units in Mohali's commercial sectors with accelerated handover schedules.",
+    id: "civil-works",
+    title: "Civil Construction & Structural Alterations",
+    category: "civil",
+    tagline: "Structural Engineering & Clean Alterations",
+    description: "Heavy brickwork alterations, RCC lintel reinforcements, wall removals, floor leveling, concealed conduit channeling, and multi-layer chemical terrace waterproofing with laser-leveled alignment.",
     features: [
-      "Acoustic ceiling grid systems & sound-insulated cabins",
-      "12mm toughened glass partitions with patch fittings",
-      "High-traffic anti-skid vitrified flooring (Kajaria / Somany)",
-      "Strict compliance with fire safety electrical conduits"
+      "Reinforced RCC lintel beams & structural masonry adjustments",
+      "Multi-coat Dr. Fixit chemical waterproofing for terraces and wet areas",
+      "Laser-leveled screed bases prepared for large-format tiles",
+      "Concealed electrical piping and pressure-tested plumbing conduits"
     ],
-    materialsUsed: ["Armstrong Acoustic Tiles", "Dorma / Ozone Glass Hardware", "Finolex FRLS Fire-Resistant Cables"],
+    materialsUsed: ["UltraTech / ACC 53 Grade Cement", "Kamdhenu / Tata Tiscon Steel", "Dr. Fixit Pidifin 2K Waterproofing"],
+    icon: "Building2",
+    href: "/civil-construction-contractor-kharar-mohali"
+  },
+  {
+    id: "commercial-fitouts",
+    title: "Commercial Office Fit-Outs & Showrooms",
+    category: "turnkey",
+    tagline: "Durable High-Traffic Workspaces & Retail Floors",
+    description: "Turnkey civil and interior execution for corporate offices, SCO showroom floors, clinics, and workspaces across Mohali's commercial corridors with strict milestone project management.",
+    features: [
+      "Acoustic ceiling baffles & sound-insulated private cabins",
+      "12mm toughened glass partitions with heavy-duty patch hardware",
+      "High-abrasion commercial vitrified flooring",
+      "Fire-safe electrical wiring conduits and network infrastructure"
+    ],
+    materialsUsed: ["Armstrong Acoustic Tiles", "Dorma / Ozone Hardware", "Finolex FRLS Fire-Resistant Cables"],
     icon: "Briefcase",
     href: "/commercial-interior-office-fitouts-mohali"
   }
@@ -129,95 +131,39 @@ export const SERVICES_DATA: ServiceItem[] = [
 export const TRANSFORMATION_ROOMS: TransformationRoom[] = [
   {
     id: "living-room",
-    title: "Living Room & False Ceiling",
-    subtitle: "Sunny Enclave, Sector 125, Kharar",
+    title: "Living Room Structural & Spatial Transformation",
+    subtitle: "Sunny Enclave, Kharar – Before & After Architectural Fit-Out",
     rawImage: "https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=1200&q=80",
     finishedImage: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80",
     rawHotspots: [
-      { x: 30, y: 40, label: "Structural Brickwork", detail: "Chiseled conduits for concealed electrical lines with 90° plumb alignment." },
-      { x: 65, y: 30, label: "GI Ceiling Grid", detail: "Heavy gauge zinc-coated channels anchored into the RCC slab." },
-      { x: 45, y: 75, label: "Floor Leveling", detail: "Laser-leveled screed base prepared for 800x1600mm vitrified tiles." }
+      { x: 30, y: 40, label: "Masonry Conduits", detail: "Chiseled conduits for concealed electrical lines with 90° plumb alignment." },
+      { x: 65, y: 30, label: "GI Ceiling Framework", detail: "Heavy gauge zinc-coated channels anchored into the RCC slab." },
+      { x: 45, y: 75, label: "Screed Base", detail: "Laser-leveled screed base prepared for 800x1600mm vitrified tiles." }
     ],
     finishedHotspots: [
       { x: 32, y: 38, label: "COB Profile Lighting", detail: "3000K warm indirect cove lighting with magnetic spot rails." },
-      { x: 68, y: 55, label: "Fluted Charcoal Panel", detail: "Acoustic wooden wall paneling with brushed brass inlay." },
-      { x: 48, y: 80, label: "Italian Glazed Tiles", detail: "Zero-grout rectified vitrified flooring with high-gloss mirror finish." }
+      { x: 68, y: 55, label: "Fluted Feature Wall", detail: "Acoustic wooden wall paneling with brushed metal inlay." },
+      { x: 48, y: 80, label: "Rectified Vitrified Flooring", detail: "Zero-grout vitrified flooring with high-gloss mirror finish." }
     ]
   },
   {
     id: "modular-kitchen",
-    title: "Modern Turnkey Kitchen",
-    subtitle: "Kharar-Landran Road Corridor",
+    title: "Kitchen Remodel & Civil Waterproofing",
+    subtitle: "Kharar-Landran Road – Foundation Plumbing to Modular Finish",
     rawImage: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80",
     finishedImage: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80",
     rawHotspots: [
       { x: 25, y: 45, label: "CPVC Plumbing Rig", detail: "Pressure-tested concealed Jaquar water and gas pipeline conduits." },
-      { x: 70, y: 50, label: "Anti-Damp Chemical", detail: "Dr. Fixit 2K waterproofing applied to backsplash and sink wet-zone." }
+      { x: 70, y: 50, label: "Chemical Barrier", detail: "Dr. Fixit 2K waterproofing applied to backsplash and sink wet-zone." }
     ],
     finishedHotspots: [
-      { x: 28, y: 40, label: "Anti-Scratch Acrylic", detail: "1mm anti-fingerprint acrylic shutters with seamless edge-banding." },
+      { x: 28, y: 40, label: "Matte Acrylic Shutters", detail: "1mm anti-fingerprint acrylic shutters with seamless edge-banding." },
       { x: 60, y: 65, label: "Seamless Quartz Slab", detail: "Heat and stain-resistant 20mm composite quartz countertop." }
     ]
   }
 ];
 
-export const PORTFOLIO_ITEMS: PortfolioItem[] = [
-  {
-    id: "proj-1",
-    title: "Luxury Duplex Villa",
-    category: "residential",
-    locality: "Sunny Enclave, Kharar",
-    scope: "Full Civil Construction + 4BHK Turnkey Interior",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-    bhk: "4 BHK Villa"
-  },
-  {
-    id: "proj-2",
-    title: "Acrylic Modular Kitchen & Pantry",
-    category: "kitchen",
-    locality: "Sector 125, Mohali",
-    scope: "Marine BWP 710 Carcase + Hettich Tandem Fittings",
-    image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80",
-    bhk: "3 BHK Flat"
-  },
-  {
-    id: "proj-3",
-    title: "Gyproc Ceiling & Magnetic Track Light",
-    category: "ceiling",
-    locality: "Kharar-Landran Road",
-    scope: "Acoustic False Ceiling + Smart Mood Profile Lights",
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
-    bhk: "Penthouse"
-  },
-  {
-    id: "proj-4",
-    title: "Commercial SCO Corporate Floor",
-    category: "civil",
-    locality: "Sector 82, JLPL Mohali",
-    scope: "Wall Demolition, Tile Relaying & Toughened Glass Cabins",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
-    bhk: "SCO Office"
-  },
-  {
-    id: "proj-5",
-    title: "Contemporary Master Bedroom Suite",
-    category: "residential",
-    locality: "New Chandigarh",
-    scope: "Headboard Louvers, Sliding Tinted Wardrobe & Ceiling",
-    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80",
-    bhk: "3 BHK Villa"
-  },
-  {
-    id: "proj-6",
-    title: "Civil Alteration & Bathroom Remodel",
-    category: "civil",
-    locality: "Desumajra, Kharar",
-    scope: "Wall Shift, Complete Waterproofing & Concealed Fittings",
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
-    bhk: "2 BHK Flat"
-  }
-];
-
+// Verified Client Reviews from Official Reviews Sheet
 export const TESTIMONIALS_DATA: TestimonialItem[] = [
   {
     id: "t-1",
@@ -225,56 +171,79 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     locality: "Sunny Enclave, Sector 125, Kharar",
     projectType: "Full Civil Remodel + 3BHK Turnkey Interior",
     rating: 5,
-    reviewText: "We bought an independent builder floor in Sunny Enclave that needed significant wall changes and an interior overhaul. Having Elegant Contractors and Interiors manage both the masonry and the modular woodwork eliminated the usual finger-pointing between workers. Exceptional quality of marine ply and false ceiling lighting!",
+    reviewText: "We handed over our bare builder floor and received a luxury home ready to move into. Their daily WhatsApp site progress updates and transparent BOQ pricing gave us total peace of mind with zero finger-pointing between workers.",
     date: "October 2026"
   },
   {
     id: "t-2",
-    clientName: "Gurpreet Kaur & Harinder Singh",
-    locality: "Kharar-Landran Road, Mohali",
-    projectType: "3BHK Flat Complete Interior & False Ceiling",
+    clientName: "Dr. Vikramjit Gill",
+    locality: "Eco City, New Chandigarh",
+    projectType: "Turnkey Luxury Residential Interiors",
     rating: 5,
-    reviewText: "Their 3D design team showed us computerized renders before touching a single tool on site. The finished false ceiling, cove profile lights, and kitchen cabinets matched the 3D renders 100%. What impressed us most was their daily WhatsApp photo updates and fixed BOQ price with zero surprise charges.",
+    reviewText: "Best turnkey interior team in Tricity—completed our 4BHK villa ahead of schedule! Having a single team handle both civil modifications and modular woodwork saved us months of coordination headaches.",
     date: "September 2026"
   },
   {
     id: "t-3",
-    clientName: "Amanpreet Singh (Director)",
+    clientName: "Col. S. K. Pathak (Retd.)",
+    locality: "Wave Estate, Sector 85, Mohali",
+    projectType: "Turnkey Luxury Residential Interiors",
+    rating: 5,
+    reviewText: "Superb attention to detail and zero cost escalation after the agreement was signed. The site supervisor was physically on-site every morning ensuring strict quality checks at every milestone.",
+    date: "August 2026"
+  },
+  {
+    id: "t-4",
+    clientName: "Baljeet Kaur & Paramjit Singh",
+    locality: "Kharar-Landran Road Corridor, Mohali",
+    projectType: "Custom Engineered Modular Kitchen",
+    rating: 5,
+    reviewText: "Our old kitchen had persistent dampness from the outer wall. Elegant Contractors first treated the civil masonry with chemical waterproofing, re-routed the water lines, and then installed our custom parallel modular kitchen with genuine marine ply and Hettich fittings.",
+    date: "July 2026"
+  },
+  {
+    id: "t-5",
+    clientName: "Er. Manav & Divya Thapar",
+    locality: "Wave Estate, Sector 85, Mohali",
+    projectType: "False Ceilings & Mood Lighting",
+    rating: 5,
+    reviewText: "As an architect myself, I am very picky about ceiling plumb lines, zero-shadow cove finishing, and lighting color temperatures. They used authentic Saint-Gobain Gyproc moisture-proof boards on heavy-gauge zinc framing. Masterclass execution!",
+    date: "June 2026"
+  },
+  {
+    id: "t-6",
+    clientName: "Amanpreet Singh",
     locality: "Sector 82, JLPL Industrial Area, Mohali",
     projectType: "Corporate Office SCO Interior & Civil Work",
     rating: 5,
-    reviewText: "Elegant Contractors executed our 2200 sq ft office fit-out within 32 days flat. Structural floor tiling, glass partitions, and fire-resistant electrical channeling were handled professionally under civil engineer supervision. Definitely the top turnkey team in the Tricity belt.",
-    date: "August 2026"
+    reviewText: "Completed our 2,200 sq ft corporate office fit-out in 32 days flat with zero timeline delay. Structural floor tiling, glass partitions, and fire-resistant electrical channeling were handled professionally.",
+    date: "May 2026"
   }
 ];
 
 export const FAQS_DATA = [
   {
-    q: "Who is the best turnkey interior designer and civil contractor in Kharar and Sunny Enclave?",
-    a: "Elegant Contractors And Interiors is widely recognized as the leading turnkey contractor in Kharar, Sunny Enclave (Sector 125), and Mohali. With over 12 years of hands-on execution and 180+ completed residences, we are unique in delivering heavy structural civil modifications and luxury bespoke interior fit-outs under single-point master accountability."
+    q: "What makes Elegant Spaces different from hiring separate masons and carpenters?",
+    a: "When you hire separate civil laborers and carpenters, delays and blame games are common—carpenters blame uneven plaster, while masons blame electricians for damaged brickwork. At Elegant Spaces, we provide single-point accountability. Our civil and interior craftsmen work under one coordinated project manager. Conduits, plumbing lines, and walls are aligned with precision to fit modular furniture and ceilings seamlessly."
   },
   {
-    q: "What warranties and guarantees do Elegant Contractors And Interiors provide?",
-    a: "We provide an ironclad 10-year waterproof warranty on 100% BWP 710 marine plywood woodwork, manufacturer warranty on German soft-close hydraulic hardware (Hettich/Hafele), and written contractual delivery timelines with zero surprise budget escalation clauses across all Mohali and Kharar sites."
+    q: "How does your project execution process work?",
+    a: "Our process follows four clear phases: (1) Understand & Laser Measurement – we inspect your site and understand your aesthetic and lifestyle needs; (2) Plan & Design – detailed 2D layouts, photorealistic 3D renders, and an itemized BOQ quotation; (3) Build & Execute – civil alterations, MEP conduits, and factory-pressed woodwork with regular photo updates; (4) Final Handover – rigorous snag inspection and deep cleaning before handing over the keys."
   },
   {
-    q: "Why choose Elegant Contractors over hiring separate masons and carpenters?",
-    a: "When you hire separate civil laborers and interior carpenters, delays and blame games are inevitable. Carpenters blame uneven plastering; masons blame electricians for damaging brickwork. At Elegant Contractors, our civil engineers and interior craftsmen work under one accountable project manager. Walls, plumbing pipes, and electrical points are aligned with millimeter precision to fit modular furniture seamlessly."
+    q: "Which specific areas across Chandigarh Tricity do you serve?",
+    a: "Our primary service hubs include Mohali (Sectors 60 through 125), Kharar, Sunny Enclave (Sector 125), Sector 117, Kharar-Landran Road, New Chandigarh, Aerocity, IT City Mohali, Zirakpur, Chandigarh, and Panchkula."
   },
   {
-    q: "Which specific areas across Mohali and Kharar do you service?",
-    a: "Our primary service hubs include Sector 125 Sunny Enclave, Kharar-Landran Road, Desumajra, SAS Nagar (Mohali Sectors 60 through 125), New Chandigarh, Aerocity, IT City Mohali, and the wider Chandigarh Tricity corridor."
+    q: "Which material brands and specifications do you use?",
+    a: "We specify branded, certified materials in every agreement: UltraTech or ACC 53-grade cement and Tata Tiscon steel for civil works; Dr. Fixit chemical waterproofing; certified BWP 710 calibrated marine plywood from CenturyPly or Greenply for kitchens and wardrobes; Merino laminates; and German soft-close hydraulic hardware from Hettich or Hafele."
   },
   {
-    q: "Which material brands do you use for civil and interior work?",
-    a: "We only use certified branded supplies. For civil work: UltraTech / ACC cement, Kamdhenu / Tata Tiscon steel, and Dr. Fixit chemical waterproofing. For interiors: CenturyPly / Greenply BWP 710 calibrated marine ply, Merino laminates, and Hettich, Hafele, or Godrej soft-close hardware."
+    q: "How are project payments structured?",
+    a: "Payments are linked directly to verifiable on-site progress milestones rather than lump sums. Typically, stages are divided into: (1) Design signoff & material mobilization; (2) Civil structural completion & woodwork carcase installation; (3) Shutter, glass, and electrical fitting; (4) Final quality audit, deep cleaning, and key handover."
   },
   {
-    q: "How does your milestone payment structure work?",
-    a: "We believe in transparent, stage-linked payments. You do not pay in a single lump sum. Work is divided into 4–5 verifiable milestones (e.g. Design signoff & material arrival ➔ Civil & framing completion ➔ Carcase installation ➔ Shutter & paint finishing ➔ Final quality audit & key handover)."
-  },
-  {
-    q: "What warranties do you provide on completion?",
-    a: "We provide up to a 10-year manufacturer warranty on BWP marine plywood and architectural hardware, alongside a 1-year complimentary service warranty on all civil structural alterations and interior installations."
+    q: "Can I schedule a site consultation before finalizing a contract?",
+    a: "Yes. We offer complimentary site measurement consultations across Mohali, Kharar, and Chandigarh Tricity. Our team visits your site to verify dimensions, assess structural conditions, and provide an itemized BOQ proposal."
   }
 ];

@@ -52,12 +52,12 @@ export default function SplashScreen() {
               transition={{ duration: 0.85, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="mt-6 text-center"
             >
-              <h1 className="font-cinzel font-bold text-2xl sm:text-3xl md:text-4xl text-stone-900 tracking-[0.1em] uppercase leading-tight">
+              <span className="font-cinzel font-bold text-2xl sm:text-3xl md:text-4xl text-stone-900 tracking-[0.1em] uppercase leading-tight block">
                 ELEGANT CONTRACTORS
-              </h1>
-              <p className="font-cinzel text-lg sm:text-2xl font-semibold text-[#C5A059] tracking-[0.16em] uppercase mt-1.5">
+              </span>
+              <span className="font-cinzel text-lg sm:text-2xl font-semibold text-[#C5A059] tracking-[0.16em] uppercase mt-1.5 block">
                 AND INTERIORS
-              </p>
+              </span>
             </motion.div>
           </div>
         </motion.div>

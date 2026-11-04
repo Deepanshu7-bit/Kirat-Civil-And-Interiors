@@ -1,17 +1,19 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { 
   Phone, 
   MessageSquare, 
   CheckCircle2, 
-  Hammer, 
+  Building2, 
   ShieldCheck, 
-  Droplets, 
-  Clock, 
+  ArrowRight, 
+  Sparkles, 
   ChevronRight,
-  Building,
-  HelpCircle
+  ArrowUpRight,
+  Hammer,
+  Check
 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -19,43 +21,33 @@ import MobileStickyBar from '@/components/contact/MobileStickyBar';
 import { BUSINESS_INFO } from '@/lib/data';
 
 export const metadata: Metadata = {
-  title: 'Civil Construction & Contractor Mohali | Elegant Spaces',
-  description: 'Licensed civil contractor & thekedar in Kharar, Sunny Enclave & Mohali. Structural wall alterations, RCC foundation casting, Dr. Fixit chemical waterproofing, and laser-flat plastering.',
-  keywords: [
-    'civil contractor mohali',
-    'civil thekedar kharar',
-    'civil construction sunny enclave',
-    'wall demolition contractor mohali',
-    'rcc foundation mistri tricity',
-    'chemical waterproofing kharar',
-    'brickwork contractor sector 117',
-    'civil engineer kharar',
-    'house construction contractor mohali'
-  ],
+  title: 'Civil Construction & Wall Demolition Contractor Kharar, Mohali | Elegant Spaces',
+  description: 'Civil contractor in Kharar, Sunny Enclave & Mohali. Structural brickwork alterations, RCC lintels, wall demolition, terrace chemical waterproofing, and foundation-to-finish execution.',
   alternates: {
     canonical: 'https://www.elegantspaces.me/civil-construction-contractor-kharar-mohali',
   },
   openGraph: {
-    title: 'Civil Construction & Contractor Mohali | Elegant Spaces',
-    description: 'Structural civil alterations, reinforced RCC masonry, and chemical waterproofing across Kharar, Sunny Enclave, and Mohali Tricity.',
+    title: 'Civil Construction Contractor Kharar, Mohali | Elegant Spaces',
+    description: 'Structural civil alterations, wall demolition, chemical waterproofing, and RCC framing in Kharar and Mohali.',
     url: 'https://www.elegantspaces.me/civil-construction-contractor-kharar-mohali',
     type: 'website',
-    images: [{ url: '/logos/elegant-logo-luxury-crest.jpg', width: 1024, height: 1024, alt: 'Civil Construction Contractor Mohali Kharar' }]
-  }
+    images: [{ url: '/images/raw-civil-site.jpg', width: 1200, height: 630, alt: 'Civil Construction Contractor Kharar Mohali' }],
+  },
 };
 
 export default function CivilConstructionPage() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Structural Civil Construction & Alterations",
+    "name": "Civil Construction & Structural Alterations",
+    "serviceType": "Civil Contractor",
     "provider": {
       "@type": "HomeAndConstructionBusiness",
       "name": BUSINESS_INFO.name,
       "telephone": BUSINESS_INFO.phone,
+      "url": "https://www.elegantspaces.me",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "ACME HEIGHTS-2, 309/G, Sector 117, Ex 2",
         "addressLocality": "Sahibzada Ajit Singh Nagar",
         "addressRegion": "Punjab",
         "postalCode": "140301",
@@ -63,7 +55,7 @@ export default function CivilConstructionPage() {
       }
     },
     "areaServed": BUSINESS_INFO.serviceAreas,
-    "description": "Heavy structural civil construction, load-bearing RCC lintel beams, wall demolition, damp-proofing, and floor slab casting under qualified civil engineer supervision."
+    "description": "Civil construction contractor specializing in brickwork alterations, wall demolition, RCC beam reinforcement, terrace chemical waterproofing, and laser screeding across Kharar and Mohali."
   };
 
   const faqSchema = {
@@ -72,30 +64,53 @@ export default function CivilConstructionPage() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Can you safely knock down a wall in my Kharar/Mohali flat or kothi?",
+        "name": "Can you safely remove an interior wall to create an open-plan kitchen or living room?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Our civil engineers inspect load-bearing columns and beams before touching any brickwork. If a wall is load-bearing, we install reinforced ISMC structural steel girders or RCC lintels before safe controlled brick demolition to guarantee zero structural sagging."
+          "text": "Yes. Before any demolition, our civil engineering team inspects whether the wall is load-bearing or partition masonry. If load-bearing, we engineer and cast a reinforced RCC lintel or install structural steel I-beams before dismantling brickwork, ensuring zero structural vibration or hairline cracks."
         }
       },
       {
         "@type": "Question",
-        "name": "How do you treat severe wall dampness (seelan) before interior paint?",
+        "name": "Which waterproofing chemicals do you use for wet areas and terrace leakage?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We do not use temporary cosmetic putty. Our civil team chips plaster down to bare brick, identifies the moisture source, injects Dr. Fixit chemical waterproofing membranes, and applies polymer-modified crystalline barrier coats with a multi-year warranty."
+          "text": "We strictly use multi-layer Dr. Fixit chemical membranes (such as Pidifin 2K polymer-modified mortar) reinforced with fiberglass mesh, rather than superficial bitumen or temporary cement washes. This ensures permanent protection against Punjab monsoon downpours."
         }
       },
       {
         "@type": "Question",
-        "name": "Do you handle both civil work and finishing interiors?",
+        "name": "How do you coordinate civil works with subsequent interior carpentry?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, that is our unique strength. Having civil engineering and interior woodcrafters under one roof eliminates the classic blame game between masons and carpenters, ensuring millimeter-precise conduits, level floors, and zero rework."
+          "text": "Because Elegant Spaces manages both civil engineering and interior joinery under single accountability, our civil masons align wall corners to laser 90° plumbs and screed floors to zero-tolerance levels. This guarantees that modular furniture and false ceilings fit flush without unsightly filler strips."
         }
       }
     ]
   };
+
+  const civilGallery = [
+    {
+      src: '/images/raw-civil-site.jpg',
+      title: 'Structural Brick Masonry & Lintel Casting',
+      desc: 'Engineered RCC lintels supporting open-plan residential wall removals.'
+    },
+    {
+      src: '/images/master-bedroom-civil-raw-1.jpg',
+      title: 'Concealed Conduit Channeling',
+      desc: 'Precision chiseled wall conduits for concealed electrical and CPVC piping.'
+    },
+    {
+      src: '/images/master-bedroom-civil-raw-2.jpg',
+      title: 'Laser-Leveled Floor Screeding',
+      desc: 'Screed underlayment prepared for zero-grout large-format vitrified tiles.'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=1200&q=80',
+      title: 'Dr. Fixit Chemical Waterproofing',
+      desc: 'Multi-layer polymer membrane applied to washrooms and terrace slabs.'
+    }
+  ];
 
   return (
     <>
@@ -110,199 +125,280 @@ export default function CivilConstructionPage() {
 
       <Navbar />
 
-      <main className="min-h-screen bg-[#FAF8F5] text-stone-900 selection:bg-gold/30 selection:text-stone-900 pt-[68px] sm:pt-[72px]">
-        {/* Breadcrumb Bar */}
-        {/* Breadcrumb Bar */}
-        <div className="bg-white border-b border-[#EADBCA] py-2.5 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto flex items-center gap-2 text-xs font-mono text-stone-500 overflow-x-auto whitespace-nowrap">
-            <Link href="/" className="hover:text-stone-900 transition-colors shrink-0">Home</Link>
-            <ChevronRight className="w-3.5 h-3.5 text-stone-400 shrink-0" />
-            <span className="text-stone-400 shrink-0">Services</span>
-            <ChevronRight className="w-3.5 h-3.5 text-stone-400 shrink-0" />
-            <span className="text-[#9E7D3B] font-semibold shrink-0">Civil Construction &amp; Structural Works</span>
-          </div>
-        </div>
+      <main className="min-h-screen bg-[#FAF8F5] text-stone-900 pt-16 sm:pt-20">
+        {/* 1. Large Service-Specific Visual Hero */}
+        <section className="relative min-h-[55vh] sm:min-h-[65vh] flex items-end overflow-hidden bg-stone-950">
+          <Image
+            src="/images/raw-civil-site.jpg"
+            alt="Civil Construction Contractor Kharar Mohali – Elegant Spaces"
+            fill
+            priority
+            className="object-cover object-center opacity-60 brightness-95"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-stone-950/20" />
 
-        {/* Hero Section */}
-        <section className="relative py-12 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[radial-gradient(circle_at_top,#F5E9D3_0%,transparent_60%)]">
-          <div className="max-w-5xl mx-auto text-center space-y-5 sm:space-y-6">
-            <div className="inline-flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-full border border-[#EADBCA] bg-white/80 backdrop-blur-sm text-[10px] sm:text-xs font-mono text-stone-800 shadow-sm max-w-full text-center">
-              <span className="w-2 h-2 rounded-full bg-[#C5A059] animate-pulse" />
-              <span className="text-[#9E7D3B] font-semibold uppercase tracking-wider">MOHALI · KHARAR · SUNNY ENCLAVE</span>
-              <span className="text-stone-400 hidden xs:inline">|</span>
-              <span className="text-stone-600 font-sans hidden xs:inline">CIVIL ENGINEER SUPERVISION</span>
-            </div>
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pb-14 sm:pb-20 pt-28">
+            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-stone-300 mb-4">
+              <Link href="/" className="hover:text-white transition-colors">Home</Link>
+              <ChevronRight className="w-3.5 h-3.5 text-[#C5A059]" />
+              <span className="text-stone-300">Services</span>
+              <ChevronRight className="w-3.5 h-3.5 text-[#C5A059]" />
+              <span className="text-[#C5A059]">Civil Works</span>
+            </nav>
 
-            <h1 className="text-2xl sm:text-5xl lg:text-6xl font-cinzel font-bold text-stone-900 tracking-tight leading-tight">
-              Master <span className="text-[#C5A059]">Civil Contractor</span> in Kharar &amp; Mohali
-            </h1>
+            <div className="max-w-3xl">
+              <span className="inline-block px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#F5E9D3] text-xs font-mono uppercase tracking-[0.2em] mb-3">
+                RCC Alterations · Chemical Waterproofing · Screed Leveling
+              </span>
+              <h1 className="font-cormorant font-semibold text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.08]">
+                Civil Construction &amp; Structural Alterations
+              </h1>
+              <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-stone-200 font-light font-sans max-w-2xl leading-relaxed">
+                Heavy brick masonry alterations, reinforced RCC lintels, Dr. Fixit chemical damp-proofing, and clean conduit channeling executed under qualified civil engineer supervision across Kharar &amp; Mohali.
+              </p>
 
-            <p className="text-base sm:text-lg text-stone-600 max-w-3xl mx-auto font-sans leading-relaxed">
-              From heavy load-bearing structural alterations, lintel beam casting, and wall shifting to Dr. Fixit chemical damp-proofing and laser-leveled plastering. We engineer solid foundations so your luxury interiors never crack or peel.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
-              <a
-                href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=Hi%20Elegant%20Contractors,%20I%20need%20a%20site%20inspection%20and%20quote%20for%20Civil%20Construction%20/%20Wall%20Alterations.`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-stone-900 text-[#F5E9D3] font-mono text-xs tracking-wider uppercase flex items-center justify-center gap-2 hover:bg-stone-800 transition-all shadow-lg"
-              >
-                <MessageSquare className="w-4 h-4 text-[#C5A059]" />
-                <span>Book Free Civil Site Inspection</span>
-              </a>
-
-              <a
-                href={`tel:${BUSINESS_INFO.phone.replace(/[^0-9+]/g, '')}`}
-                className="w-full sm:w-auto px-6 py-3.5 rounded-full border border-[#EADBCA] bg-white text-stone-800 font-mono text-xs tracking-wider uppercase hover:border-[#C5A059] transition-all flex items-center justify-center gap-2 shadow-sm"
-              >
-                <Phone className="w-4 h-4 text-[#C5A059]" />
-                <span>Call Civil Engineer: {BUSINESS_INFO.phone}</span>
-              </a>
-            </div>
-
-            {/* Trust Badges */}
-            <div className="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto border-t border-[#EADBCA]">
-              <div className="text-center p-3 rounded-xl bg-white/70 border border-[#EADBCA]">
-                <Building className="w-5 h-5 text-[#C5A059] mx-auto mb-1" />
-                <span className="font-mono text-xs font-semibold text-stone-900 block">180+ Delivered</span>
-                <span className="text-[10px] text-stone-500">Civil & Renovation Sites</span>
-              </div>
-              <div className="text-center p-3 rounded-xl bg-white/70 border border-[#EADBCA]">
-                <Hammer className="w-5 h-5 text-[#C5A059] mx-auto mb-1" />
-                <span className="font-mono text-xs font-semibold text-stone-900 block">Structural Beams</span>
-                <span className="text-[10px] text-stone-500">ISMC Steel & RCC Casting</span>
-              </div>
-              <div className="text-center p-3 rounded-xl bg-white/70 border border-[#EADBCA]">
-                <Droplets className="w-5 h-5 text-[#C5A059] mx-auto mb-1" />
-                <span className="font-mono text-xs font-semibold text-stone-900 block">Dr. Fixit Chemical</span>
-                <span className="text-[10px] text-stone-500">Deep Seelan Waterproofing</span>
-              </div>
-              <div className="text-center p-3 rounded-xl bg-white/70 border border-[#EADBCA]">
-                <ShieldCheck className="w-5 h-5 text-[#C5A059] mx-auto mb-1" />
-                <span className="font-mono text-xs font-semibold text-stone-900 block">12+ Years</span>
-                <span className="text-[10px] text-stone-500">Field Proven Authority</span>
+              <div className="mt-6 flex flex-wrap gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#C5A059] text-stone-950 font-sans text-xs uppercase tracking-wider font-semibold hover:bg-[#d6b36a] transition-all shadow-md"
+                >
+                  <MessageSquare className="w-4 h-4 text-stone-950" />
+                  <span>Request Civil Site Inspection</span>
+                </Link>
+                <a
+                  href={`tel:${BUSINESS_INFO.phone.replace(/[^0-9+]/g, '')}`}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/25 text-white font-mono text-xs uppercase tracking-wider transition-all"
+                >
+                  <Phone className="w-4 h-4 text-[#C5A059]" />
+                  <span>Call {BUSINESS_INFO.phone}</span>
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Civil Capabilities Comparison */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white border-y border-[#EADBCA]">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-10">
-              <span className="font-mono text-xs uppercase tracking-widest text-[#9E7D3B] font-semibold">ENGINEERING EXCELLENCE</span>
-              <h2 className="text-2xl sm:text-4xl font-cinzel font-bold text-stone-900 mt-2">
-                Why Professional Civil Supervision Matters
+        {/* 4. Large Relevant Image Gallery */}
+        <section className="py-16 sm:py-24 px-5 sm:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="mb-12 max-w-2xl">
+            <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#9E7D3B] font-bold block mb-2">
+              ON-SITE CIVIL MASTERY
+            </span>
+            <h2 className="font-cormorant font-semibold text-3xl sm:text-4xl text-stone-900 tracking-tight">
+              Civil Execution &amp; Structural Precision
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            {civilGallery.map((item, idx) => (
+              <div
+                key={idx}
+                className="group rounded-3xl overflow-hidden border border-[#EADBCA] bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden bg-stone-100">
+                  <Image
+                    src={item.src}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent opacity-70" />
+                  <span className="absolute bottom-3 left-3 text-sm font-cinzel font-bold text-white tracking-wide">
+                    {item.title}
+                  </span>
+                </div>
+                <div className="p-4 sm:p-5">
+                  <p className="text-xs text-stone-600 font-sans leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 5. Types of Civil Services */}
+        <section className="py-16 sm:py-20 bg-[#F5EFE6]/50 border-y border-[#EADBCA]">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+            <div className="text-center max-w-2xl mx-auto mb-14">
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#9E7D3B] font-bold block mb-2">
+                CIVIL SCOPE
+              </span>
+              <h2 className="font-cormorant font-semibold text-3xl sm:text-4xl text-stone-900 tracking-tight">
+                Engineered Structural Services
               </h2>
-              <p className="text-sm text-stone-600 mt-2 max-w-2xl mx-auto">
-                Compare our qualified engineering protocols against unorganized daily wage mistris who risk structural safety.
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { title: 'Non-Load & Load Bearing Wall Shifting', desc: 'Carefully dismantling brick walls and inserting RCC lintels for modern open layouts.' },
+                { title: 'Dr. Fixit Chemical Waterproofing', desc: 'Injection grouting, polymer coating, and fiber-mesh barriers for terraces and bathrooms.' },
+                { title: 'Laser-Leveled Floor Screeding', desc: 'Precision base leveling ensuring zero joint gaps for large-format 800x1600mm vitrified tiles.' },
+                { title: 'Concealed Conduit Carving', desc: 'Plumb 90° chiseled channels for electrical conduits and pressure-tested CPVC piping.' },
+                { title: 'Bathroom & Balcony Remodeling', desc: 'Demolishing old tiling, repairing dampness, and reinstalling concealed plumbing fixtures.' },
+                { title: 'Structural Plaster & Crack Stitching', desc: '53-grade cement plastering with polymer bonding agents to prevent shrinkage cracks.' },
+              ].map((item, i) => (
+                <div key={i} className="p-6 rounded-2xl bg-white border border-[#EADBCA] shadow-xs">
+                  <span className="font-cormorant text-2xl font-bold text-[#C5A059] block mb-2">0{i + 1}</span>
+                  <h3 className="font-cinzel text-sm sm:text-base font-bold text-stone-900 mb-1">{item.title}</h3>
+                  <p className="text-xs text-stone-600 font-sans leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 6. Visual Workflow */}
+        <section className="py-16 sm:py-24 px-5 sm:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="mb-12 max-w-2xl">
+            <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#9E7D3B] font-bold block mb-2">
+              SAFETY &amp; CONTROL
+            </span>
+            <h2 className="font-cormorant font-semibold text-3xl sm:text-4xl text-stone-900 tracking-tight">
+              Civil Execution Protocol
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {[
+              { num: '01', title: 'Structural Audit', desc: 'Verifying load distribution, RCC beams, and wall plumb alignments.' },
+              { num: '02', title: 'Controlled Demolition', desc: 'Diamond saw cutting and temporary props preventing structural vibration.' },
+              { num: '03', title: 'Chemical Injections', desc: 'Dr. Fixit polymer membrane application to eliminate rising dampness.' },
+              { num: '04', title: 'Plumb Plaster & Cleanup', desc: 'Laser straight plaster lines and evening debris removal from site.' },
+            ].map((p, idx) => (
+              <div key={idx} className="p-6 rounded-2xl bg-white border border-[#EADBCA] shadow-xs">
+                <span className="font-cormorant text-3xl font-bold text-[#C5A059] block mb-2">{p.num}</span>
+                <h3 className="font-cinzel text-sm font-bold text-stone-900 mb-1">{p.title}</h3>
+                <p className="text-xs text-stone-600 font-sans leading-relaxed">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 7. Related Inspirations */}
+        <section className="py-14 sm:py-16 bg-[#F5EFE6]/60 border-t border-[#EADBCA]">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+            <div className="flex items-end justify-between mb-8">
+              <div>
+                <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#9E7D3B] font-bold block mb-1">
+                  DESIGN INSPIRATIONS
+                </span>
+                <h3 className="font-cormorant font-semibold text-2xl sm:text-3xl text-stone-900">
+                  Related Architecture Concepts
+                </h3>
+              </div>
+              <Link href="/design-gallery" className="text-xs font-mono font-semibold text-[#9E7D3B] hover:text-stone-900">
+                View All Designs →
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <Link
+                href="/design-gallery/exterior-architecture"
+                className="group rounded-2xl overflow-hidden border border-[#EADBCA] bg-white shadow-xs hover:shadow-md transition-all"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden bg-stone-100">
+                  <Image
+                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+                    alt="Contemporary Villa Facade"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent" />
+                  <span className="absolute bottom-2.5 left-2.5 text-xs font-cinzel font-bold text-white">
+                    Contemporary Villa Architecture &amp; Facades
+                  </span>
+                </div>
+              </Link>
+
+              <Link
+                href="/design-gallery/modern-living-room"
+                className="group rounded-2xl overflow-hidden border border-[#EADBCA] bg-white shadow-xs hover:shadow-md transition-all"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden bg-stone-100">
+                  <Image
+                    src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80"
+                    alt="Living Room Structural Remodel"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent" />
+                  <span className="absolute bottom-2.5 left-2.5 text-xs font-cinzel font-bold text-white">
+                    Open Concept Living Room Remodel
+                  </span>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* 8. Concise FAQs */}
+        <section className="py-16 sm:py-20 px-5 sm:px-8 lg:px-12 max-w-4xl mx-auto">
+          <div className="text-center mb-10">
+            <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#9E7D3B] font-bold block mb-1">
+              QUESTIONS &amp; ANSWERS
+            </span>
+            <h2 className="font-cormorant font-semibold text-2xl sm:text-4xl text-stone-900 tracking-tight">
+              Civil Alteration FAQs
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            <div className="p-5 sm:p-6 rounded-2xl bg-white border border-[#EADBCA]">
+              <h3 className="font-cinzel text-sm sm:text-base font-bold text-stone-900 mb-2">
+                Can you safely remove an interior wall to create an open-plan kitchen or living room?
+              </h3>
+              <p className="text-xs sm:text-sm text-stone-600 font-sans leading-relaxed">
+                Yes. Before any demolition, our civil engineering team inspects whether the wall is load-bearing or partition masonry. If load-bearing, we engineer and cast a reinforced RCC lintel or install structural steel I-beams before dismantling brickwork, ensuring zero structural vibration or hairline cracks.
               </p>
             </div>
 
-            <div className="overflow-x-auto rounded-2xl border border-[#EADBCA] shadow-sm">
-              <table className="w-full text-left text-sm">
-                <thead className="bg-[#FAF8F5] border-b border-[#EADBCA] font-mono text-xs uppercase tracking-wider text-stone-700">
-                  <tr>
-                    <th className="py-4 px-5">Civil Work Stage</th>
-                    <th className="py-4 px-5 text-[#9E7D3B] font-bold">Elegant Contractors Standard</th>
-                    <th className="py-4 px-5 text-stone-500">Typical Local Mistri</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-[#EADBCA]">
-                  <tr>
-                    <td className="py-4 px-5 font-semibold text-stone-900">Wall Removal & Demolition</td>
-                    <td className="py-4 px-5 text-stone-900 bg-[#F5E9D3]/20 font-medium">Load calculation, propping jacks, and ISMC steel girder insertion</td>
-                    <td className="py-4 px-5 text-stone-500">Sledgehammer hacking without inspecting overhead lintel beams</td>
-                  </tr>
-                  <tr>
-                    <td className="py-4 px-5 font-semibold text-stone-900">Damp-Proofing (Seelan)</td>
-                    <td className="py-4 px-5 text-stone-900 bg-[#F5E9D3]/20 font-medium">Chemical injection & polymer crystalline barrier down to brick core</td>
-                    <td className="py-4 px-5 text-stone-500">Covering damp patches with oil paint or PVC panels that trap moisture</td>
-                  </tr>
-                  <tr>
-                    <td className="py-4 px-5 font-semibold text-stone-900">Plastering & Levelling</td>
-                    <td className="py-4 px-5 text-stone-900 bg-[#F5E9D3]/20 font-medium">Laser-guided level lines, chicken mesh over conduit cuts to stop cracks</td>
-                    <td className="py-4 px-5 text-stone-500">Hand trowel finishing that leaves wavy surfaces for modular woodwork</td>
-                  </tr>
-                  <tr>
-                    <td className="py-4 px-5 font-semibold text-stone-900">MEP Conduit Grooving</td>
-                    <td className="py-4 px-5 text-stone-900 bg-[#F5E9D3]/20 font-medium">Twin-blade wall chaser with zero structural brick shock</td>
-                    <td className="py-4 px-5 text-stone-500">Chisel hammering that loosens adjacent mortar joints</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="p-5 sm:p-6 rounded-2xl bg-white border border-[#EADBCA]">
+              <h3 className="font-cinzel text-sm sm:text-base font-bold text-stone-900 mb-2">
+                Which waterproofing chemicals do you use for wet areas and terrace leakage?
+              </h3>
+              <p className="text-xs sm:text-sm text-stone-600 font-sans leading-relaxed">
+                We strictly use multi-layer Dr. Fixit chemical membranes (such as Pidifin 2K polymer-modified mortar) reinforced with fiberglass mesh, rather than superficial bitumen or temporary cement washes. This ensures permanent protection against Punjab monsoon downpours.
+              </p>
+            </div>
+
+            <div className="p-5 sm:p-6 rounded-2xl bg-white border border-[#EADBCA]">
+              <h3 className="font-cinzel text-sm sm:text-base font-bold text-stone-900 mb-2">
+                How do you coordinate civil works with subsequent interior carpentry?
+              </h3>
+              <p className="text-xs sm:text-sm text-stone-600 font-sans leading-relaxed">
+                Because Elegant Spaces manages both civil engineering and interior joinery under single accountability, our civil masons align wall corners to laser 90° plumbs and screed floors to zero-tolerance levels. This guarantees that modular furniture and false ceilings fit flush without unsightly filler strips.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* FAQs */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white border-t border-[#EADBCA]">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <span className="font-mono text-xs uppercase tracking-widest text-[#9E7D3B] font-semibold">FREQUENTLY ASKED QUESTIONS</span>
-              <h2 className="text-2xl sm:text-4xl font-cinzel font-bold text-stone-900 mt-2">
-                Civil Construction FAQs in Mohali & Kharar
-              </h2>
-            </div>
-
-            <div className="space-y-4">
-              <div className="p-6 rounded-xl border border-[#EADBCA] bg-[#FAF8F5]">
-                <h3 className="font-cinzel text-base sm:text-lg font-bold text-stone-900 flex items-start gap-2">
-                  <HelpCircle className="w-5 h-5 text-[#C5A059] shrink-0 mt-0.5" />
-                  <span>Can you safely knock down a wall in my Kharar/Mohali flat or kothi?</span>
-                </h3>
-                <p className="text-sm text-stone-600 mt-3 leading-relaxed pl-7">
-                  Yes. Our civil engineers inspect load-bearing columns and beams before touching any brickwork. If a wall is load-bearing, we install reinforced ISMC structural steel girders or RCC lintels before safe controlled brick demolition to guarantee zero structural sagging.
-                </p>
-              </div>
-
-              <div className="p-6 rounded-xl border border-[#EADBCA] bg-[#FAF8F5]">
-                <h3 className="font-cinzel text-base sm:text-lg font-bold text-stone-900 flex items-start gap-2">
-                  <HelpCircle className="w-5 h-5 text-[#C5A059] shrink-0 mt-0.5" />
-                  <span>How do you treat severe wall dampness (seelan) before interior paint?</span>
-                </h3>
-                <p className="text-sm text-stone-600 mt-3 leading-relaxed pl-7">
-                  We do not use temporary cosmetic putty. Our civil team chips plaster down to bare brick, identifies the moisture source, injects Dr. Fixit chemical waterproofing membranes, and applies polymer-modified crystalline barrier coats with a multi-year warranty.
-                </p>
-              </div>
-
-              <div className="p-6 rounded-xl border border-[#EADBCA] bg-[#FAF8F5]">
-                <h3 className="font-cinzel text-base sm:text-lg font-bold text-stone-900 flex items-start gap-2">
-                  <HelpCircle className="w-5 h-5 text-[#C5A059] shrink-0 mt-0.5" />
-                  <span>Do you handle both civil work and finishing interiors?</span>
-                </h3>
-                <p className="text-sm text-stone-600 mt-3 leading-relaxed pl-7">
-                  Yes, that is our unique strength. Having civil engineering and interior woodcrafters under one roof eliminates the classic blame game between masons and carpenters, ensuring millimeter-precise conduits, level floors, and zero rework.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Final Conversion Banner */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#FAF8F5] via-[#F5E9D3]/40 to-[#FAF8F5] border-t border-[#EADBCA] text-center relative overflow-hidden">
-          <div className="max-w-3xl mx-auto space-y-6">
-            <span className="font-mono text-xs uppercase tracking-widest text-[#9E7D3B] font-semibold">READY TO RENOVATE OR MODIFY?</span>
-            <h2 className="text-3xl sm:text-5xl font-cinzel font-bold text-stone-900 tracking-tight">
-              Get an On-Site Civil Consultation in 24 Hours
+        {/* 9. Strong Enquiry CTA */}
+        <section className="py-20 bg-stone-950 text-white text-center px-5 sm:px-8">
+          <div className="max-w-3xl mx-auto space-y-4">
+            <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#C5A059]">
+              ENGINEERED SOLIDITY
+            </span>
+            <h2 className="font-cormorant font-semibold text-3xl sm:text-5xl text-white">
+              Planning Civil Modifications in Kharar or Mohali?
             </h2>
-            <p className="text-sm sm:text-base text-stone-600 font-sans leading-relaxed">
-              Serving Sector 117 (ACME Heights-2), Sunny Enclave (Sector 125), Kharar-Landran Corridor, New Chandigarh, and SAS Nagar Mohali.
+            <p className="text-xs sm:text-sm text-stone-300 font-light max-w-lg mx-auto font-sans leading-relaxed">
+              Book an on-site structural inspection. Our civil engineers will evaluate your property, inspect moisture conditions, and provide an itemized BOQ estimate.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
-              <a
-                href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=Hi%20Elegant%20Contractors,%20please%20schedule%20a%20civil%20site%20inspection.`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-stone-900 text-[#F5E9D3] font-mono text-xs tracking-wider uppercase font-bold flex items-center justify-center gap-2 hover:bg-stone-800 transition-all shadow-lg"
+
+            <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#C5A059] text-stone-950 font-sans text-xs uppercase tracking-wider font-semibold hover:bg-[#d6b36a] transition-all shadow-md"
               >
-                <MessageSquare className="w-4 h-4 text-[#C5A059]" />
+                <MessageSquare className="w-4 h-4 text-stone-950" />
                 <span>Book Civil Site Inspection</span>
-              </a>
+              </Link>
               <a
                 href={`tel:${BUSINESS_INFO.phone.replace(/[^0-9+]/g, '')}`}
-                className="w-full sm:w-auto px-7 py-4 rounded-full border border-[#EADBCA] bg-white text-stone-800 font-mono text-xs tracking-wider uppercase hover:border-[#C5A059] transition-all flex items-center justify-center gap-2 shadow-sm"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-mono text-xs uppercase tracking-wider transition-all"
               >
                 <Phone className="w-4 h-4 text-[#C5A059]" />
                 <span>Call {BUSINESS_INFO.phone}</span>
@@ -310,10 +406,10 @@ export default function CivilConstructionPage() {
             </div>
           </div>
         </section>
-      </main>
 
-      <Footer />
-      <MobileStickyBar />
+        <Footer />
+        <MobileStickyBar />
+      </main>
     </>
   );
 }

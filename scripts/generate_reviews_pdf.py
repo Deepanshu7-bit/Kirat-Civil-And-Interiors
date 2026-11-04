@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Generate a professional, high-quality, easily copyable PDF of customer reviews
-for Kirat Civil and Interiors / Elegant Contractors & Interiors.
+for Elegant Contractors And Interiors.
 """
 
 import os
@@ -53,7 +53,7 @@ class NumberedCanvas(canvas.Canvas):
 
         # Running Header (on pages after cover/first page)
         if self._pageNumber > 1:
-            self.drawString(40, 805, "KIRAT CIVIL & INTERIORS  |  Verified Customer Reviews & Testimonials Master Sheet")
+            self.drawString(40, 805, "ELEGANT CONTRACTORS AND INTERIORS  |  Verified Customer Reviews & Testimonials Master Sheet")
             self.setStrokeColor(COLOR_LINE)
             self.setLineWidth(0.5)
             self.line(40, 798, 555, 798)
@@ -63,7 +63,7 @@ class NumberedCanvas(canvas.Canvas):
         self.setLineWidth(0.5)
         self.line(40, 42, 555, 42)
 
-        self.drawString(40, 28, "Elegant Contractors & Interiors  •  Kharar & Mohali, Punjab  •  Phone: +91 98783 90090  •  www.elegantspaces.me")
+        self.drawString(40, 28, "Elegant Contractors And Interiors  •  Kharar & Mohali, Punjab  •  Phone: +91 7401011740  •  www.elegantspaces.me")
         self.drawRightString(555, 28, f"Page {self._pageNumber} of {total_pages}")
         self.restoreState()
 
@@ -166,7 +166,7 @@ def build_pdf(csv_path: str, output_path: str):
     story = []
 
     # 1. Header Banner
-    story.append(Paragraph("KIRAT CIVIL & INTERIORS", title_style))
+    story.append(Paragraph("ELEGANT CONTRACTORS AND INTERIORS", title_style))
     story.append(Spacer(1, 3))
     story.append(Paragraph("<b>Master Social Proof Sheet:</b> Reviews & Testimonials Catalog Across Lengths & Locations", subtitle_style))
     story.append(Spacer(1, 8))
@@ -334,6 +334,15 @@ def build_pdf(csv_path: str, output_path: str):
     print(f"Successfully generated PDF: {output_path}")
 
 if __name__ == '__main__':
+    import shutil
     csv_file = '/Users/nugen/Documents/Kirat-Civil-And-Interiors/reviews-sheet.csv'
-    out_pdf = '/Users/nugen/Documents/Kirat-Civil-And-Interiors/Kirat_Civil_And_Interiors_Reviews_Sheet.pdf'
-    build_pdf(csv_file, out_pdf)
+    primary_pdf = '/Users/nugen/Documents/Kirat-Civil-And-Interiors/Elegant_Contractors_And_Interiors_Reviews_Sheet.pdf'
+    legacy_pdf = '/Users/nugen/Documents/Kirat-Civil-And-Interiors/Kirat_Civil_And_Interiors_Reviews_Sheet.pdf'
+    
+    build_pdf(csv_file, primary_pdf)
+    shutil.copyfile(primary_pdf, legacy_pdf)
+    
+    os.makedirs('/Users/nugen/Documents/Kirat-Civil-And-Interiors/public', exist_ok=True)
+    shutil.copyfile(primary_pdf, '/Users/nugen/Documents/Kirat-Civil-And-Interiors/public/Elegant_Contractors_And_Interiors_Reviews_Sheet.pdf')
+    shutil.copyfile(primary_pdf, '/Users/nugen/Documents/Kirat-Civil-And-Interiors/public/Kirat_Civil_And_Interiors_Reviews_Sheet.pdf')
+    print("All PDF versions generated and synchronized.")

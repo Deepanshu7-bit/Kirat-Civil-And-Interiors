@@ -40,7 +40,7 @@ export default function ProjectCalculator() {
 
   const handleWhatsAppDispatch = () => {
     const message = encodeURIComponent(
-      `Hello Elegant Contractors & Interiors, I just customized my project scope on your website:\n\n` +
+      `Hello Elegant Spaces – Contractors & Interiors, I just customized my project scope on your website:\n\n` +
       `• Property: ${getBhkLabel()}\n` +
       `• Scope: ${getScopeLabel()}\n` +
       `• Material Quality: ${getTierLabel()}\n` +
@@ -192,7 +192,7 @@ export default function ProjectCalculator() {
                   Warranty Coverage:
                 </span>
                 <div className="text-xs sm:text-sm font-semibold text-stone-900 mt-1">
-                  10-Yr Marine Ply + 1-Yr Service
+                  Manufacturer Hardware &amp; Plywood Warranty
                 </div>
                 <span className="text-[10px] text-stone-500 font-mono">Anti-Termite &amp; BWP 710 Certified</span>
               </div>

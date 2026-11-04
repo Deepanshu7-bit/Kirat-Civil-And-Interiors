@@ -1,87 +1,78 @@
 'use client';
 
 import React from 'react';
-import { Compass, FileText, Hammer, KeyRound } from 'lucide-react';
+import { Compass, FileText, Hammer, KeyRound, CheckCircle2 } from 'lucide-react';
 
 export default function TurnkeyRoadmap() {
   const steps = [
     {
       step: '01',
-      title: 'Site Laser Inspection & 3D Layout',
-      desc: 'Our civil team inspects structural dampness, verifies wall angles, and prepares millimeter-precise 2D layouts and photorealistic 3D room walkthroughs.',
-      icon: <Compass className="w-5 h-5 text-[#C5A059]" />,
-      tag: 'Day 1 – 7'
+      title: 'Understand',
+      desc: 'We visit your property across Mohali or Kharar, take laser measurements, inspect structural masonry and plumbing points, and understand your family’s lifestyle routines.',
+      tag: 'Site Visit & Scope',
     },
     {
       step: '02',
-      title: 'Fixed Transparent BOQ Contract',
-      desc: 'Every bag of cement, grade of BWP marine ply, brand of paint, and soft-close hinge is documented in writing with fixed pricing and zero surprise escalation clauses.',
-      icon: <FileText className="w-5 h-5 text-[#C5A059]" />,
-      tag: 'Day 8 – 10'
+      title: 'Plan & Design',
+      desc: 'Our interior studio develops optimized 2D spatial layouts, photorealistic 3D room walkthroughs, and an itemized BOQ with branded material specifications and fixed pricing.',
+      tag: '3D Renders & BOQ',
     },
     {
       step: '03',
-      title: 'Civil & Structural MEP Execution',
-      desc: 'Wall alterations, beam reinforcements, chemical damp-proofing, and concealed electrical/plumbing lines are executed under qualified civil engineer supervision.',
-      icon: <Hammer className="w-5 h-5 text-[#C5A059]" />,
-      tag: 'Day 11 – 30'
+      title: 'Build & Execute',
+      desc: 'Our civil engineers and master carpenters coordinate on site. Wall alterations, concealed conduits, and factory-pressed woodwork are executed with daily milestone updates.',
+      tag: 'Civil & Interior Works',
     },
     {
       step: '04',
-      title: 'Finishing & Deep-Clean Handover',
-      desc: 'Factory-pressed modular shutters installed, Gyproc false ceiling painted to perfection, complete chemical cleaning conducted, and keys handed over on time.',
-      icon: <KeyRound className="w-5 h-5 text-[#C5A059]" />,
-      tag: 'Day 31 – 45'
-    }
+      title: 'Final Handover',
+      desc: 'After rigorous multi-point snag inspections and complete deep site cleaning, we hand over keys to your move-in ready home on schedule.',
+      tag: 'Audit & Key Handover',
+    },
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5] border-t border-[#EADBCA]" id="process">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#F5E9D3] border border-[#EADBCA] text-[#9E7D3B] text-xs font-mono uppercase tracking-widest mb-3 shadow-sm">
-            <span>ZERO UNCERTAINTY METHODOLOGY</span>
-          </div>
-
-          <h2 className="text-2xl sm:text-4xl font-cinzel font-bold text-stone-900 tracking-tight">
-            How Your Project Gets <span className="text-[#C5A059]">Delivered</span>
+    <section className="py-20 sm:py-28 bg-[#F5EFE6]/50 border-y border-[#EADBCA]" id="process">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <div className="max-w-3xl mb-14 sm:mb-16">
+          <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#9E7D3B] bg-[#F5E9D3] border border-[#EADBCA] px-3.5 py-1 rounded-full mb-3 inline-block">
+            OUR PROCESS
+          </span>
+          <h2 className="font-cormorant font-semibold text-3xl sm:text-5xl lg:text-6xl text-stone-900 tracking-tight leading-tight">
+            How Your Project Gets Delivered
           </h2>
-          <p className="mt-2 text-xs sm:text-sm text-stone-600 font-sans">
-            A battle-tested 4-step execution framework designed to protect your budget, timeline, and peace of mind.
+          <p className="mt-3 text-xs sm:text-sm text-stone-600 font-sans leading-relaxed">
+            A battle-tested 4-stage execution framework engineered to eliminate finger-pointing, protect your budget, and deliver on schedule.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((item, idx) => (
             <div
               key={idx}
-              className="rounded-2xl p-6 bg-white border border-[#EADBCA] hover:border-[#C5A059] shadow-[0_10px_30px_rgba(245,233,211,0.5)] hover:shadow-[0_15px_35px_rgba(245,233,211,0.8)] transition-all duration-300 relative flex flex-col justify-between group hover:-translate-y-1"
+              className="rounded-3xl p-6 sm:p-7 bg-white border border-[#EADBCA] hover:border-[#C5A059] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center justify-between mb-5">
-                  <div className="w-11 h-11 rounded-xl bg-[#FAF8F5] border border-[#EADBCA] flex items-center justify-center group-hover:border-[#C5A059] transition-colors">
-                    {item.icon}
-                  </div>
-                  <span className="font-cinzel text-2xl font-bold text-[#EADBCA] group-hover:text-[#C5A059] transition-colors">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-cormorant text-4xl sm:text-5xl font-bold text-[#C5A059]">
                     {item.step}
+                  </span>
+                  <span className="font-mono text-[10px] uppercase tracking-wider text-[#9E7D3B] bg-[#F5E9D3] px-2.5 py-1 rounded-full border border-[#EADBCA] font-semibold">
+                    {item.tag}
                   </span>
                 </div>
 
-                <div className="inline-block px-2 py-0.5 rounded bg-[#F5E9D3] border border-[#EADBCA] text-[10px] font-mono text-[#9E7D3B] uppercase tracking-wider mb-2 font-semibold">
-                  {item.tag}
-                </div>
-
-                <h3 className="font-cinzel text-base font-bold text-stone-900 group-hover:text-[#9E7D3B] transition-colors">
+                <h3 className="font-cinzel text-base font-bold text-stone-900 mb-2">
                   {item.title}
                 </h3>
-
-                <p className="mt-2 text-xs text-stone-600 font-sans leading-relaxed">
+                <p className="text-xs sm:text-sm text-stone-600 font-sans leading-relaxed">
                   {item.desc}
                 </p>
               </div>
 
-              <div className="mt-6 pt-3 border-t border-[#EADBCA] flex items-center gap-1.5 text-[11px] font-mono text-[#9E7D3B] font-semibold">
-                <span>Verified Milestones</span>
+              <div className="mt-6 pt-3 border-t border-[#EADBCA] flex items-center gap-1.5 text-[11px] font-mono text-stone-500">
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#C5A059]" />
+                <span>Accountable Stage</span>
               </div>
             </div>
           ))}

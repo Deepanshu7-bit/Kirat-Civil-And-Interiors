@@ -97,7 +97,7 @@ export default function RawToFinishedSection() {
             {/* Background: Raw Civil Construction Image */}
             <div className="absolute inset-0">
               <Image
-                src="/images/raw-master-bedroom.jpg"
+                src="/images/raw-master-bedroom.webp"
                 alt="Raw Civil Construction and Masonry Stage"
                 fill
                 loading="lazy"
@@ -116,7 +116,7 @@ export default function RawToFinishedSection() {
               style={{ clipPath: `inset(0 0 0 ${sliderPosition}%)` }}
             >
               <Image
-                src="/images/furnished-master-bedroom.jpg"
+                src="/images/furnished-master-bedroom.webp"
                 alt="Finished Bespoke Luxury Living Stage"
                 fill
                 loading="lazy"
@@ -151,7 +151,7 @@ export default function RawToFinishedSection() {
           {/* Bottom Context Strip */}
           <div className="bg-[#FAF6EE] p-3.5 sm:p-4 px-4 sm:px-6 border-t border-[#EADBCA] flex flex-col sm:flex-row items-center justify-between text-xs text-stone-600 gap-1.5 sm:gap-2 text-center sm:text-left">
             <span className="font-mono text-stone-700">
-              Verified Project Site: <strong className="text-stone-900">Sector 117 ACME Heights-2 &amp; Kharar</strong>
+              Site Transformation: <strong className="text-stone-900">Sector 117 / Sunny Enclave Kharar Corridor</strong>
             </span>
             <span className="text-[11px] text-stone-500 font-mono">
               Touch and drag handle left/right to compare transformation

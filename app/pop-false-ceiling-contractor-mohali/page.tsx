@@ -8,13 +8,12 @@ import {
   CheckCircle2, 
   SunMedium, 
   ShieldCheck, 
+  ArrowRight, 
   Sparkles, 
-  HelpCircle,
-  Clock,
-  Layers,
   ChevronRight,
-  Flame,
-  Volume2
+  ArrowUpRight,
+  Lightbulb,
+  Check
 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -23,62 +22,40 @@ import { BUSINESS_INFO } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'POP & False Ceiling Contractor Mohali | Elegant Spaces',
-  description: 'Experienced POP wala and false ceiling contractor in Mohali, Kharar & Sunny Enclave. Saint-Gobain Gyproc false ceilings, magnetic track lighting, cove LED profiles, and crack-free GI framing with rates from ₹75/sq ft.',
-  keywords: [
-    'pop wala near me',
-    'pop false ceiling contractor mohali',
-    'false ceiling contractor kharar',
-    'gypsum false ceiling sunny enclave',
-    'pop thekedar mohali',
-    'false ceiling rate per sq ft tricity',
-    'cove profile light false ceiling',
-    'saint gobain gyproc false ceiling contractor',
-    'pop false ceiling sector 117 mohali',
-    'designer false ceiling contractor chandigarh'
-  ],
+  description: 'Architectural false ceilings and mood lighting in Mohali & Kharar. Saint-Gobain Gyproc boards, magnetic track lights, indirect 3000K cove lighting, and acoustic ceilings.',
   alternates: {
     canonical: 'https://www.elegantspaces.me/pop-false-ceiling-contractor-mohali',
   },
   openGraph: {
     title: 'POP & False Ceiling Contractor Mohali | Elegant Spaces',
-    description: 'Bespoke Gyproc false ceilings, cove profile lighting, and designer POP work across Kharar, Sunny Enclave & Mohali with transparent per-square-foot pricing.',
+    description: 'Precision Gyproc false ceiling designs with magnetic track lights and warm ambient lighting in Mohali and Kharar.',
     url: 'https://www.elegantspaces.me/pop-false-ceiling-contractor-mohali',
     type: 'website',
-    images: [{ url: '/logos/elegant-logo-luxury-crest.jpg', width: 1024, height: 1024, alt: 'False Ceiling Contractor Mohali Kharar' }]
-  }
+    images: [{ url: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80', width: 1200, height: 630, alt: 'False Ceiling Contractor Mohali' }],
+  },
 };
 
 export default function FalseCeilingPage() {
-  const ceilingSchema = {
+  const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "POP & Gypsum False Ceiling Installation",
+    "name": "Architectural False Ceilings & Mood Lighting",
+    "serviceType": "Gyproc False Ceiling Contractor",
     "provider": {
       "@type": "HomeAndConstructionBusiness",
       "name": BUSINESS_INFO.name,
       "telephone": BUSINESS_INFO.phone,
+      "url": "https://www.elegantspaces.me",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "ACME HEIGHTS-2, 309/G, Sector 117, Ex 2",
         "addressLocality": "Sahibzada Ajit Singh Nagar",
         "addressRegion": "Punjab",
         "postalCode": "140301",
         "addressCountry": "IN"
       }
     },
-    "areaServed": ["Mohali", "Kharar", "Sunny Enclave", "Sector 117", "New Chandigarh", "Tricity"],
-    "description": "Architectural POP and Saint-Gobain Gyproc false ceilings with heavy-gauge GI channel framework, anti-crack joint tape, indirect warm COB cove lighting, and magnetic track spotlighting.",
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "INR",
-      "price": "75",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "75",
-        "priceCurrency": "INR",
-        "unitText": "per square foot"
-      }
-    }
+    "areaServed": BUSINESS_INFO.serviceAreas,
+    "description": "Architectural false ceiling contractor in Mohali and Kharar. Saint-Gobain Gyproc moisture-resistant plaster boards, galvanized GI framing, magnetic track rails, and indirect warm cove lighting."
   };
 
   const faqSchema = {
@@ -87,36 +64,59 @@ export default function FalseCeilingPage() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is the per square foot rate for false ceiling in Mohali and Kharar?",
+        "name": "Why do you use Saint-Gobain Gyproc boards instead of local POP powder?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "In Mohali and Kharar, standard Gypsum false ceiling (using Saint-Gobain Gyproc 12.5mm boards and heavy GI channels) typically costs ₹75 to ₹95 per square foot including material and labor. Intricate multi-layered designer POP ceilings with cove light channels range from ₹105 to ₹145 per square foot."
+          "text": "Traditional hand-applied POP powder is prone to hairline cracks, uneven surface waves, and water absorption. Saint-Gobain Gyproc machine-pressed gypsum boards provide millimeter-straight coves, superior acoustic damping, and moisture resistance that will not crack or sag over time."
         }
       },
       {
         "@type": "Question",
-        "name": "How do you prevent false ceiling sagging and cracks at the joints?",
+        "name": "What lighting color temperature do you recommend for residential false ceilings?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Cracks occur when cheap contractors use lightweight local tin channels and omit expansion joints. We anchor heavy-gauge, rust-resistant galvanized iron (GI) channels into the RCC ceiling slab using steel rawl plugs, followed by fiberglass self-adhesive joint tape and Gyproc jointing compound."
+          "text": "We strictly recommend warm indirect ambient lighting in the 3000K range for living areas and bedrooms. It creates an inviting atmosphere without harsh glare, flatteringly illuminating wall textures and decor."
         }
       },
       {
         "@type": "Question",
-        "name": "Do you also handle cove lighting, magnetic track lights, and painting?",
+        "name": "How is electrical conduit pulling coordinated during ceiling installation?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Elegant Contractors provides an all-in-one ceiling package: framing, gypsum boarding, electrical conduit wiring, cove LED strips (3000K warm white), magnetic track spotlight rails, and final Asian Paints Royale emulsion coat."
+          "text": "Our team coordinates framing and electrical cabling concurrently. Conduits for magnetic track lights, recessed spots, and cove strips are pulled and tested before boards are fastened, avoiding any damaged plaster or rework."
         }
       }
     ]
   };
 
+  const ceilingGallery = [
+    {
+      src: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80',
+      title: 'Architectural Coves & Magnetic Rails',
+      desc: 'Seamless indirect coves casting warm 3000K glow over main living salon.'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80',
+      title: 'Minimal Linear Drop & Shadow Line',
+      desc: 'Flush zero-trim COB fixtures integrated into crisp geometric perimeter drop.'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80',
+      title: 'Double-Height Ceiling Illumination',
+      desc: 'Low-glare magnetic track rails designed to wash feature walls evenly.'
+    },
+    {
+      src: '/images/furnished-master-bedroom.jpg',
+      title: 'Master Bedroom Perimeter Coves',
+      desc: 'Soft recessed night lighting with dual switching positioned beside the bed.'
+    }
+  ];
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ceilingSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <script
         type="application/ld+json"
@@ -125,233 +125,294 @@ export default function FalseCeilingPage() {
 
       <Navbar />
 
-      <main className="min-h-screen bg-[#FAF8F5] text-stone-900 selection:bg-gold/30 selection:text-stone-900 pt-[68px] sm:pt-[72px]">
-        {/* Breadcrumbs */}
-        <div className="bg-white border-b border-[#EADBCA] py-2.5 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto flex items-center gap-2 text-xs font-mono text-stone-500 overflow-x-auto whitespace-nowrap">
-            <Link href="/" className="hover:text-stone-900 transition-colors shrink-0">Home</Link>
-            <ChevronRight className="w-3.5 h-3.5 text-stone-400 shrink-0" />
-            <span className="text-stone-400 shrink-0">Services</span>
-            <ChevronRight className="w-3.5 h-3.5 text-stone-400 shrink-0" />
-            <span className="text-[#9E7D3B] font-semibold shrink-0">POP Wala &amp; False Ceiling Contractor Mohali</span>
-          </div>
-        </div>
+      <main className="min-h-screen bg-[#FAF8F5] text-stone-900 pt-16 sm:pt-20">
+        {/* ============================================================== */}
+        {/* 1. Large Service-Specific Visual Hero                          */}
+        {/* ============================================================== */}
+        <section className="relative min-h-[55vh] sm:min-h-[65vh] flex items-end overflow-hidden bg-stone-950">
+          <Image
+            src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=85"
+            alt="POP False Ceiling Contractor Mohali – Elegant Spaces"
+            fill
+            priority
+            className="object-cover object-center opacity-60 brightness-95"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-stone-950/20" />
 
-        {/* Hero Section */}
-        <section className="relative py-12 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[radial-gradient(circle_at_top,#F5E9D3_0%,transparent_60%)]">
-          <div className="max-w-5xl mx-auto text-center space-y-5 sm:space-y-6">
-            <div className="inline-flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-full border border-[#EADBCA] bg-white/80 backdrop-blur-sm text-[10px] sm:text-xs font-mono text-stone-800 shadow-sm max-w-full text-center">
-              <span className="w-2 h-2 rounded-full bg-[#C5A059] animate-pulse" />
-              <span className="text-[#9E7D3B] font-semibold uppercase tracking-wider">MOHALI · KHARAR · TRICITY</span>
-              <span className="text-stone-400 hidden xs:inline">|</span>
-              <span className="text-stone-600 font-sans hidden xs:inline">STARTING AT ₹75 / SQ FT</span>
-            </div>
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pb-14 sm:pb-20 pt-28">
+            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs font-mono text-stone-300 mb-4">
+              <Link href="/" className="hover:text-white transition-colors">Home</Link>
+              <ChevronRight className="w-3.5 h-3.5 text-[#C5A059]" />
+              <span className="text-stone-300">Services</span>
+              <ChevronRight className="w-3.5 h-3.5 text-[#C5A059]" />
+              <span className="text-[#C5A059]">False Ceilings</span>
+            </nav>
 
-            <h1 className="text-2xl sm:text-5xl lg:text-6xl font-cinzel font-bold text-stone-900 tracking-tight leading-tight">
-              Master <span className="text-[#C5A059]">POP Wala &amp; False Ceiling</span> Contractor in Mohali
-            </h1>
+            <div className="max-w-3xl">
+              <span className="inline-block px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#F5E9D3] text-xs font-mono uppercase tracking-[0.2em] mb-3">
+                Saint-Gobain Gyproc · Magnetic Track Lights · 3000K Coves
+              </span>
+              <h1 className="font-cormorant font-semibold text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.08]">
+                Architectural False Ceilings &amp; Mood Lighting
+              </h1>
+              <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-stone-200 font-light font-sans max-w-2xl leading-relaxed">
+                Sculpting interior space through glare-free indirect illumination, magnetic track rails, and rigid zinc-coated GI framing across Mohali, Kharar, and Chandigarh Tricity.
+              </p>
 
-            <p className="text-base sm:text-lg text-stone-600 max-w-3xl mx-auto font-sans leading-relaxed">
-              Transform your rooms with architectural grandeur. We deliver crack-free <strong>Saint-Gobain Gyproc false ceilings</strong>, hidden <strong>warm cove lighting (3000K)</strong>, modern <strong>magnetic track rails</strong>, and bespoke POP craftsmanship across Kharar, Sunny Enclave, and SAS Nagar Mohali.
-            </p>
-
-            {/* Quick Actions */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
-              <a
-                href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=Hi%20Elegant%20Contractors,%20I%20need%20a%20per%20sq%20ft%20quote%20for%20False%20Ceiling%20/%20POP%20work%20in%20Mohali/Kharar.`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-stone-900 text-[#F5E9D3] font-mono text-xs tracking-wider uppercase flex items-center justify-center gap-2 hover:bg-stone-800 transition-all shadow-lg"
-              >
-                <MessageSquare className="w-4 h-4 text-[#C5A059]" />
-                <span>Get Free False Ceiling Estimate</span>
-              </a>
-
-              <a
-                href={`tel:${BUSINESS_INFO.phone.replace(/[^0-9+]/g, '')}`}
-                className="w-full sm:w-auto px-6 py-3.5 rounded-full border border-[#EADBCA] bg-white text-stone-800 font-mono text-xs tracking-wider uppercase hover:border-[#C5A059] transition-all flex items-center justify-center gap-2 shadow-sm"
-              >
-                <Phone className="w-4 h-4 text-[#C5A059]" />
-                <span>Call POP Mistri / Thekedar: {BUSINESS_INFO.phone}</span>
-              </a>
-            </div>
-
-            {/* Guarantee Cards */}
-            <div className="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto border-t border-[#EADBCA]">
-              <div className="text-center p-3 rounded-xl bg-white/70 border border-[#EADBCA]">
-                <Layers className="w-5 h-5 text-[#C5A059] mx-auto mb-1" />
-                <span className="font-mono text-xs font-semibold text-stone-900 block">Saint-Gobain Gyproc</span>
-                <span className="text-[10px] text-stone-500">Certified 12.5mm Boards</span>
-              </div>
-              <div className="text-center p-3 rounded-xl bg-white/70 border border-[#EADBCA]">
-                <ShieldCheck className="w-5 h-5 text-[#C5A059] mx-auto mb-1" />
-                <span className="font-mono text-xs font-semibold text-stone-900 block">Anti-Sag GI Grid</span>
-                <span className="text-[10px] text-stone-500">Heavy Zinc-Coated Framing</span>
-              </div>
-              <div className="text-center p-3 rounded-xl bg-white/70 border border-[#EADBCA]">
-                <SunMedium className="w-5 h-5 text-[#C5A059] mx-auto mb-1" />
-                <span className="font-mono text-xs font-semibold text-stone-900 block">Magnetic Tracks</span>
-                <span className="text-[10px] text-stone-500">Architectural Lighting</span>
-              </div>
-              <div className="text-center p-3 rounded-xl bg-white/70 border border-[#EADBCA]">
-                <Clock className="w-5 h-5 text-[#C5A059] mx-auto mb-1" />
-                <span className="font-mono text-xs font-semibold text-stone-900 block">3 Days Per Room</span>
-                <span className="text-[10px] text-stone-500">Quick Clean Execution</span>
+              <div className="mt-6 flex flex-wrap gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#C5A059] text-stone-950 font-sans text-xs uppercase tracking-wider font-semibold hover:bg-[#d6b36a] transition-all shadow-md"
+                >
+                  <MessageSquare className="w-4 h-4 text-stone-950" />
+                  <span>Request Ceiling Consultation</span>
+                </Link>
+                <a
+                  href={`tel:${BUSINESS_INFO.phone.replace(/[^0-9+]/g, '')}`}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/25 text-white font-mono text-xs uppercase tracking-wider transition-all"
+                >
+                  <Phone className="w-4 h-4 text-[#C5A059]" />
+                  <span>Call {BUSINESS_INFO.phone}</span>
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Transparent Per-Sq-Ft Rate Breakdown */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white border-y border-[#EADBCA]">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-10">
-              <span className="font-mono text-xs uppercase tracking-widest text-[#9E7D3B] font-semibold">100% TRANSPARENT PRICING</span>
-              <h2 className="text-2xl sm:text-4xl font-cinzel font-bold text-stone-900 mt-2">
-                False Ceiling & POP Rates in Mohali & Kharar (2026)
+        {/* ============================================================== */}
+        {/* 4. Large Relevant Image Gallery                                */}
+        {/* ============================================================== */}
+        <section className="py-16 sm:py-24 px-5 sm:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="mb-12 max-w-2xl">
+            <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#9E7D3B] font-bold block mb-2">
+              CEILING CONCEPTS
+            </span>
+            <h2 className="font-cormorant font-semibold text-3xl sm:text-4xl text-stone-900 tracking-tight">
+              Ambient Illumination &amp; Clean Profiles
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            {ceilingGallery.map((item, idx) => (
+              <div
+                key={idx}
+                className="group rounded-3xl overflow-hidden border border-[#EADBCA] bg-white shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden bg-stone-100">
+                  <Image
+                    src={item.src}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent opacity-70" />
+                  <span className="absolute bottom-3 left-3 text-sm font-cinzel font-bold text-white tracking-wide">
+                    {item.title}
+                  </span>
+                </div>
+                <div className="p-4 sm:p-5">
+                  <p className="text-xs text-stone-600 font-sans leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ============================================================== */}
+        {/* 5. Ceiling Specifications & Framing Systems                    */}
+        {/* ============================================================== */}
+        <section className="py-16 sm:py-20 bg-[#F5EFE6]/50 border-y border-[#EADBCA]">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+            <div className="text-center max-w-2xl mx-auto mb-14">
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#9E7D3B] font-bold block mb-2">
+                FRAMING &amp; LIGHTING
+              </span>
+              <h2 className="font-cormorant font-semibold text-3xl sm:text-4xl text-stone-900 tracking-tight">
+                Architectural Ceiling Systems
               </h2>
-              <p className="text-sm text-stone-600 mt-2 max-w-2xl mx-auto">
-                No hidden charges. Clear square-foot rates including branded materials, laser alignment, joint tape finishing, and cleanup.
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { title: 'Saint-Gobain Gyproc Sheets', desc: 'Moisture-proof, fire-resistant certified boards providing laser-straight level surfaces.' },
+                { title: 'Zinc-Coated Heavy GI Framing', desc: 'Galvanized iron channel grid anchored directly into the RCC slab to prevent future sag.' },
+                { title: 'Magnetic Low-Voltage Track Rails', desc: 'Flush magnetic rails supporting directional spots and linear floodlights with easy repositioning.' },
+                { title: 'Warm 3000K Indirect Coves', desc: 'High-CRI strip illumination concealed within deep coves, delivering continuous shadow-free glow.' },
+                { title: 'Acoustic Ceiling Treatments', desc: 'Perforated gypsum and acoustic baffles designed to absorb room reverberation in home theaters.' },
+                { title: 'Smart Dimming Controls', desc: 'Multi-zone automation enabling customized day, evening, and relaxation lighting scenes.' },
+              ].map((item, i) => (
+                <div key={i} className="p-6 rounded-2xl bg-white border border-[#EADBCA] shadow-xs">
+                  <span className="font-cormorant text-2xl font-bold text-[#C5A059] block mb-2">0{i + 1}</span>
+                  <h3 className="font-cinzel text-sm sm:text-base font-bold text-stone-900 mb-1">{item.title}</h3>
+                  <p className="text-xs text-stone-600 font-sans leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================================== */}
+        {/* 6. Visual Workflow                                            */}
+        {/* ============================================================== */}
+        <section className="py-16 sm:py-24 px-5 sm:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="mb-12 max-w-2xl">
+            <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#9E7D3B] font-bold block mb-2">
+              INSTALLATION WORKFLOW
+            </span>
+            <h2 className="font-cormorant font-semibold text-3xl sm:text-4xl text-stone-900 tracking-tight">
+              Precision Ceiling Execution
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {[
+              { num: '01', title: 'Laser Level & Framing', desc: 'Leveling grid anchored with metal fasteners into RCC ceiling slab.' },
+              { num: '02', title: 'Conduit Pulling', desc: 'Electrical conduits for AC, COB spots, and coves pulled and tested.' },
+              { num: '03', title: 'Gyproc Fixing & Tape', desc: 'Boards screwed with fiber mesh tape and crack-resistant jointing.' },
+              { num: '04', title: 'Royale Emulsion Finish', desc: 'Sanding, 2 coats primer, and Asian Paints Royale topcoat application.' },
+            ].map((p, idx) => (
+              <div key={idx} className="p-6 rounded-2xl bg-white border border-[#EADBCA] shadow-xs">
+                <span className="font-cormorant text-3xl font-bold text-[#C5A059] block mb-2">{p.num}</span>
+                <h3 className="font-cinzel text-sm font-bold text-stone-900 mb-1">{p.title}</h3>
+                <p className="text-xs text-stone-600 font-sans leading-relaxed">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ============================================================== */}
+        {/* 7. Related Design Inspirations                                */}
+        {/* ============================================================== */}
+        <section className="py-14 sm:py-16 bg-[#F5EFE6]/60 border-t border-[#EADBCA]">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+            <div className="flex items-end justify-between mb-8">
+              <div>
+                <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#9E7D3B] font-bold block mb-1">
+                  DESIGN INSPIRATIONS
+                </span>
+                <h3 className="font-cormorant font-semibold text-2xl sm:text-3xl text-stone-900">
+                  Ceiling &amp; Lighting Concepts
+                </h3>
+              </div>
+              <Link href="/design-gallery" className="text-xs font-mono font-semibold text-[#9E7D3B] hover:text-stone-900">
+                View All Designs →
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <Link
+                href="/design-gallery/false-ceiling-designs"
+                className="group rounded-2xl overflow-hidden border border-[#EADBCA] bg-white shadow-xs hover:shadow-md transition-all"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden bg-stone-100">
+                  <Image
+                    src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80"
+                    alt="False Ceiling Inspiration Concept"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent" />
+                  <span className="absolute bottom-2.5 left-2.5 text-xs font-cinzel font-bold text-white">
+                    Architectural Ceiling &amp; Mood Lighting Concept
+                  </span>
+                </div>
+              </Link>
+
+              <Link
+                href="/design-gallery/modern-living-room"
+                className="group rounded-2xl overflow-hidden border border-[#EADBCA] bg-white shadow-xs hover:shadow-md transition-all"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden bg-stone-100">
+                  <Image
+                    src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80"
+                    alt="Modern Living Room with Ambient Ceiling"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent" />
+                  <span className="absolute bottom-2.5 left-2.5 text-xs font-cinzel font-bold text-white">
+                    Modern Living Room Ambient Lighting
+                  </span>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================================== */}
+        {/* 8. Concise FAQs                                               */}
+        {/* ============================================================== */}
+        <section className="py-16 sm:py-20 px-5 sm:px-8 lg:px-12 max-w-4xl mx-auto">
+          <div className="text-center mb-10">
+            <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#9E7D3B] font-bold block mb-1">
+              QUESTIONS &amp; ANSWERS
+            </span>
+            <h2 className="font-cormorant font-semibold text-2xl sm:text-4xl text-stone-900 tracking-tight">
+              False Ceiling FAQs
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            <div className="p-5 sm:p-6 rounded-2xl bg-white border border-[#EADBCA]">
+              <h3 className="font-cinzel text-sm sm:text-base font-bold text-stone-900 mb-2">
+                Why do you use Saint-Gobain Gyproc boards instead of local POP powder?
+              </h3>
+              <p className="text-xs sm:text-sm text-stone-600 font-sans leading-relaxed">
+                Traditional hand-applied POP powder is prone to hairline cracks, uneven surface waves, and water absorption. Saint-Gobain Gyproc machine-pressed gypsum boards provide millimeter-straight coves, superior acoustic damping, and moisture resistance that will not crack or sag over time.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="rounded-2xl p-6 border border-[#EADBCA] bg-[#FAF8F5] flex flex-col justify-between">
-                <div>
-                  <span className="text-xs font-mono uppercase tracking-wider text-[#9E7D3B] font-semibold block">PLAN 1</span>
-                  <h3 className="font-cinzel text-xl font-bold text-stone-900 mt-1">Standard Gyproc False Ceiling</h3>
-                  <p className="text-xs text-stone-600 mt-2">
-                    Ideal for clean flat ceilings, peripheral borders, and recessed spotlighting in bedrooms and living rooms.
-                  </p>
-                  <ul className="mt-4 space-y-2 text-xs text-stone-700">
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#C5A059]" /> 12.5mm Saint-Gobain Gyproc board</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#C5A059]" /> Rust-resistant GI intermediate channels</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#C5A059]" /> Spot cutouts for LED downlights</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#C5A059]" /> Fiber mesh tape crack prevention</li>
-                  </ul>
-                </div>
-                <div className="mt-6 pt-4 border-t border-[#EADBCA]">
-                  <span className="text-[11px] font-mono text-stone-500 block">Rate:</span>
-                  <span className="font-cinzel text-2xl font-bold text-stone-900">₹75 – ₹85</span>
-                  <span className="text-xs font-mono text-stone-500"> / sq ft (Material + Labor)</span>
-                </div>
-              </div>
+            <div className="p-5 sm:p-6 rounded-2xl bg-white border border-[#EADBCA]">
+              <h3 className="font-cinzel text-sm sm:text-base font-bold text-stone-900 mb-2">
+                What lighting color temperature do you recommend for residential false ceilings?
+              </h3>
+              <p className="text-xs sm:text-sm text-stone-600 font-sans leading-relaxed">
+                We strictly recommend warm indirect ambient lighting in the 3000K range for living areas and bedrooms. It creates an inviting atmosphere without harsh glare, flatteringly illuminating wall textures and decor.
+              </p>
+            </div>
 
-              <div className="rounded-2xl p-6 border-2 border-[#C5A059] bg-white shadow-lg flex flex-col justify-between relative">
-                <div className="absolute -top-3 right-6 bg-[#C5A059] text-stone-950 font-mono text-[10px] uppercase font-bold px-3 py-0.5 rounded-full shadow">
-                  MOST POPULAR
-                </div>
-                <div>
-                  <span className="text-xs font-mono uppercase tracking-wider text-[#9E7D3B] font-semibold block">PLAN 2</span>
-                  <h3 className="font-cinzel text-xl font-bold text-stone-900 mt-1">Designer Cove & Ambient LED</h3>
-                  <p className="text-xs text-stone-600 mt-2">
-                    Two-level multi-tiered ceiling with hidden indirect cove light trough (3000K warm white) and central chandelier hook.
-                  </p>
-                  <ul className="mt-4 space-y-2 text-xs text-stone-700">
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#C5A059]" /> Concealed double-cove LED trough</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#C5A059]" /> Heavy-duty perimeter ceiling angles</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#C5A059]" /> Curvilinear or rectangular geometry</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#C5A059]" /> Smooth Gyproc jointing compound finish</li>
-                  </ul>
-                </div>
-                <div className="mt-6 pt-4 border-t border-[#EADBCA]">
-                  <span className="text-[11px] font-mono text-stone-500 block">Rate:</span>
-                  <span className="font-cinzel text-2xl font-bold text-[#9E7D3B]">₹95 – ₹115</span>
-                  <span className="text-xs font-mono text-stone-500"> / sq ft (Material + Labor)</span>
-                </div>
-              </div>
-
-              <div className="rounded-2xl p-6 border border-[#EADBCA] bg-[#FAF8F5] flex flex-col justify-between">
-                <div>
-                  <span className="text-xs font-mono uppercase tracking-wider text-[#9E7D3B] font-semibold block">PLAN 3</span>
-                  <h3 className="font-cinzel text-xl font-bold text-stone-900 mt-1">Architectural Magnetic Track</h3>
-                  <p className="text-xs text-stone-600 mt-2">
-                    Ultra-modern recessed magnetic track rails, charcoal fluted wooden rafters, and smart dimmer integration.
-                  </p>
-                  <ul className="mt-4 space-y-2 text-xs text-stone-700">
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#C5A059]" /> Zero-trim flush magnetic track channels</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#C5A059]" /> Wooden veneer or charcoal rafter accents</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#C5A059]" /> Acoustic sound dampening grid options</li>
-                    <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#C5A059]" /> Smart home dimming profile compatibility</li>
-                  </ul>
-                </div>
-                <div className="mt-6 pt-4 border-t border-[#EADBCA]">
-                  <span className="text-[11px] font-mono text-stone-500 block">Rate:</span>
-                  <span className="font-cinzel text-2xl font-bold text-stone-900">₹130 – ₹175</span>
-                  <span className="text-xs font-mono text-stone-500"> / sq ft (Custom Architectural)</span>
-                </div>
-              </div>
+            <div className="p-5 sm:p-6 rounded-2xl bg-white border border-[#EADBCA]">
+              <h3 className="font-cinzel text-sm sm:text-base font-bold text-stone-900 mb-2">
+                How is electrical conduit pulling coordinated during ceiling installation?
+              </h3>
+              <p className="text-xs sm:text-sm text-stone-600 font-sans leading-relaxed">
+                Our team coordinates framing and electrical cabling concurrently. Conduits for magnetic track lights, recessed spots, and cove strips are pulled and tested before boards are fastened, avoiding any damaged plaster or rework.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Frequently Asked Questions */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#FAF8F5]">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <span className="font-mono text-xs uppercase tracking-widest text-[#9E7D3B] font-semibold">CUSTOMER QUESTIONS</span>
-              <h2 className="text-2xl sm:text-4xl font-cinzel font-bold text-stone-900 mt-2">
-                Frequently Asked False Ceiling & POP Questions
-              </h2>
-            </div>
-
-            <div className="space-y-4">
-              <div className="p-6 rounded-xl border border-[#EADBCA] bg-white shadow-sm">
-                <h3 className="font-cinzel text-base sm:text-lg font-bold text-stone-900 flex items-start gap-2">
-                  <HelpCircle className="w-5 h-5 text-[#C5A059] shrink-0 mt-0.5" />
-                  <span>How long does it take to do a false ceiling for a 3BHK flat in Kharar/Mohali?</span>
-                </h3>
-                <p className="text-sm text-stone-600 mt-3 leading-relaxed pl-7">
-                  For a full 3BHK apartment (Living room, Dining area, and 3 Bedrooms), our team completes the framing and Gyproc boarding in <strong>5 to 7 days</strong>. Taping, jointing, electrical wiring, and final paint primer take another 2 to 3 days.
-                </p>
-              </div>
-
-              <div className="p-6 rounded-xl border border-[#EADBCA] bg-white shadow-sm">
-                <h3 className="font-cinzel text-base sm:text-lg font-bold text-stone-900 flex items-start gap-2">
-                  <HelpCircle className="w-5 h-5 text-[#C5A059] shrink-0 mt-0.5" />
-                  <span>Does a false ceiling decrease the room height too much?</span>
-                </h3>
-                <p className="text-sm text-stone-600 mt-3 leading-relaxed pl-7">
-                  In modern apartments with 9.5 to 10-foot ceilings, a standard false ceiling drops by only <strong>4 to 5 inches</strong>. For lower ceilings, we design peripheral border coves that leave the center open, making the room actually feel taller and more spacious.
-                </p>
-              </div>
-
-              <div className="p-6 rounded-xl border border-[#EADBCA] bg-white shadow-sm">
-                <h3 className="font-cinzel text-base sm:text-lg font-bold text-stone-900 flex items-start gap-2">
-                  <HelpCircle className="w-5 h-5 text-[#C5A059] shrink-0 mt-0.5" />
-                  <span>What is the difference between POP (Plaster of Paris) and Gypsum boards?</span>
-                </h3>
-                <p className="text-sm text-stone-600 mt-3 leading-relaxed pl-7">
-                  Traditional POP involves mixing powder on-site and hand-molding chicken mesh, which is labor-heavy, produces huge amounts of dust, and is prone to drying cracks. Gypsum boards (Saint-Gobain Gyproc) are machine-pressed factory boards that offer 100% laser-flat finishes, zero water drying time, and superior acoustic and thermal insulation. We specialize in precision Gyproc systems.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Banner */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#FAF8F5] via-[#F5E9D3]/40 to-[#FAF8F5] border-t border-[#EADBCA] text-center relative overflow-hidden">
-          <div className="max-w-3xl mx-auto space-y-6">
-            <span className="font-mono text-xs uppercase tracking-widest text-[#9E7D3B] font-semibold">NEED AN ON-SITE MEASUREMENT?</span>
-            <h2 className="text-3xl sm:text-5xl font-cinzel font-bold text-stone-900 tracking-tight">
-              Get Your False Ceiling Measured Today
+        {/* ============================================================== */}
+        {/* 9. Strong Enquiry CTA                                         */}
+        {/* ============================================================== */}
+        <section className="py-20 bg-stone-950 text-white text-center px-5 sm:px-8">
+          <div className="max-w-3xl mx-auto space-y-4">
+            <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#C5A059]">
+              START YOUR CEILING DESIGN
+            </span>
+            <h2 className="font-cormorant font-semibold text-3xl sm:text-5xl text-white">
+              Upgrade Your Home&apos;s Ambiance
             </h2>
-            <p className="text-sm sm:text-base text-stone-600 font-sans leading-relaxed">
-              Available across Sector 117 ACME Heights-2, Sunny Enclave Sector 125, Gillco Valley Kharar, and all Mohali GMADA sectors.
+            <p className="text-xs sm:text-sm text-stone-300 font-light max-w-lg mx-auto font-sans leading-relaxed">
+              Book a site consultation across Mohali, Kharar, or Chandigarh. We provide lighting layouts and fixed itemized estimates.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4">
-              <a
-                href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=Hi%20Elegant%20Contractors,%20I%20want%20to%20get%20false%20ceiling%20measurements%20and%20rates%20for%20my%20site.`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-stone-900 text-[#F5E9D3] font-mono text-xs tracking-wider uppercase font-bold flex items-center justify-center gap-2 hover:bg-stone-800 transition-all shadow-lg"
+
+            <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#C5A059] text-stone-950 font-sans text-xs uppercase tracking-wider font-semibold hover:bg-[#d6b36a] transition-all shadow-md"
               >
-                <MessageSquare className="w-4 h-4 text-[#C5A059]" />
-                <span>Schedule Free Site Measurement</span>
-              </a>
+                <MessageSquare className="w-4 h-4 text-stone-950" />
+                <span>Schedule Site Measurement</span>
+              </Link>
               <a
                 href={`tel:${BUSINESS_INFO.phone.replace(/[^0-9+]/g, '')}`}
-                className="w-full sm:w-auto px-7 py-4 rounded-full border border-[#EADBCA] bg-white text-stone-800 font-mono text-xs tracking-wider uppercase hover:border-[#C5A059] transition-all flex items-center justify-center gap-2 shadow-sm"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-mono text-xs uppercase tracking-wider transition-all"
               >
                 <Phone className="w-4 h-4 text-[#C5A059]" />
                 <span>Call {BUSINESS_INFO.phone}</span>
@@ -359,10 +420,10 @@ export default function FalseCeilingPage() {
             </div>
           </div>
         </section>
-      </main>
 
-      <Footer />
-      <MobileStickyBar />
+        <Footer />
+        <MobileStickyBar />
+      </main>
     </>
   );
 }
